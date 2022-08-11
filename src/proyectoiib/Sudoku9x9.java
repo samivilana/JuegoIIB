@@ -1,12 +1,11 @@
-
 package proyectoiib;
 
 import javax.swing.JOptionPane;
 
 public class Sudoku9x9 extends javax.swing.JFrame {
-    
-   Tablero9x9 tb =new Tablero9x9();
-          
+
+    Tablero9x9 tb = new Tablero9x9();
+
     /**
      * Creates new form Sudoku9x9
      */
@@ -16,7 +15,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         iniciar();
     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -124,7 +122,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         btnVolver = new javax.swing.JButton();
         jlbError = new javax.swing.JLabel();
         lblError = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnSolucion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku 9x9");
@@ -171,9 +169,11 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF10.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF10.setPreferredSize(new java.awt.Dimension(32, 32));
 
+        jTF11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF11.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF11.setPreferredSize(new java.awt.Dimension(32, 32));
 
@@ -188,6 +188,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF19.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF19.setPreferredSize(new java.awt.Dimension(32, 32));
 
@@ -202,6 +203,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF21.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF21.setPreferredSize(new java.awt.Dimension(32, 32));
 
@@ -243,7 +245,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                     .addComponent(jTF12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTF19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF19, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTF20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jTF21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -251,6 +253,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTF4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jTF13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,6 +269,12 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 jTF13KeyTyped(evt);
             }
         });
+
+        jTF14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jTF15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jTF5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jTF6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -388,6 +398,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF18.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF18KeyReleased(evt);
@@ -397,6 +409,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF26.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF26KeyReleased(evt);
@@ -405,6 +419,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 jTF26KeyTyped(evt);
             }
         });
+
+        jTF27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -456,6 +472,10 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTF28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jTF29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF30.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF30KeyReleased(evt);
@@ -474,6 +494,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF48.setToolTipText("");
         jTF48.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -484,6 +506,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF46.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF47.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF47KeyReleased(evt);
@@ -492,6 +516,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 jTF47KeyTyped(evt);
             }
         });
+
+        jTF39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -552,6 +578,10 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        jTF32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jTF40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF49.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF49KeyReleased(evt);
@@ -560,6 +590,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 jTF49KeyTyped(evt);
             }
         });
+
+        jTF42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jTF50.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -649,6 +681,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTF34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF35.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF35KeyReleased(evt);
@@ -684,6 +718,10 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 jTF44KeyTyped(evt);
             }
         });
+
+        jTF45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jTF54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jTF53.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -752,37 +790,61 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTF55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF64.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF64KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF64KeyTyped(evt);
             }
         });
 
         jTF73.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF73KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF73KeyTyped(evt);
             }
         });
 
+        jTF56.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF65.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF65KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF65KeyTyped(evt);
             }
         });
 
         jTF74.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF74KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF74KeyTyped(evt);
             }
         });
 
+        jTF57.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF66.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF66KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF66KeyTyped(evt);
             }
         });
 
         jTF75.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF75KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF75KeyTyped(evt);
             }
@@ -837,32 +899,52 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTF58.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF67.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF67KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF67KeyTyped(evt);
             }
         });
 
         jTF76.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF76KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF76KeyTyped(evt);
             }
         });
 
+        jTF59.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF77.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF77KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF77KeyTyped(evt);
             }
         });
 
         jTF68.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF68KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF68KeyTyped(evt);
             }
         });
 
+        jTF60.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jTF69.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF69.setToolTipText("");
 
+        jTF78.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF78.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF78KeyTyped(evt);
@@ -920,53 +1002,68 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTF61.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF61ActionPerformed(evt);
-            }
-        });
         jTF61.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF61KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF61KeyTyped(evt);
             }
         });
 
+        jTF70.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF79.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF79KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF79KeyTyped(evt);
             }
         });
 
-        jTF62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF62ActionPerformed(evt);
-            }
-        });
         jTF62.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF62KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF62KeyTyped(evt);
             }
         });
 
         jTF80.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF80KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF80KeyTyped(evt);
             }
         });
 
+        jTF71.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         jTF63.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF63KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF63KeyTyped(evt);
             }
         });
 
         jTF72.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF72KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF72KeyTyped(evt);
             }
         });
 
         jTF81.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF81KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF81KeyTyped(evt);
             }
@@ -1053,7 +1150,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 1, Short.MAX_VALUE))
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -1082,10 +1179,10 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         lblError.setForeground(new java.awt.Color(255, 0, 0));
 
-        jButton1.setText("Ver Solución");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSolucion.setText("Ver Solución");
+        btnSolucion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSolucionActionPerformed(evt);
             }
         });
 
@@ -1104,7 +1201,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                             .addComponent(jlbError, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(btnSolucion)
                         .addGap(44, 44, 44)))
                 .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jblPanelLayout.createSequentialGroup()
@@ -1127,18 +1224,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                     .addComponent(btnVolver)
                     .addComponent(jlbError)
                     .addComponent(lblError)
-                    .addComponent(jButton1))
-                .addContainerGap(19, Short.MAX_VALUE))
+                    .addComponent(btnSolucion))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
-
-        btnVolver.getAccessibleContext().setAccessibleName("Volver a jugar");
 
         getContentPane().add(jblPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   
-    private void iniciar(){
+
+    private void iniciar() {
         tb.cargarDatos();
         jTF4.setText(String.valueOf(tb.tablero[0][3]));
         jTF4.setEditable(false);
@@ -1146,7 +1241,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jTF5.setEditable(false);
         jTF9.setText(String.valueOf(tb.tablero[0][8]));
         jTF9.setEditable(false);
-        
+
         jTF10.setText(String.valueOf(tb.tablero[1][0]));
         jTF10.setEditable(false);
         jTF11.setText(String.valueOf(tb.tablero[1][4]));
@@ -1155,7 +1250,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jTF14.setEditable(false);
         jTF15.setText(String.valueOf(tb.tablero[1][0]));
         jTF15.setEditable(false);
-        
+
         jTF19.setText(String.valueOf(tb.tablero[2][0]));
         jTF19.setEditable(false);
         jTF21.setText(String.valueOf(tb.tablero[2][2]));
@@ -1173,7 +1268,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jTF32.setEditable(false);
         jTF34.setText(String.valueOf(tb.tablero[3][6]));
         jTF34.setEditable(false);
-        
+
         jTF38.setText(String.valueOf(tb.tablero[4][1]));
         jTF38.setEditable(false);
         jTF39.setText(String.valueOf(tb.tablero[4][2]));
@@ -1184,13 +1279,12 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jTF42.setEditable(false);
         jTF45.setText(String.valueOf(tb.tablero[4][8]));
         jTF45.setEditable(false);
-        
+
         jTF46.setText(String.valueOf(tb.tablero[5][0]));
         jTF46.setEditable(false);
         jTF54.setText(String.valueOf(tb.tablero[5][8]));
         jTF54.setEditable(false);
-        
-        
+
         jTF55.setText(String.valueOf(tb.tablero[6][0]));
         jTF55.setEditable(false);
         jTF56.setText(String.valueOf(tb.tablero[6][1]));
@@ -1203,30 +1297,23 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jTF59.setEditable(false);
         jTF60.setText(String.valueOf(tb.tablero[6][5]));
         jTF60.setEditable(false);
-        
+
         jTF69.setText(String.valueOf(tb.tablero[7][5]));
         jTF69.setEditable(false);
         jTF70.setText(String.valueOf(tb.tablero[7][6]));
         jTF70.setEditable(false);
         jTF71.setText(String.valueOf(tb.tablero[7][7]));
         jTF71.setEditable(false);
-        
+
         jTF78.setText(String.valueOf(tb.tablero[8][5]));
         jTF78.setEditable(false);
-        
-    }
-    private void jTF61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF61ActionPerformed
 
-    private void jTF62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF62ActionPerformed
+    }
 
     private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
-       Sudoku4x4 tablero4x4 = new Sudoku4x4();
-       tablero4x4.setVisible(true);
-       this.setVisible(false);
+        Sudoku4x4 tablero4x4 = new Sudoku4x4();
+        tablero4x4.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnCambiarActionPerformed
 
     private void jTF1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyTyped
@@ -1237,7 +1324,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
         }
-        
+
     }//GEN-LAST:event_jTF1KeyTyped
 
     private void jTF2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyTyped
@@ -1247,7 +1334,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
         }
-        
+
 
     }//GEN-LAST:event_jTF2KeyTyped
 
@@ -1376,8 +1463,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
-        }        
-       
+        }
+
     }//GEN-LAST:event_jTF6KeyTyped
 
     private void jTF13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyTyped
@@ -1523,7 +1610,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
         }
-       
+
     }//GEN-LAST:event_jTF7KeyTyped
 
     private void jTF8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF8KeyTyped
@@ -1694,20 +1781,12 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF1.getText().isEmpty()) {
             jTF1.setText("");
         }
-
         if (!jTF2.getText().isEmpty()) {
             jTF2.setText("");
         }
         if (!jTF3.getText().isEmpty()) {
             jTF3.setText("");
         }
-        if (!jTF4.getText().isEmpty()) {
-            jTF4.setText("");
-        }
-        if (!jTF5.getText().isEmpty()) {
-            jTF5.setText("");
-        }
-
         if (!jTF6.getText().isEmpty()) {
             jTF6.setText("");
         }
@@ -1717,26 +1796,11 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF8.getText().isEmpty()) {
             jTF8.setText("");
         }
-        if (!jTF9.getText().isEmpty()) {
-            jTF9.setText("");
-        }
-        if (!jTF10.getText().isEmpty()) {
-            jTF10.setText("");
-        }
-        if (!jTF11.getText().isEmpty()) {
-            jTF11.setText("");
-        }
         if (!jTF12.getText().isEmpty()) {
             jTF12.setText("");
         }
         if (!jTF13.getText().isEmpty()) {
             jTF13.setText("");
-        }
-        if (!jTF14.getText().isEmpty()) {
-            jTF14.setText("");
-        }
-        if (!jTF15.getText().isEmpty()) {
-            jTF15.setText("");
         }
         if (!jTF16.getText().isEmpty()) {
             jTF16.setText("");
@@ -1747,14 +1811,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF18.getText().isEmpty()) {
             jTF18.setText("");
         }
-        if (!jTF19.getText().isEmpty()) {
-            jTF19.setText("");
-        }
         if (!jTF20.getText().isEmpty()) {
             jTF20.setText("");
-        }
-        if (!jTF21.getText().isEmpty()) {
-            jTF21.setText("");
         }
         if (!jTF22.getText().isEmpty()) {
             jTF22.setText("");
@@ -1765,20 +1823,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF24.getText().isEmpty()) {
             jTF24.setText("");
         }
-        if (!jTF25.getText().isEmpty()) {
-            jTF25.setText("");
-        }
         if (!jTF26.getText().isEmpty()) {
             jTF26.setText("");
-        }
-        if (!jTF27.getText().isEmpty()) {
-            jTF27.setText("");
-        }
-        if (!jTF28.getText().isEmpty()) {
-            jTF28.setText("");
-        }
-        if (!jTF29.getText().isEmpty()) {
-            jTF29.setText("");
         }
         if (!jTF30.getText().isEmpty()) {
             jTF30.setText("");
@@ -1786,14 +1832,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF31.getText().isEmpty()) {
             jTF31.setText("");
         }
-        if (!jTF32.getText().isEmpty()) {
-            jTF32.setText("");
-        }
         if (!jTF33.getText().isEmpty()) {
             jTF33.setText("");
-        }
-        if (!jTF34.getText().isEmpty()) {
-            jTF34.setText("");
         }
         if (!jTF35.getText().isEmpty()) {
             jTF35.setText("");
@@ -1804,32 +1844,14 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF37.getText().isEmpty()) {
             jTF37.setText("");
         }
-        if (!jTF38.getText().isEmpty()) {
-            jTF38.setText("");
-        }
-        if (!jTF39.getText().isEmpty()) {
-            jTF39.setText("");
-        }
-        if (!jTF40.getText().isEmpty()) {
-            jTF40.setText("");
-        }
         if (!jTF41.getText().isEmpty()) {
             jTF41.setText("");
-        }
-        if (!jTF42.getText().isEmpty()) {
-            jTF42.setText("");
         }
         if (!jTF43.getText().isEmpty()) {
             jTF43.setText("");
         }
         if (!jTF44.getText().isEmpty()) {
             jTF44.setText("");
-        }
-        if (!jTF45.getText().isEmpty()) {
-            jTF45.setText("");
-        }
-        if (!jTF46.getText().isEmpty()) {
-            jTF46.setText("");
         }
         if (!jTF47.getText().isEmpty()) {
             jTF47.setText("");
@@ -1851,27 +1873,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         }
         if (!jTF53.getText().isEmpty()) {
             jTF53.setText("");
-        }
-        if (!jTF54.getText().isEmpty()) {
-            jTF54.setText("");
-        }
-        if (!jTF55.getText().isEmpty()) {
-            jTF55.setText("");
-        }
-        if (!jTF56.getText().isEmpty()) {
-            jTF56.setText("");
-        }
-        if (!jTF57.getText().isEmpty()) {
-            jTF57.setText("");
-        }
-        if (!jTF58.getText().isEmpty()) {
-            jTF58.setText("");
-        }
-        if (!jTF59.getText().isEmpty()) {
-            jTF59.setText("");
-        }
-        if (!jTF60.getText().isEmpty()) {
-            jTF60.setText("");
         }
         if (!jTF61.getText().isEmpty()) {
             jTF61.setText("");
@@ -1897,15 +1898,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF68.getText().isEmpty()) {
             jTF68.setText("");
         }
-        if (!jTF69.getText().isEmpty()) {
-            jTF69.setText("");
-        }
-        if (!jTF70.getText().isEmpty()) {
-            jTF70.setText("");
-        }
-        if (!jTF71.getText().isEmpty()) {
-            jTF71.setText("");
-        }
         if (!jTF72.getText().isEmpty()) {
             jTF72.setText("");
         }
@@ -1923,9 +1915,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         }
         if (!jTF77.getText().isEmpty()) {
             jTF77.setText("");
-        }
-        if (!jTF78.getText().isEmpty()) {
-            jTF78.setText("");
         }
         if (!jTF79.getText().isEmpty()) {
             jTF79.setText("");
@@ -1948,6 +1937,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF13ActionPerformed
 
     private void jTF13KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF13.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF13.getText()), 1)) {
@@ -1978,7 +1968,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF13KeyReleased
 
     private void jTF16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF16KeyReleased
-        
+
         int con = 0;
         if (tb.comprobar_valor((jTF16.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF16.getText()), 1)) {
@@ -2009,6 +1999,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF16KeyReleased
 
     private void jTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF1.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF1.getText()), 0)) {
@@ -2039,6 +2030,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF1KeyReleased
 
     private void jTF2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF2.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF2.getText()), 0)) {
@@ -2100,6 +2092,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF3KeyReleased
 
     private void jTF6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF6KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF6.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF6.getText()), 0)) {
@@ -2130,6 +2123,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF6KeyReleased
 
     private void jTF7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF7KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF7.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF7.getText()), 0)) {
@@ -2160,6 +2154,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF7KeyReleased
 
     private void jTF8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF8KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF8.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF8.getText()), 0)) {
@@ -2190,6 +2185,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF8KeyReleased
 
     private void jTF12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF12.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF12.getText()), 1)) {
@@ -2220,6 +2216,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF12KeyReleased
 
     private void jTF20KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF20KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF20.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF20.getText()), 2)) {
@@ -2250,6 +2247,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF20KeyReleased
 
     private void jTF22KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF22KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF22.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF22.getText()), 2)) {
@@ -2280,6 +2278,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF22KeyReleased
 
     private void jTF23KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF23KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF23.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF23.getText()), 2)) {
@@ -2310,6 +2309,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF23KeyReleased
 
     private void jTF17KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF17KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF17.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF17.getText()), 1)) {
@@ -2340,6 +2340,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF17KeyReleased
 
     private void jTF18KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF18KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF18.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF18.getText()), 1)) {
@@ -2370,6 +2371,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF18KeyReleased
 
     private void jTF24KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF24KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF24.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF24.getText()), 2)) {
@@ -2400,6 +2402,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF24KeyReleased
 
     private void jTF26KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF26KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF26.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF26.getText()), 2)) {
@@ -2430,6 +2433,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF26KeyReleased
 
     private void jTF30KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF30KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF30.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF30.getText()), 3)) {
@@ -2460,6 +2464,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF30KeyReleased
 
     private void jTF31KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF31KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF31.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF31.getText()), 3)) {
@@ -2490,7 +2495,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF31KeyReleased
 
     private void jTF33KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF33KeyReleased
-                int con = 0;
+
+        int con = 0;
         if (tb.comprobar_valor((jTF33.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF33.getText()), 3)) {
                 lblError.setText("el numero " + jTF33.getText() + " ya esta en la fila");
@@ -2520,6 +2526,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF33KeyReleased
 
     private void jTF35KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF35KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF35.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF35.getText()), 3)) {
@@ -2550,6 +2557,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF35KeyReleased
 
     private void jTF36KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF36KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF36.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF36.getText()), 3)) {
@@ -2580,6 +2588,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF36KeyReleased
 
     private void jTF37KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF37KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF37.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF37.getText()), 4)) {
@@ -2610,7 +2619,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF37KeyReleased
 
     private void jTF41KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF41KeyReleased
-               int con = 0;
+
+        int con = 0;
         if (tb.comprobar_valor((jTF41.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF41.getText()), 4)) {
                 lblError.setText("el numero " + jTF41.getText() + " ya esta en la fila");
@@ -2640,7 +2650,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF41KeyReleased
 
     private void jTF43KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF43KeyReleased
-               int con = 0;
+
+        int con = 0;
         if (tb.comprobar_valor((jTF43.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF43.getText()), 4)) {
                 lblError.setText("el numero " + jTF43.getText() + " ya esta en la fila");
@@ -2670,7 +2681,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF43KeyReleased
 
     private void jTF44KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF44KeyReleased
-               int con = 0;
+
+        int con = 0;
         if (tb.comprobar_valor((jTF44.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF44.getText()), 4)) {
                 lblError.setText("el numero " + jTF44.getText() + " ya esta en la fila");
@@ -2700,6 +2712,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF44KeyReleased
 
     private void jTF47KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF47KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF47.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF47.getText()), 5)) {
@@ -2730,6 +2743,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF47KeyReleased
 
     private void jTF48KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF48KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF48.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF48.getText()), 5)) {
@@ -2760,7 +2774,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF48KeyReleased
 
     private void jTF49KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF49KeyReleased
-       int con = 0;
+
+        int con = 0;
         if (tb.comprobar_valor((jTF49.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF49.getText()), 5)) {
                 lblError.setText("el numero " + jTF49.getText() + " ya esta en la fila");
@@ -2790,6 +2805,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF49KeyReleased
 
     private void jTF50KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF50KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF50.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF50.getText()), 5)) {
@@ -2820,6 +2836,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF50KeyReleased
 
     private void jTF51KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF51KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF51.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF51.getText()), 5)) {
@@ -2850,6 +2867,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF51KeyReleased
 
     private void jTF52KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF52KeyReleased
+
         int con = 0;
         if (tb.comprobar_valor((jTF52.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF52.getText()), 5)) {
@@ -2880,7 +2898,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF52KeyReleased
 
     private void jTF53KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF53KeyReleased
-         int con = 0;
+
+        int con = 0;
         if (tb.comprobar_valor((jTF53.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF53.getText()), 5)) {
                 lblError.setText("el numero " + jTF53.getText() + " ya esta en la fila");
@@ -2909,12 +2928,540 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTF53KeyReleased
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolucionActionPerformed
+
+        int verSolucion = JOptionPane.showConfirmDialog(rootPane, "¿Seguro que quieres continuar?", "Advertencia", JOptionPane.YES_NO_OPTION);
 
 
-    
+    }//GEN-LAST:event_btnSolucionActionPerformed
+
+    private void jTF61KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF61KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF61.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF61.getText()), 6)) {
+                lblError.setText("el numero " + jTF61.getText() + " ya esta en la fila");
+                jTF61.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF61.getText()), 6)) {
+                    lblError.setText("el numero " + jTF61.getText() + " ya esta en la columna");
+                    jTF61.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF61.getText()), 6, 6)) {
+                        lblError.setText("el numero " + jTF61.getText() + " ya esta en la caja");
+                        jTF61.setText("");
+                    } else {
+                        tb.tablero[6][6] = Integer.valueOf(jTF61.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF61.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[6][6] = 0;
+        }
+    }//GEN-LAST:event_jTF61KeyReleased
+
+    private void jTF62KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF62KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF62.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF62.getText()), 6)) {
+                lblError.setText("el numero " + jTF62.getText() + " ya esta en la fila");
+                jTF62.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF62.getText()), 7)) {
+                    lblError.setText("el numero " + jTF62.getText() + " ya esta en la columna");
+                    jTF62.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF62.getText()), 6, 7)) {
+                        lblError.setText("el numero " + jTF62.getText() + " ya esta en la caja");
+                        jTF62.setText("");
+                    } else {
+                        tb.tablero[6][7] = Integer.valueOf(jTF62.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF62.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[6][7] = 0;
+        }
+    }//GEN-LAST:event_jTF62KeyReleased
+
+    private void jTF63KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF63KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF63.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF63.getText()), 6)) {
+                lblError.setText("el numero " + jTF63.getText() + " ya esta en la fila");
+                jTF63.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF63.getText()), 8)) {
+                    lblError.setText("el numero " + jTF63.getText() + " ya esta en la columna");
+                    jTF63.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF63.getText()), 6, 8)) {
+                        lblError.setText("el numero " + jTF63.getText() + " ya esta en la caja");
+                        jTF63.setText("");
+                    } else {
+                        tb.tablero[6][8] = Integer.valueOf(jTF63.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF63.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[6][8] = 0;
+        }
+    }//GEN-LAST:event_jTF63KeyReleased
+
+    private void jTF64KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF64KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF64.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF64.getText()), 7)) {
+                lblError.setText("el numero " + jTF64.getText() + " ya esta en la fila");
+                jTF64.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF64.getText()), 0)) {
+                    lblError.setText("el numero " + jTF64.getText() + " ya esta en la columna");
+                    jTF64.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF64.getText()), 7, 0)) {
+                        lblError.setText("el numero " + jTF64.getText() + " ya esta en la caja");
+                        jTF64.setText("");
+                    } else {
+                        tb.tablero[7][0] = Integer.valueOf(jTF64.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF64.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[7][0] = 0;
+        }
+    }//GEN-LAST:event_jTF64KeyReleased
+
+    private void jTF65KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF65KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF65.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF65.getText()), 7)) {
+                lblError.setText("el numero " + jTF65.getText() + " ya esta en la fila");
+                jTF65.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF65.getText()), 1)) {
+                    lblError.setText("el numero " + jTF65.getText() + " ya esta en la columna");
+                    jTF65.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF65.getText()), 7, 1)) {
+                        lblError.setText("el numero " + jTF65.getText() + " ya esta en la caja");
+                        jTF65.setText("");
+                    } else {
+                        tb.tablero[7][1] = Integer.valueOf(jTF65.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF65.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[7][1] = 0;
+        }
+    }//GEN-LAST:event_jTF65KeyReleased
+
+    private void jTF66KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF66KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF66.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF66.getText()), 7)) {
+                lblError.setText("el numero " + jTF66.getText() + " ya esta en la fila");
+                jTF66.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF66.getText()), 2)) {
+                    lblError.setText("el numero " + jTF66.getText() + " ya esta en la columna");
+                    jTF66.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF66.getText()), 7, 2)) {
+                        lblError.setText("el numero " + jTF66.getText() + " ya esta en la caja");
+                        jTF66.setText("");
+                    } else {
+                        tb.tablero[7][2] = Integer.valueOf(jTF66.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF66.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[7][2] = 0;
+        }
+    }//GEN-LAST:event_jTF66KeyReleased
+
+    private void jTF67KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF67KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF67.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF67.getText()), 7)) {
+                lblError.setText("el numero " + jTF67.getText() + " ya esta en la fila");
+                jTF67.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF67.getText()), 3)) {
+                    lblError.setText("el numero " + jTF67.getText() + " ya esta en la columna");
+                    jTF67.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF67.getText()), 7, 3)) {
+                        lblError.setText("el numero " + jTF67.getText() + " ya esta en la caja");
+                        jTF67.setText("");
+                    } else {
+                        tb.tablero[7][3] = Integer.valueOf(jTF67.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF67.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[7][3] = 0;
+        }
+    }//GEN-LAST:event_jTF67KeyReleased
+
+    private void jTF68KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF68KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF68.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF68.getText()), 7)) {
+                lblError.setText("el numero " + jTF68.getText() + " ya esta en la fila");
+                jTF68.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF68.getText()), 4)) {
+                    lblError.setText("el numero " + jTF68.getText() + " ya esta en la columna");
+                    jTF68.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF68.getText()), 7, 4)) {
+                        lblError.setText("el numero " + jTF68.getText() + " ya esta en la caja");
+                        jTF68.setText("");
+                    } else {
+                        tb.tablero[7][4] = Integer.valueOf(jTF68.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF68.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[7][4] = 0;
+        }
+    }//GEN-LAST:event_jTF68KeyReleased
+
+    private void jTF72KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF72KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF72.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF72.getText()), 7)) {
+                lblError.setText("el numero " + jTF72.getText() + " ya esta en la fila");
+                jTF72.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF72.getText()), 8)) {
+                    lblError.setText("el numero " + jTF72.getText() + " ya esta en la columna");
+                    jTF72.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF72.getText()), 7, 8)) {
+                        lblError.setText("el numero " + jTF72.getText() + " ya esta en la caja");
+                        jTF72.setText("");
+                    } else {
+                        tb.tablero[7][8] = Integer.valueOf(jTF72.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF72.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[7][8] = 0;
+        }
+    }//GEN-LAST:event_jTF72KeyReleased
+
+    private void jTF73KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF73KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF73.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF73.getText()), 8)) {
+                lblError.setText("el numero " + jTF73.getText() + " ya esta en la fila");
+                jTF73.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF73.getText()), 0)) {
+                    lblError.setText("el numero " + jTF73.getText() + " ya esta en la columna");
+                    jTF73.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF73.getText()), 8, 0)) {
+                        lblError.setText("el numero " + jTF73.getText() + " ya esta en la caja");
+                        jTF73.setText("");
+                    } else {
+                        tb.tablero[8][0] = Integer.valueOf(jTF73.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF73.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][0] = 0;
+        }
+    }//GEN-LAST:event_jTF73KeyReleased
+
+    private void jTF74KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF74KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF74.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF74.getText()), 8)) {
+                lblError.setText("el numero " + jTF74.getText() + " ya esta en la fila");
+                jTF74.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF74.getText()), 1)) {
+                    lblError.setText("el numero " + jTF74.getText() + " ya esta en la columna");
+                    jTF74.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF74.getText()), 8, 1)) {
+                        lblError.setText("el numero " + jTF74.getText() + " ya esta en la caja");
+                        jTF74.setText("");
+                    } else {
+                        tb.tablero[8][1] = Integer.valueOf(jTF74.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF74.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][1] = 0;
+        }
+    }//GEN-LAST:event_jTF74KeyReleased
+
+    private void jTF75KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF75KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF75.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF75.getText()), 8)) {
+                lblError.setText("el numero " + jTF75.getText() + " ya esta en la fila");
+                jTF75.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF75.getText()), 2)) {
+                    lblError.setText("el numero " + jTF75.getText() + " ya esta en la columna");
+                    jTF75.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF75.getText()), 8, 2)) {
+                        lblError.setText("el numero " + jTF75.getText() + " ya esta en la caja");
+                        jTF75.setText("");
+                    } else {
+                        tb.tablero[8][2] = Integer.valueOf(jTF75.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF75.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][2] = 0;
+        }
+    }//GEN-LAST:event_jTF75KeyReleased
+
+    private void jTF76KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF76KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF76.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF76.getText()), 8)) {
+                lblError.setText("el numero " + jTF76.getText() + " ya esta en la fila");
+                jTF76.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF76.getText()), 3)) {
+                    lblError.setText("el numero " + jTF76.getText() + " ya esta en la columna");
+                    jTF76.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF76.getText()), 8, 3)) {
+                        lblError.setText("el numero " + jTF76.getText() + " ya esta en la caja");
+                        jTF76.setText("");
+                    } else {
+                        tb.tablero[8][3] = Integer.valueOf(jTF76.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF76.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][3] = 0;
+        }
+    }//GEN-LAST:event_jTF76KeyReleased
+
+    private void jTF77KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF77KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF77.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF77.getText()), 8)) {
+                lblError.setText("el numero " + jTF77.getText() + " ya esta en la fila");
+                jTF77.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF77.getText()), 4)) {
+                    lblError.setText("el numero " + jTF77.getText() + " ya esta en la columna");
+                    jTF77.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF77.getText()), 8, 4)) {
+                        lblError.setText("el numero " + jTF77.getText() + " ya esta en la caja");
+                        jTF77.setText("");
+                    } else {
+                        tb.tablero[8][4] = Integer.valueOf(jTF77.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF77.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][4] = 0;
+        }
+    }//GEN-LAST:event_jTF77KeyReleased
+
+    private void jTF79KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF79KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF79.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF79.getText()), 8)) {
+                lblError.setText("el numero " + jTF79.getText() + " ya esta en la fila");
+                jTF79.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF79.getText()), 6)) {
+                    lblError.setText("el numero " + jTF79.getText() + " ya esta en la columna");
+                    jTF79.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF79.getText()), 8, 6)) {
+                        lblError.setText("el numero " + jTF79.getText() + " ya esta en la caja");
+                        jTF79.setText("");
+                    } else {
+                        tb.tablero[8][6] = Integer.valueOf(jTF79.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF79.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][6] = 0;
+        }
+    }//GEN-LAST:event_jTF79KeyReleased
+
+    private void jTF80KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF80KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF80.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF80.getText()), 8)) {
+                lblError.setText("el numero " + jTF80.getText() + " ya esta en la fila");
+                jTF80.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF80.getText()), 7)) {
+                    lblError.setText("el numero " + jTF80.getText() + " ya esta en la columna");
+                    jTF80.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF80.getText()), 8, 7)) {
+                        lblError.setText("el numero " + jTF80.getText() + " ya esta en la caja");
+                        jTF80.setText("");
+                    } else {
+                        tb.tablero[8][7] = Integer.valueOf(jTF80.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF80.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][7] = 0;
+        }
+    }//GEN-LAST:event_jTF80KeyReleased
+
+    private void jTF81KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF81KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF81.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF81.getText()), 8)) {
+                lblError.setText("el numero " + jTF81.getText() + " ya esta en la fila");
+                jTF81.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF81.getText()), 8)) {
+                    lblError.setText("el numero " + jTF81.getText() + " ya esta en la columna");
+                    jTF81.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF81.getText()), 8, 8)) {
+                        lblError.setText("el numero " + jTF81.getText() + " ya esta en la caja");
+                        jTF81.setText("");
+                    } else {
+                        tb.tablero[8][8] = Integer.valueOf(jTF81.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF81.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[8][8] = 0;
+        }
+    }//GEN-LAST:event_jTF81KeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -2952,8 +3499,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCambiar;
+    private javax.swing.JButton btnSolucion;
     private javax.swing.JButton btnVolver;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
