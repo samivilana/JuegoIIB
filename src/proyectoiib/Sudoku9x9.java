@@ -1,26 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package proyectoiib;
 
-/**
- *
- * @author Lenovo
- */
+import javax.swing.JOptionPane;
+
 public class Sudoku9x9 extends javax.swing.JFrame {
     
-    
+   Tablero9x9 tb =new Tablero9x9();
+          
     /**
      * Creates new form Sudoku9x9
      */
     public Sudoku9x9() {
         initComponents();
         this.setLocationRelativeTo(this);
-        
+        iniciar();
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,100 +26,104 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jblPanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        jTF1 = new javax.swing.JTextField();
+        jTF2 = new javax.swing.JTextField();
+        jTF3 = new javax.swing.JTextField();
+        jTF10 = new javax.swing.JTextField();
+        jTF11 = new javax.swing.JTextField();
+        jTF12 = new javax.swing.JTextField();
+        jTF19 = new javax.swing.JTextField();
+        jTF20 = new javax.swing.JTextField();
+        jTF21 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
+        jTF4 = new javax.swing.JTextField();
+        jTF13 = new javax.swing.JTextField();
+        jTF14 = new javax.swing.JTextField();
+        jTF15 = new javax.swing.JTextField();
+        jTF5 = new javax.swing.JTextField();
+        jTF6 = new javax.swing.JTextField();
+        jTF22 = new javax.swing.JTextField();
+        jTF23 = new javax.swing.JTextField();
+        jTF24 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
-        jTextField22 = new javax.swing.JTextField();
-        jTextField23 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
-        jTextField25 = new javax.swing.JTextField();
-        jTextField26 = new javax.swing.JTextField();
-        jTextField27 = new javax.swing.JTextField();
+        jTF7 = new javax.swing.JTextField();
+        jTF8 = new javax.swing.JTextField();
+        jTF16 = new javax.swing.JTextField();
+        jTF17 = new javax.swing.JTextField();
+        jTF9 = new javax.swing.JTextField();
+        jTF18 = new javax.swing.JTextField();
+        jTF25 = new javax.swing.JTextField();
+        jTF26 = new javax.swing.JTextField();
+        jTF27 = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField31 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
-        jTextField33 = new javax.swing.JTextField();
-        jTextField34 = new javax.swing.JTextField();
-        jTextField35 = new javax.swing.JTextField();
-        jTextField36 = new javax.swing.JTextField();
+        jTF28 = new javax.swing.JTextField();
+        jTF29 = new javax.swing.JTextField();
+        jTF30 = new javax.swing.JTextField();
+        jTF37 = new javax.swing.JTextField();
+        jTF38 = new javax.swing.JTextField();
+        jTF48 = new javax.swing.JTextField();
+        jTF46 = new javax.swing.JTextField();
+        jTF47 = new javax.swing.JTextField();
+        jTF39 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jTextField41 = new javax.swing.JTextField();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
-        jTextField44 = new javax.swing.JTextField();
-        jTextField45 = new javax.swing.JTextField();
+        jTF31 = new javax.swing.JTextField();
+        jTF32 = new javax.swing.JTextField();
+        jTF40 = new javax.swing.JTextField();
+        jTF49 = new javax.swing.JTextField();
+        jTF42 = new javax.swing.JTextField();
+        jTF50 = new javax.swing.JTextField();
+        jTF33 = new javax.swing.JTextField();
+        jTF41 = new javax.swing.JTextField();
+        jTF51 = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
-        jTextField46 = new javax.swing.JTextField();
-        jTextField47 = new javax.swing.JTextField();
-        jTextField48 = new javax.swing.JTextField();
-        jTextField49 = new javax.swing.JTextField();
-        jTextField50 = new javax.swing.JTextField();
-        jTextField51 = new javax.swing.JTextField();
-        jTextField52 = new javax.swing.JTextField();
-        jTextField53 = new javax.swing.JTextField();
-        jTextField54 = new javax.swing.JTextField();
+        jTF34 = new javax.swing.JTextField();
+        jTF35 = new javax.swing.JTextField();
+        jTF36 = new javax.swing.JTextField();
+        jTF43 = new javax.swing.JTextField();
+        jTF44 = new javax.swing.JTextField();
+        jTF45 = new javax.swing.JTextField();
+        jTF54 = new javax.swing.JTextField();
+        jTF53 = new javax.swing.JTextField();
+        jTF52 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
-        jTextField55 = new javax.swing.JTextField();
-        jTextField56 = new javax.swing.JTextField();
-        jTextField57 = new javax.swing.JTextField();
-        jTextField58 = new javax.swing.JTextField();
-        jTextField59 = new javax.swing.JTextField();
-        jTextField60 = new javax.swing.JTextField();
-        jTextField61 = new javax.swing.JTextField();
-        jTextField62 = new javax.swing.JTextField();
-        jTextField63 = new javax.swing.JTextField();
+        jTF55 = new javax.swing.JTextField();
+        jTF64 = new javax.swing.JTextField();
+        jTF73 = new javax.swing.JTextField();
+        jTF56 = new javax.swing.JTextField();
+        jTF65 = new javax.swing.JTextField();
+        jTF74 = new javax.swing.JTextField();
+        jTF57 = new javax.swing.JTextField();
+        jTF66 = new javax.swing.JTextField();
+        jTF75 = new javax.swing.JTextField();
         jPanel10 = new javax.swing.JPanel();
-        jTextField64 = new javax.swing.JTextField();
-        jTextField65 = new javax.swing.JTextField();
-        jTextField66 = new javax.swing.JTextField();
-        jTextField67 = new javax.swing.JTextField();
-        jTextField68 = new javax.swing.JTextField();
-        jTextField69 = new javax.swing.JTextField();
-        jTextField70 = new javax.swing.JTextField();
-        jTextField71 = new javax.swing.JTextField();
-        jTextField72 = new javax.swing.JTextField();
+        jTF58 = new javax.swing.JTextField();
+        jTF67 = new javax.swing.JTextField();
+        jTF76 = new javax.swing.JTextField();
+        jTF59 = new javax.swing.JTextField();
+        jTF77 = new javax.swing.JTextField();
+        jTF68 = new javax.swing.JTextField();
+        jTF60 = new javax.swing.JTextField();
+        jTF69 = new javax.swing.JTextField();
+        jTF78 = new javax.swing.JTextField();
         jPanel11 = new javax.swing.JPanel();
-        jTextField73 = new javax.swing.JTextField();
-        jTextField74 = new javax.swing.JTextField();
-        jTextField75 = new javax.swing.JTextField();
-        jTextField76 = new javax.swing.JTextField();
-        jTextField77 = new javax.swing.JTextField();
-        jTextField78 = new javax.swing.JTextField();
-        jTextField79 = new javax.swing.JTextField();
-        jTextField80 = new javax.swing.JTextField();
-        jTextField81 = new javax.swing.JTextField();
+        jTF61 = new javax.swing.JTextField();
+        jTF70 = new javax.swing.JTextField();
+        jTF79 = new javax.swing.JTextField();
+        jTF62 = new javax.swing.JTextField();
+        jTF80 = new javax.swing.JTextField();
+        jTF71 = new javax.swing.JTextField();
+        jTF63 = new javax.swing.JTextField();
+        jTF72 = new javax.swing.JTextField();
+        jTF81 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaResultado = new javax.swing.JTextArea();
+        btnCambiar = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
+        jlbError = new javax.swing.JLabel();
+        lblError = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -133,32 +133,77 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField1.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField1.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF1.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF1.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF1ActionPerformed(evt);
+            }
+        });
+        jTF1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF1KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF1KeyTyped(evt);
+            }
+        });
 
-        jTextField2.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField2.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF2.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF2.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF2KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF2KeyTyped(evt);
+            }
+        });
 
-        jTextField3.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField3.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF3.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF3.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF3KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF3KeyTyped(evt);
+            }
+        });
 
-        jTextField4.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField4.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF10.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF10.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        jTextField5.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField5.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF11.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF11.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        jTextField6.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField6.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF12.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF12.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF12KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF12KeyTyped(evt);
+            }
+        });
 
-        jTextField7.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField7.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF19.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF19.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        jTextField8.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField8.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF20.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF20.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF20.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF20KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF20KeyTyped(evt);
+            }
+        });
 
-        jTextField9.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTextField9.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF21.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF21.setPreferredSize(new java.awt.Dimension(32, 32));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -167,19 +212,19 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTF1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTF2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTF3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -187,25 +232,75 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTF19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTF21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTF13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF13ActionPerformed(evt);
+            }
+        });
+        jTF13.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF13KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF13KeyTyped(evt);
+            }
+        });
+
+        jTF6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF6KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF6KeyTyped(evt);
+            }
+        });
+
+        jTF22.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF22KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF22KeyTyped(evt);
+            }
+        });
+
+        jTF23.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF23KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF23KeyTyped(evt);
+            }
+        });
+
+        jTF24.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF24KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF24KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -214,23 +309,23 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jTextField11)
-                    .addComponent(jTextField10))
+                    .addComponent(jTF22, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(jTF13)
+                    .addComponent(jTF4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jTF23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                            .addComponent(jTF14, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTF15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -238,24 +333,78 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF22, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF23, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTF7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF7KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF7KeyTyped(evt);
+            }
+        });
+
+        jTF8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF8KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF8KeyTyped(evt);
+            }
+        });
+
+        jTF16.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF16KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF16KeyTyped(evt);
+            }
+        });
+
+        jTF17.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF17KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF17KeyTyped(evt);
+            }
+        });
+
+        jTF18.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF18KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF18KeyTyped(evt);
+            }
+        });
+
+        jTF26.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF26KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF26KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -265,23 +414,23 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF17, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF18, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF25, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF26, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF27, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -289,25 +438,60 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF17, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF18, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF25, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF26, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF27, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField33.setToolTipText("");
+        jTF30.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF30KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF30KeyTyped(evt);
+            }
+        });
+
+        jTF37.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF37KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF37KeyTyped(evt);
+            }
+        });
+
+        jTF48.setToolTipText("");
+        jTF48.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF48KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF48KeyTyped(evt);
+            }
+        });
+
+        jTF47.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF47KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF47KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -317,22 +501,22 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF37, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF38, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF28, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF29, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF46, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF47, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF39, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF30, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF48, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -340,24 +524,78 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF29, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF30, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF28, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF39, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF37, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF38, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF46, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF47, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF48, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTF31.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF31KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF31KeyTyped(evt);
+            }
+        });
+
+        jTF49.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF49KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF49KeyTyped(evt);
+            }
+        });
+
+        jTF50.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF50KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF50KeyTyped(evt);
+            }
+        });
+
+        jTF33.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF33KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF33KeyTyped(evt);
+            }
+        });
+
+        jTF41.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF41KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF41KeyTyped(evt);
+            }
+        });
+
+        jTF51.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF51KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF51KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -367,25 +605,25 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF31, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF32, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF33, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTF40, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTF41, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTF49, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTF50, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTF42, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF51, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -393,23 +631,77 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF31, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF32, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF33, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF42, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF41, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF40, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF51, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF50, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF49, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTF35.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF35KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF35KeyTyped(evt);
+            }
+        });
+
+        jTF36.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF36KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF36KeyTyped(evt);
+            }
+        });
+
+        jTF43.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF43KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF43KeyTyped(evt);
+            }
+        });
+
+        jTF44.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF44KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF44KeyTyped(evt);
+            }
+        });
+
+        jTF53.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF53KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF53KeyTyped(evt);
+            }
+        });
+
+        jTF52.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF52KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF52KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -420,21 +712,21 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTF34, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF43, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTF44, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF35, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF52, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF53, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF54, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF36, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF45, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
@@ -442,23 +734,59 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF34, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF35, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF36, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF44, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF45, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF43, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF54, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF53, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF52, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTF64.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF64KeyTyped(evt);
+            }
+        });
+
+        jTF73.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF73KeyTyped(evt);
+            }
+        });
+
+        jTF65.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF65KeyTyped(evt);
+            }
+        });
+
+        jTF74.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF74KeyTyped(evt);
+            }
+        });
+
+        jTF66.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF66KeyTyped(evt);
+            }
+        });
+
+        jTF75.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF75KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -467,23 +795,23 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField57, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField55, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField56, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF73, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF55, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF64, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF56, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF57, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF65, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField62, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF66, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jTextField60, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF74, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField63, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF75, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -491,25 +819,55 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField55, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF55, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF56, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF57, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField56, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField62, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF64, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF65, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF66, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField57, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField60, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField63, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF73, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF74, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF75, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField71.setToolTipText("");
+        jTF67.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF67KeyTyped(evt);
+            }
+        });
+
+        jTF76.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF76KeyTyped(evt);
+            }
+        });
+
+        jTF77.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF77KeyTyped(evt);
+            }
+        });
+
+        jTF68.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF68KeyTyped(evt);
+            }
+        });
+
+        jTF69.setToolTipText("");
+
+        jTF78.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF78KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -519,23 +877,23 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jTextField64, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF58, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField67, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF59, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField70, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF60, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF76, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField68, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF77, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField72, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF78, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jTextField65, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF67, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF68, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField71, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF69, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
@@ -543,34 +901,74 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField64, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField67, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField70, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF58, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF59, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF60, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField65, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField71, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF68, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF67, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF69, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField68, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField72, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF77, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF76, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF78, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField73.addActionListener(new java.awt.event.ActionListener() {
+        jTF61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField73ActionPerformed(evt);
+                jTF61ActionPerformed(evt);
+            }
+        });
+        jTF61.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF61KeyTyped(evt);
             }
         });
 
-        jTextField76.addActionListener(new java.awt.event.ActionListener() {
+        jTF79.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF79KeyTyped(evt);
+            }
+        });
+
+        jTF62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField76ActionPerformed(evt);
+                jTF62ActionPerformed(evt);
+            }
+        });
+        jTF62.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF62KeyTyped(evt);
+            }
+        });
+
+        jTF80.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF80KeyTyped(evt);
+            }
+        });
+
+        jTF63.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF63KeyTyped(evt);
+            }
+        });
+
+        jTF72.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF72KeyTyped(evt);
+            }
+        });
+
+        jTF81.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF81KeyTyped(evt);
             }
         });
 
@@ -582,23 +980,23 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jTextField73, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF61, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF62, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField79, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF63, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF70, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF71, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField80, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTF72, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF79, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField77, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTF80, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jTextField81, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTF81, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
@@ -606,19 +1004,19 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField73, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField79, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF61, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF62, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF63, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField74, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(jTextField78)
-                    .addComponent(jTextField80))
+                    .addComponent(jTF70, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(jTF71)
+                    .addComponent(jTF72))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField75, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                    .addComponent(jTextField77)
-                    .addComponent(jTextField81))
+                    .addComponent(jTF79, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(jTF80)
+                    .addComponent(jTF81))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -664,64 +1062,1859 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaResultado.setColumns(20);
+        txaResultado.setRows(5);
+        jScrollPane1.setViewportView(txaResultado);
 
-        jButton1.setText("Cambiar 4x4");
+        btnCambiar.setText("Cambiar 4x4");
+        btnCambiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCambiarActionPerformed(evt);
+            }
+        });
+
+        btnVolver.setLabel("Volver a jugar");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+
+        lblError.setForeground(new java.awt.Color(255, 0, 0));
+
+        jButton1.setText("Ver Solución");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
+        javax.swing.GroupLayout jblPanelLayout = new javax.swing.GroupLayout(jblPanel);
+        jblPanel.setLayout(jblPanelLayout);
+        jblPanelLayout.setHorizontalGroup(
+            jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jblPanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jblPanelLayout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(jButton1)))
+                        .addGap(34, 34, 34))
+                    .addGroup(jblPanelLayout.createSequentialGroup()
+                        .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbError, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(44, 44, 44)))
+                .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jblPanelLayout.createSequentialGroup()
+                        .addComponent(btnCambiar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnVolver))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+        jblPanelLayout.setVerticalGroup(
+            jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jblPanelLayout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(21, 21, 21))
+                .addGap(18, 18, 18)
+                .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCambiar)
+                    .addComponent(btnVolver)
+                    .addComponent(jlbError)
+                    .addComponent(lblError)
+                    .addComponent(jButton1))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        btnVolver.getAccessibleContext().setAccessibleName("Volver a jugar");
+
+        getContentPane().add(jblPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+   
+    private void iniciar(){
+        tb.cargarDatos();
+        jTF4.setText(String.valueOf(tb.tablero[0][3]));
+        jTF4.setEditable(false);
+        jTF5.setText(String.valueOf(tb.tablero[0][4]));
+        jTF5.setEditable(false);
+        jTF9.setText(String.valueOf(tb.tablero[0][8]));
+        jTF9.setEditable(false);
+        
+        jTF10.setText(String.valueOf(tb.tablero[1][0]));
+        jTF10.setEditable(false);
+        jTF11.setText(String.valueOf(tb.tablero[1][4]));
+        jTF11.setEditable(false);
+        jTF14.setText(String.valueOf(tb.tablero[1][5]));
+        jTF14.setEditable(false);
+        jTF15.setText(String.valueOf(tb.tablero[1][0]));
+        jTF15.setEditable(false);
+        
+        jTF19.setText(String.valueOf(tb.tablero[2][0]));
+        jTF19.setEditable(false);
+        jTF21.setText(String.valueOf(tb.tablero[2][2]));
+        jTF21.setEditable(false);
+        jTF25.setText(String.valueOf(tb.tablero[2][6]));
+        jTF25.setEditable(false);
+        jTF27.setText(String.valueOf(tb.tablero[2][8]));
+        jTF27.setEditable(false);
 
-    private void jTextField73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField73ActionPerformed
+        jTF28.setText(String.valueOf(tb.tablero[3][0]));
+        jTF28.setEditable(false);
+        jTF29.setText(String.valueOf(tb.tablero[3][1]));
+        jTF29.setEditable(false);
+        jTF32.setText(String.valueOf(tb.tablero[3][4]));
+        jTF32.setEditable(false);
+        jTF34.setText(String.valueOf(tb.tablero[3][6]));
+        jTF34.setEditable(false);
+        
+        jTF38.setText(String.valueOf(tb.tablero[4][1]));
+        jTF38.setEditable(false);
+        jTF39.setText(String.valueOf(tb.tablero[4][2]));
+        jTF39.setEditable(false);
+        jTF40.setText(String.valueOf(tb.tablero[4][3]));
+        jTF40.setEditable(false);
+        jTF42.setText(String.valueOf(tb.tablero[4][5]));
+        jTF42.setEditable(false);
+        jTF45.setText(String.valueOf(tb.tablero[4][8]));
+        jTF45.setEditable(false);
+        
+        jTF46.setText(String.valueOf(tb.tablero[5][0]));
+        jTF46.setEditable(false);
+        jTF54.setText(String.valueOf(tb.tablero[5][8]));
+        jTF54.setEditable(false);
+        
+        
+        jTF55.setText(String.valueOf(tb.tablero[6][0]));
+        jTF55.setEditable(false);
+        jTF56.setText(String.valueOf(tb.tablero[6][1]));
+        jTF56.setEditable(false);
+        jTF57.setText(String.valueOf(tb.tablero[6][2]));
+        jTF57.setEditable(false);
+        jTF58.setText(String.valueOf(tb.tablero[6][3]));
+        jTF58.setEditable(false);
+        jTF59.setText(String.valueOf(tb.tablero[6][4]));
+        jTF59.setEditable(false);
+        jTF60.setText(String.valueOf(tb.tablero[6][5]));
+        jTF60.setEditable(false);
+        
+        jTF69.setText(String.valueOf(tb.tablero[7][5]));
+        jTF69.setEditable(false);
+        jTF70.setText(String.valueOf(tb.tablero[7][6]));
+        jTF70.setEditable(false);
+        jTF71.setText(String.valueOf(tb.tablero[7][7]));
+        jTF71.setEditable(false);
+        
+        jTF78.setText(String.valueOf(tb.tablero[8][5]));
+        jTF78.setEditable(false);
+        
+    }
+    private void jTF61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF61ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField73ActionPerformed
+    }//GEN-LAST:event_jTF61ActionPerformed
 
-    private void jTextField76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField76ActionPerformed
+    private void jTF62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF62ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField76ActionPerformed
+    }//GEN-LAST:event_jTF62ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
        Sudoku4x4 tablero4x4 = new Sudoku4x4();
        tablero4x4.setVisible(true);
        this.setVisible(false);
+    }//GEN-LAST:event_btnCambiarActionPerformed
+
+    private void jTF1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyTyped
+
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_jTF1KeyTyped
+
+    private void jTF2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+        
+
+    }//GEN-LAST:event_jTF2KeyTyped
+
+    private void jTF3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF3KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_jTF3KeyTyped
+
+    private void jTF12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_jTF12KeyTyped
+
+    private void jTF20KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF20KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF20KeyTyped
+
+    private void jTF30KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF30KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF30KeyTyped
+
+    private void jTF37KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF37KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF37KeyTyped
+
+    private void jTF47KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF47KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF47KeyTyped
+
+    private void jTF48KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF48KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF48KeyTyped
+
+    private void jTF64KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF64KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF64KeyTyped
+
+    private void jTF65KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF65KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF65KeyTyped
+
+    private void jTF66KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF66KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF66KeyTyped
+
+    private void jTF73KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF73KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF73KeyTyped
+
+    private void jTF74KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF74KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF74KeyTyped
+
+    private void jTF75KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF75KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF75KeyTyped
+
+    private void jTF6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF6KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }        
+       
+    }//GEN-LAST:event_jTF6KeyTyped
+
+    private void jTF13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_jTF13KeyTyped
+
+    private void jTF22KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF22KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF22KeyTyped
+
+    private void jTF23KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF23KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF23KeyTyped
+
+    private void jTF24KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF24KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF24KeyTyped
+
+    private void jTF31KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF31KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF31KeyTyped
+
+    private void jTF33KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF33KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF33KeyTyped
+
+    private void jTF41KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF41KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF41KeyTyped
+
+    private void jTF49KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF49KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF49KeyTyped
+
+    private void jTF50KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF50KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF50KeyTyped
+
+    private void jTF51KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF51KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF51KeyTyped
+
+    private void jTF67KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF67KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF67KeyTyped
+
+    private void jTF68KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF68KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF68KeyTyped
+
+    private void jTF76KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF76KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF76KeyTyped
+
+    private void jTF77KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF77KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF77KeyTyped
+
+    private void jTF78KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF78KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF78KeyTyped
+
+    private void jTF7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF7KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+       
+    }//GEN-LAST:event_jTF7KeyTyped
+
+    private void jTF8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF8KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_jTF8KeyTyped
+
+    private void jTF16KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF16KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF16KeyTyped
+
+    private void jTF17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF17KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF17KeyTyped
+
+    private void jTF18KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF18KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF18KeyTyped
+
+    private void jTF26KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF26KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF26KeyTyped
+
+    private void jTF35KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF35KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF35KeyTyped
+
+    private void jTF36KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF36KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF36KeyTyped
+
+    private void jTF43KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF43KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF43KeyTyped
+
+    private void jTF44KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF44KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF44KeyTyped
+
+    private void jTF52KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF52KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF52KeyTyped
+
+    private void jTF53KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF53KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF53KeyTyped
+
+    private void jTF61KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF61KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF61KeyTyped
+
+    private void jTF62KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF62KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF62KeyTyped
+
+    private void jTF63KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF63KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF63KeyTyped
+
+    private void jTF72KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF72KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF72KeyTyped
+
+    private void jTF79KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF79KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF79KeyTyped
+
+    private void jTF80KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF80KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF80KeyTyped
+
+    private void jTF81KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF81KeyTyped
+        char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF81KeyTyped
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+
+        if (!jTF1.getText().isEmpty()) {
+            jTF1.setText("");
+        }
+
+        if (!jTF2.getText().isEmpty()) {
+            jTF2.setText("");
+        }
+        if (!jTF3.getText().isEmpty()) {
+            jTF3.setText("");
+        }
+        if (!jTF4.getText().isEmpty()) {
+            jTF4.setText("");
+        }
+        if (!jTF5.getText().isEmpty()) {
+            jTF5.setText("");
+        }
+
+        if (!jTF6.getText().isEmpty()) {
+            jTF6.setText("");
+        }
+        if (!jTF7.getText().isEmpty()) {
+            jTF7.setText("");
+        }
+        if (!jTF8.getText().isEmpty()) {
+            jTF8.setText("");
+        }
+        if (!jTF9.getText().isEmpty()) {
+            jTF9.setText("");
+        }
+        if (!jTF10.getText().isEmpty()) {
+            jTF10.setText("");
+        }
+        if (!jTF11.getText().isEmpty()) {
+            jTF11.setText("");
+        }
+        if (!jTF12.getText().isEmpty()) {
+            jTF12.setText("");
+        }
+        if (!jTF13.getText().isEmpty()) {
+            jTF13.setText("");
+        }
+        if (!jTF14.getText().isEmpty()) {
+            jTF14.setText("");
+        }
+        if (!jTF15.getText().isEmpty()) {
+            jTF15.setText("");
+        }
+        if (!jTF16.getText().isEmpty()) {
+            jTF16.setText("");
+        }
+        if (!jTF17.getText().isEmpty()) {
+            jTF17.setText("");
+        }
+        if (!jTF18.getText().isEmpty()) {
+            jTF18.setText("");
+        }
+        if (!jTF19.getText().isEmpty()) {
+            jTF19.setText("");
+        }
+        if (!jTF20.getText().isEmpty()) {
+            jTF20.setText("");
+        }
+        if (!jTF21.getText().isEmpty()) {
+            jTF21.setText("");
+        }
+        if (!jTF22.getText().isEmpty()) {
+            jTF22.setText("");
+        }
+        if (!jTF23.getText().isEmpty()) {
+            jTF23.setText("");
+        }
+        if (!jTF24.getText().isEmpty()) {
+            jTF24.setText("");
+        }
+        if (!jTF25.getText().isEmpty()) {
+            jTF25.setText("");
+        }
+        if (!jTF26.getText().isEmpty()) {
+            jTF26.setText("");
+        }
+        if (!jTF27.getText().isEmpty()) {
+            jTF27.setText("");
+        }
+        if (!jTF28.getText().isEmpty()) {
+            jTF28.setText("");
+        }
+        if (!jTF29.getText().isEmpty()) {
+            jTF29.setText("");
+        }
+        if (!jTF30.getText().isEmpty()) {
+            jTF30.setText("");
+        }
+        if (!jTF31.getText().isEmpty()) {
+            jTF31.setText("");
+        }
+        if (!jTF32.getText().isEmpty()) {
+            jTF32.setText("");
+        }
+        if (!jTF33.getText().isEmpty()) {
+            jTF33.setText("");
+        }
+        if (!jTF34.getText().isEmpty()) {
+            jTF34.setText("");
+        }
+        if (!jTF35.getText().isEmpty()) {
+            jTF35.setText("");
+        }
+        if (!jTF36.getText().isEmpty()) {
+            jTF36.setText("");
+        }
+        if (!jTF37.getText().isEmpty()) {
+            jTF37.setText("");
+        }
+        if (!jTF38.getText().isEmpty()) {
+            jTF38.setText("");
+        }
+        if (!jTF39.getText().isEmpty()) {
+            jTF39.setText("");
+        }
+        if (!jTF40.getText().isEmpty()) {
+            jTF40.setText("");
+        }
+        if (!jTF41.getText().isEmpty()) {
+            jTF41.setText("");
+        }
+        if (!jTF42.getText().isEmpty()) {
+            jTF42.setText("");
+        }
+        if (!jTF43.getText().isEmpty()) {
+            jTF43.setText("");
+        }
+        if (!jTF44.getText().isEmpty()) {
+            jTF44.setText("");
+        }
+        if (!jTF45.getText().isEmpty()) {
+            jTF45.setText("");
+        }
+        if (!jTF46.getText().isEmpty()) {
+            jTF46.setText("");
+        }
+        if (!jTF47.getText().isEmpty()) {
+            jTF47.setText("");
+        }
+        if (!jTF48.getText().isEmpty()) {
+            jTF48.setText("");
+        }
+        if (!jTF49.getText().isEmpty()) {
+            jTF49.setText("");
+        }
+        if (!jTF50.getText().isEmpty()) {
+            jTF50.setText("");
+        }
+        if (!jTF51.getText().isEmpty()) {
+            jTF51.setText("");
+        }
+        if (!jTF52.getText().isEmpty()) {
+            jTF52.setText("");
+        }
+        if (!jTF53.getText().isEmpty()) {
+            jTF53.setText("");
+        }
+        if (!jTF54.getText().isEmpty()) {
+            jTF54.setText("");
+        }
+        if (!jTF55.getText().isEmpty()) {
+            jTF55.setText("");
+        }
+        if (!jTF56.getText().isEmpty()) {
+            jTF56.setText("");
+        }
+        if (!jTF57.getText().isEmpty()) {
+            jTF57.setText("");
+        }
+        if (!jTF58.getText().isEmpty()) {
+            jTF58.setText("");
+        }
+        if (!jTF59.getText().isEmpty()) {
+            jTF59.setText("");
+        }
+        if (!jTF60.getText().isEmpty()) {
+            jTF60.setText("");
+        }
+        if (!jTF61.getText().isEmpty()) {
+            jTF61.setText("");
+        }
+        if (!jTF62.getText().isEmpty()) {
+            jTF62.setText("");
+        }
+        if (!jTF63.getText().isEmpty()) {
+            jTF63.setText("");
+        }
+        if (!jTF64.getText().isEmpty()) {
+            jTF64.setText("");
+        }
+        if (!jTF65.getText().isEmpty()) {
+            jTF65.setText("");
+        }
+        if (!jTF66.getText().isEmpty()) {
+            jTF66.setText("");
+        }
+        if (!jTF67.getText().isEmpty()) {
+            jTF67.setText("");
+        }
+        if (!jTF68.getText().isEmpty()) {
+            jTF68.setText("");
+        }
+        if (!jTF69.getText().isEmpty()) {
+            jTF69.setText("");
+        }
+        if (!jTF70.getText().isEmpty()) {
+            jTF70.setText("");
+        }
+        if (!jTF71.getText().isEmpty()) {
+            jTF71.setText("");
+        }
+        if (!jTF72.getText().isEmpty()) {
+            jTF72.setText("");
+        }
+        if (!jTF73.getText().isEmpty()) {
+            jTF73.setText("");
+        }
+        if (!jTF74.getText().isEmpty()) {
+            jTF74.setText("");
+        }
+        if (!jTF75.getText().isEmpty()) {
+            jTF75.setText("");
+        }
+        if (!jTF76.getText().isEmpty()) {
+            jTF76.setText("");
+        }
+        if (!jTF77.getText().isEmpty()) {
+            jTF77.setText("");
+        }
+        if (!jTF78.getText().isEmpty()) {
+            jTF78.setText("");
+        }
+        if (!jTF79.getText().isEmpty()) {
+            jTF79.setText("");
+        }
+        if (!jTF80.getText().isEmpty()) {
+            jTF80.setText("");
+        }
+        if (!jTF81.getText().isEmpty()) {
+            jTF81.setText("");
+        }
+
+    }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void jTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF1ActionPerformed
+
+    private void jTF13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF13ActionPerformed
+
+    private void jTF13KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF13.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF13.getText()), 1)) {
+                lblError.setText("el numero " + jTF13.getText() + " ya esta en la fila");
+                jTF13.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF13.getText()), 3)) {
+                    lblError.setText("el numero " + jTF13.getText() + " ya esta en la columna");
+                    jTF13.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF13.getText()), 1, 3)) {
+                        lblError.setText("el numero " + jTF13.getText() + " ya esta en la caja");
+                        jTF13.setText("");
+                    } else {
+                        tb.tablero[1][3] = Integer.valueOf(jTF13.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF13.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][3] = 0;
+        }
+    }//GEN-LAST:event_jTF13KeyReleased
+
+    private void jTF16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF16KeyReleased
+        
+        int con = 0;
+        if (tb.comprobar_valor((jTF16.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF16.getText()), 1)) {
+                lblError.setText("el numero " + jTF16.getText() + " ya esta en la fila");
+                jTF16.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF16.getText()), 6)) {
+                    lblError.setText("el numero " + jTF16.getText() + " ya esta en la columna");
+                    jTF16.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF16.getText()), 1, 6)) {
+                        lblError.setText("el numero " + jTF16.getText() + " ya esta en la caja");
+                        jTF16.setText("");
+                    } else {
+                        tb.tablero[1][6] = Integer.valueOf(jTF16.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF16.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][6] = 0;
+        }
+    }//GEN-LAST:event_jTF16KeyReleased
+
+    private void jTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF1.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF1.getText()), 0)) {
+                lblError.setText("el numero " + jTF1.getText() + " ya esta en la fila");
+                jTF1.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF1.getText()), 1)) {
+                    lblError.setText("el numero " + jTF1.getText() + " ya esta en la columna");
+                    jTF1.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF1.getText()), 0, 1)) {
+                        lblError.setText("el numero " + jTF1.getText() + " ya esta en la caja");
+                        jTF1.setText("");
+                    } else {
+                        tb.tablero[0][1] = Integer.valueOf(jTF1.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF1.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][1] = 0;
+        }
+    }//GEN-LAST:event_jTF1KeyReleased
+
+    private void jTF2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF2.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF2.getText()), 0)) {
+                lblError.setText("el numero " + jTF2.getText() + " ya esta en la fila");
+                jTF2.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF2.getText()), 2)) {
+                    lblError.setText("el numero " + jTF2.getText() + " ya esta en la columna");
+                    jTF2.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF2.getText()), 0, 2)) {
+                        lblError.setText("el numero " + jTF2.getText() + " ya esta en la caja");
+                        jTF2.setText("");
+                    } else {
+                        tb.tablero[0][2] = Integer.valueOf(jTF2.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF2.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][2] = 0;
+        }
+    }//GEN-LAST:event_jTF2KeyReleased
+
+    private void jTF3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF3KeyReleased
+
+        int con = 0;
+        if (tb.comprobar_valor((jTF3.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF3.getText()), 0)) {
+                lblError.setText("el numero " + jTF3.getText() + " ya esta en la fila");
+                jTF3.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF3.getText()), 3)) {
+                    lblError.setText("el numero " + jTF3.getText() + " ya esta en la columna");
+                    jTF3.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF3.getText()), 0, 3)) {
+                        lblError.setText("el numero " + jTF3.getText() + " ya esta en la caja");
+                        jTF3.setText("");
+                    } else {
+                        tb.tablero[0][3] = Integer.valueOf(jTF3.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF3.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][3] = 0;
+        }
+    }//GEN-LAST:event_jTF3KeyReleased
+
+    private void jTF6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF6KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF6.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF6.getText()), 0)) {
+                lblError.setText("el numero " + jTF6.getText() + " ya esta en la fila");
+                jTF6.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF6.getText()), 6)) {
+                    lblError.setText("el numero " + jTF6.getText() + " ya esta en la columna");
+                    jTF6.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF6.getText()), 0, 6)) {
+                        lblError.setText("el numero " + jTF6.getText() + " ya esta en la caja");
+                        jTF6.setText("");
+                    } else {
+                        tb.tablero[0][6] = Integer.valueOf(jTF6.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF6.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][6] = 0;
+        }
+    }//GEN-LAST:event_jTF6KeyReleased
+
+    private void jTF7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF7KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF7.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF7.getText()), 0)) {
+                lblError.setText("el numero " + jTF7.getText() + " ya esta en la fila");
+                jTF7.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF7.getText()), 7)) {
+                    lblError.setText("el numero " + jTF7.getText() + " ya esta en la columna");
+                    jTF7.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF7.getText()), 0, 7)) {
+                        lblError.setText("el numero " + jTF7.getText() + " ya esta en la caja");
+                        jTF7.setText("");
+                    } else {
+                        tb.tablero[0][7] = Integer.valueOf(jTF7.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF7.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][7] = 0;
+        }
+    }//GEN-LAST:event_jTF7KeyReleased
+
+    private void jTF8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF8KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF8.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF8.getText()), 0)) {
+                lblError.setText("el numero " + jTF8.getText() + " ya esta en la fila");
+                jTF8.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF8.getText()), 8)) {
+                    lblError.setText("el numero " + jTF8.getText() + " ya esta en la columna");
+                    jTF8.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF8.getText()), 0, 8)) {
+                        lblError.setText("el numero " + jTF8.getText() + " ya esta en la caja");
+                        jTF8.setText("");
+                    } else {
+                        tb.tablero[0][8] = Integer.valueOf(jTF8.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF8.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][8] = 0;
+        }
+    }//GEN-LAST:event_jTF8KeyReleased
+
+    private void jTF12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF12.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF12.getText()), 1)) {
+                lblError.setText("el numero " + jTF12.getText() + " ya esta en la fila");
+                jTF12.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF12.getText()), 2)) {
+                    lblError.setText("el numero " + jTF12.getText() + " ya esta en la columna");
+                    jTF12.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF12.getText()), 1, 2)) {
+                        lblError.setText("el numero " + jTF12.getText() + " ya esta en la caja");
+                        jTF12.setText("");
+                    } else {
+                        tb.tablero[1][2] = Integer.valueOf(jTF12.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF12.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][2] = 0;
+        }
+    }//GEN-LAST:event_jTF12KeyReleased
+
+    private void jTF20KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF20KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF20.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF20.getText()), 2)) {
+                lblError.setText("el numero " + jTF20.getText() + " ya esta en la fila");
+                jTF20.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF20.getText()), 1)) {
+                    lblError.setText("el numero " + jTF20.getText() + " ya esta en la columna");
+                    jTF20.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF20.getText()), 2, 1)) {
+                        lblError.setText("el numero " + jTF20.getText() + " ya esta en la caja");
+                        jTF20.setText("");
+                    } else {
+                        tb.tablero[2][1] = Integer.valueOf(jTF20.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF20.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[2][1] = 0;
+        }
+    }//GEN-LAST:event_jTF20KeyReleased
+
+    private void jTF22KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF22KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF22.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF22.getText()), 2)) {
+                lblError.setText("el numero " + jTF22.getText() + " ya esta en la fila");
+                jTF22.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF22.getText()), 3)) {
+                    lblError.setText("el numero " + jTF22.getText() + " ya esta en la columna");
+                    jTF22.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF22.getText()), 2, 3)) {
+                        lblError.setText("el numero " + jTF22.getText() + " ya esta en la caja");
+                        jTF22.setText("");
+                    } else {
+                        tb.tablero[2][3] = Integer.valueOf(jTF22.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF22.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[2][3] = 0;
+        }
+    }//GEN-LAST:event_jTF22KeyReleased
+
+    private void jTF23KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF23KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF23.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF23.getText()), 2)) {
+                lblError.setText("el numero " + jTF23.getText() + " ya esta en la fila");
+                jTF23.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF23.getText()), 4)) {
+                    lblError.setText("el numero " + jTF23.getText() + " ya esta en la columna");
+                    jTF23.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF23.getText()), 2, 4)) {
+                        lblError.setText("el numero " + jTF23.getText() + " ya esta en la caja");
+                        jTF23.setText("");
+                    } else {
+                        tb.tablero[2][4] = Integer.valueOf(jTF23.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF23.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[2][4] = 0;
+        }
+    }//GEN-LAST:event_jTF23KeyReleased
+
+    private void jTF17KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF17KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF17.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF17.getText()), 1)) {
+                lblError.setText("el numero " + jTF17.getText() + " ya esta en la fila");
+                jTF17.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF17.getText()), 7)) {
+                    lblError.setText("el numero " + jTF17.getText() + " ya esta en la columna");
+                    jTF17.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF17.getText()), 1, 7)) {
+                        lblError.setText("el numero " + jTF17.getText() + " ya esta en la caja");
+                        jTF17.setText("");
+                    } else {
+                        tb.tablero[1][7] = Integer.valueOf(jTF17.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF17.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][7] = 0;
+        }
+    }//GEN-LAST:event_jTF17KeyReleased
+
+    private void jTF18KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF18KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF18.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF18.getText()), 1)) {
+                lblError.setText("el numero " + jTF18.getText() + " ya esta en la fila");
+                jTF18.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF18.getText()), 8)) {
+                    lblError.setText("el numero " + jTF18.getText() + " ya esta en la columna");
+                    jTF18.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF18.getText()), 1, 8)) {
+                        lblError.setText("el numero " + jTF18.getText() + " ya esta en la caja");
+                        jTF18.setText("");
+                    } else {
+                        tb.tablero[1][8] = Integer.valueOf(jTF18.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF18.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][8] = 0;
+        }
+    }//GEN-LAST:event_jTF18KeyReleased
+
+    private void jTF24KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF24KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF24.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF24.getText()), 2)) {
+                lblError.setText("el numero " + jTF24.getText() + " ya esta en la fila");
+                jTF24.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF24.getText()), 5)) {
+                    lblError.setText("el numero " + jTF24.getText() + " ya esta en la columna");
+                    jTF24.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF24.getText()), 2, 5)) {
+                        lblError.setText("el numero " + jTF24.getText() + " ya esta en la caja");
+                        jTF24.setText("");
+                    } else {
+                        tb.tablero[2][5] = Integer.valueOf(jTF24.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF24.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[2][5] = 0;
+        }
+    }//GEN-LAST:event_jTF24KeyReleased
+
+    private void jTF26KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF26KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF26.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF26.getText()), 2)) {
+                lblError.setText("el numero " + jTF26.getText() + " ya esta en la fila");
+                jTF26.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF26.getText()), 7)) {
+                    lblError.setText("el numero " + jTF26.getText() + " ya esta en la columna");
+                    jTF26.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF26.getText()), 2, 7)) {
+                        lblError.setText("el numero " + jTF26.getText() + " ya esta en la caja");
+                        jTF26.setText("");
+                    } else {
+                        tb.tablero[2][7] = Integer.valueOf(jTF26.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF26.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[2][7] = 0;
+        }
+    }//GEN-LAST:event_jTF26KeyReleased
+
+    private void jTF30KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF30KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF30.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF30.getText()), 3)) {
+                lblError.setText("el numero " + jTF30.getText() + " ya esta en la fila");
+                jTF30.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF30.getText()), 2)) {
+                    lblError.setText("el numero " + jTF30.getText() + " ya esta en la columna");
+                    jTF30.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF30.getText()), 3, 2)) {
+                        lblError.setText("el numero " + jTF30.getText() + " ya esta en la caja");
+                        jTF30.setText("");
+                    } else {
+                        tb.tablero[3][2] = Integer.valueOf(jTF30.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF30.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][2] = 0;
+        }
+    }//GEN-LAST:event_jTF30KeyReleased
+
+    private void jTF31KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF31KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF31.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF31.getText()), 3)) {
+                lblError.setText("el numero " + jTF31.getText() + " ya esta en la fila");
+                jTF31.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF31.getText()), 3)) {
+                    lblError.setText("el numero " + jTF31.getText() + " ya esta en la columna");
+                    jTF31.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF31.getText()), 3, 3)) {
+                        lblError.setText("el numero " + jTF31.getText() + " ya esta en la caja");
+                        jTF31.setText("");
+                    } else {
+                        tb.tablero[3][3] = Integer.valueOf(jTF31.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF31.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][3] = 0;
+        }
+    }//GEN-LAST:event_jTF31KeyReleased
+
+    private void jTF33KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF33KeyReleased
+                int con = 0;
+        if (tb.comprobar_valor((jTF33.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF33.getText()), 3)) {
+                lblError.setText("el numero " + jTF33.getText() + " ya esta en la fila");
+                jTF33.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF33.getText()), 5)) {
+                    lblError.setText("el numero " + jTF33.getText() + " ya esta en la columna");
+                    jTF33.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF33.getText()), 3, 5)) {
+                        lblError.setText("el numero " + jTF33.getText() + " ya esta en la caja");
+                        jTF33.setText("");
+                    } else {
+                        tb.tablero[3][5] = Integer.valueOf(jTF33.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF33.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][5] = 0;
+        }
+    }//GEN-LAST:event_jTF33KeyReleased
+
+    private void jTF35KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF35KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF35.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF35.getText()), 3)) {
+                lblError.setText("el numero " + jTF35.getText() + " ya esta en la fila");
+                jTF35.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF35.getText()), 7)) {
+                    lblError.setText("el numero " + jTF35.getText() + " ya esta en la columna");
+                    jTF35.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF35.getText()), 3, 7)) {
+                        lblError.setText("el numero " + jTF35.getText() + " ya esta en la caja");
+                        jTF35.setText("");
+                    } else {
+                        tb.tablero[3][7] = Integer.valueOf(jTF35.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF35.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][7] = 0;
+        }
+    }//GEN-LAST:event_jTF35KeyReleased
+
+    private void jTF36KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF36KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF36.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF36.getText()), 3)) {
+                lblError.setText("el numero " + jTF36.getText() + " ya esta en la fila");
+                jTF36.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF36.getText()), 8)) {
+                    lblError.setText("el numero " + jTF36.getText() + " ya esta en la columna");
+                    jTF36.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF36.getText()), 3, 8)) {
+                        lblError.setText("el numero " + jTF36.getText() + " ya esta en la caja");
+                        jTF36.setText("");
+                    } else {
+                        tb.tablero[3][8] = Integer.valueOf(jTF36.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF36.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][8] = 0;
+        }
+    }//GEN-LAST:event_jTF36KeyReleased
+
+    private void jTF37KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF37KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF37.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF37.getText()), 4)) {
+                lblError.setText("el numero " + jTF37.getText() + " ya esta en la fila");
+                jTF37.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF37.getText()), 0)) {
+                    lblError.setText("el numero " + jTF37.getText() + " ya esta en la columna");
+                    jTF37.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF37.getText()), 4, 0)) {
+                        lblError.setText("el numero " + jTF37.getText() + " ya esta en la caja");
+                        jTF37.setText("");
+                    } else {
+                        tb.tablero[4][0] = Integer.valueOf(jTF37.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF37.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[4][0] = 0;
+        }
+    }//GEN-LAST:event_jTF37KeyReleased
+
+    private void jTF41KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF41KeyReleased
+               int con = 0;
+        if (tb.comprobar_valor((jTF41.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF41.getText()), 4)) {
+                lblError.setText("el numero " + jTF41.getText() + " ya esta en la fila");
+                jTF41.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF41.getText()), 4)) {
+                    lblError.setText("el numero " + jTF41.getText() + " ya esta en la columna");
+                    jTF41.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF41.getText()), 4, 4)) {
+                        lblError.setText("el numero " + jTF41.getText() + " ya esta en la caja");
+                        jTF41.setText("");
+                    } else {
+                        tb.tablero[4][4] = Integer.valueOf(jTF41.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF41.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[4][4] = 0;
+        }
+    }//GEN-LAST:event_jTF41KeyReleased
+
+    private void jTF43KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF43KeyReleased
+               int con = 0;
+        if (tb.comprobar_valor((jTF43.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF43.getText()), 4)) {
+                lblError.setText("el numero " + jTF43.getText() + " ya esta en la fila");
+                jTF43.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF43.getText()), 6)) {
+                    lblError.setText("el numero " + jTF43.getText() + " ya esta en la columna");
+                    jTF43.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF43.getText()), 4, 6)) {
+                        lblError.setText("el numero " + jTF43.getText() + " ya esta en la caja");
+                        jTF43.setText("");
+                    } else {
+                        tb.tablero[4][6] = Integer.valueOf(jTF43.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF43.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[4][6] = 0;
+        }
+    }//GEN-LAST:event_jTF43KeyReleased
+
+    private void jTF44KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF44KeyReleased
+               int con = 0;
+        if (tb.comprobar_valor((jTF44.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF44.getText()), 4)) {
+                lblError.setText("el numero " + jTF44.getText() + " ya esta en la fila");
+                jTF44.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF44.getText()), 7)) {
+                    lblError.setText("el numero " + jTF44.getText() + " ya esta en la columna");
+                    jTF44.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF44.getText()), 4, 7)) {
+                        lblError.setText("el numero " + jTF44.getText() + " ya esta en la caja");
+                        jTF44.setText("");
+                    } else {
+                        tb.tablero[4][7] = Integer.valueOf(jTF44.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF44.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[4][7] = 0;
+        }
+    }//GEN-LAST:event_jTF44KeyReleased
+
+    private void jTF47KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF47KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF47.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF47.getText()), 5)) {
+                lblError.setText("el numero " + jTF47.getText() + " ya esta en la fila");
+                jTF47.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF47.getText()), 1)) {
+                    lblError.setText("el numero " + jTF47.getText() + " ya esta en la columna");
+                    jTF47.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF47.getText()), 5, 1)) {
+                        lblError.setText("el numero " + jTF47.getText() + " ya esta en la caja");
+                        jTF47.setText("");
+                    } else {
+                        tb.tablero[5][1] = Integer.valueOf(jTF47.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF47.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[5][1] = 0;
+        }
+    }//GEN-LAST:event_jTF47KeyReleased
+
+    private void jTF48KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF48KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF48.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF48.getText()), 5)) {
+                lblError.setText("el numero " + jTF48.getText() + " ya esta en la fila");
+                jTF48.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF48.getText()), 2)) {
+                    lblError.setText("el numero " + jTF48.getText() + " ya esta en la columna");
+                    jTF48.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF48.getText()), 5, 2)) {
+                        lblError.setText("el numero " + jTF48.getText() + " ya esta en la caja");
+                        jTF48.setText("");
+                    } else {
+                        tb.tablero[5][2] = Integer.valueOf(jTF48.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF48.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[5][2] = 0;
+        }
+    }//GEN-LAST:event_jTF48KeyReleased
+
+    private void jTF49KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF49KeyReleased
+       int con = 0;
+        if (tb.comprobar_valor((jTF49.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF49.getText()), 5)) {
+                lblError.setText("el numero " + jTF49.getText() + " ya esta en la fila");
+                jTF49.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF49.getText()), 3)) {
+                    lblError.setText("el numero " + jTF49.getText() + " ya esta en la columna");
+                    jTF49.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF49.getText()), 5, 3)) {
+                        lblError.setText("el numero " + jTF49.getText() + " ya esta en la caja");
+                        jTF49.setText("");
+                    } else {
+                        tb.tablero[5][3] = Integer.valueOf(jTF49.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF49.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[5][3] = 0;
+        }
+    }//GEN-LAST:event_jTF49KeyReleased
+
+    private void jTF50KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF50KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF50.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF50.getText()), 5)) {
+                lblError.setText("el numero " + jTF50.getText() + " ya esta en la fila");
+                jTF50.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF50.getText()), 4)) {
+                    lblError.setText("el numero " + jTF50.getText() + " ya esta en la columna");
+                    jTF50.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF50.getText()), 5, 4)) {
+                        lblError.setText("el numero " + jTF50.getText() + " ya esta en la caja");
+                        jTF50.setText("");
+                    } else {
+                        tb.tablero[5][4] = Integer.valueOf(jTF50.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF50.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[5][4] = 0;
+        }
+    }//GEN-LAST:event_jTF50KeyReleased
+
+    private void jTF51KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF51KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF51.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF51.getText()), 5)) {
+                lblError.setText("el numero " + jTF51.getText() + " ya esta en la fila");
+                jTF51.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF51.getText()), 5)) {
+                    lblError.setText("el numero " + jTF51.getText() + " ya esta en la columna");
+                    jTF51.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF51.getText()), 5, 5)) {
+                        lblError.setText("el numero " + jTF51.getText() + " ya esta en la caja");
+                        jTF51.setText("");
+                    } else {
+                        tb.tablero[5][5] = Integer.valueOf(jTF51.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF51.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[5][5] = 0;
+        }
+    }//GEN-LAST:event_jTF51KeyReleased
+
+    private void jTF52KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF52KeyReleased
+        int con = 0;
+        if (tb.comprobar_valor((jTF52.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF52.getText()), 5)) {
+                lblError.setText("el numero " + jTF52.getText() + " ya esta en la fila");
+                jTF52.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF52.getText()), 6)) {
+                    lblError.setText("el numero " + jTF52.getText() + " ya esta en la columna");
+                    jTF52.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF52.getText()), 5, 6)) {
+                        lblError.setText("el numero " + jTF52.getText() + " ya esta en la caja");
+                        jTF52.setText("");
+                    } else {
+                        tb.tablero[5][6] = Integer.valueOf(jTF52.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF52.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[5][6] = 0;
+        }
+    }//GEN-LAST:event_jTF52KeyReleased
+
+    private void jTF53KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF53KeyReleased
+         int con = 0;
+        if (tb.comprobar_valor((jTF53.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF53.getText()), 5)) {
+                lblError.setText("el numero " + jTF53.getText() + " ya esta en la fila");
+                jTF53.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF53.getText()), 7)) {
+                    lblError.setText("el numero " + jTF53.getText() + " ya esta en la columna");
+                    jTF53.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF53.getText()), 5, 7)) {
+                        lblError.setText("el numero " + jTF53.getText() + " ya esta en la caja");
+                        jTF53.setText("");
+                    } else {
+                        tb.tablero[5][7] = Integer.valueOf(jTF53.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF53.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[5][7] = 0;
+        }
+    }//GEN-LAST:event_jTF53KeyReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
+
+    
     /**
      * @param args the command line arguments
      */
@@ -758,8 +2951,9 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCambiar;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
@@ -771,87 +2965,90 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
-    private javax.swing.JTextField jTextField47;
-    private javax.swing.JTextField jTextField48;
-    private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField50;
-    private javax.swing.JTextField jTextField51;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField57;
-    private javax.swing.JTextField jTextField58;
-    private javax.swing.JTextField jTextField59;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField60;
-    private javax.swing.JTextField jTextField61;
-    private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField63;
-    private javax.swing.JTextField jTextField64;
-    private javax.swing.JTextField jTextField65;
-    private javax.swing.JTextField jTextField66;
-    private javax.swing.JTextField jTextField67;
-    private javax.swing.JTextField jTextField68;
-    private javax.swing.JTextField jTextField69;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField71;
-    private javax.swing.JTextField jTextField72;
-    private javax.swing.JTextField jTextField73;
-    private javax.swing.JTextField jTextField74;
-    private javax.swing.JTextField jTextField75;
-    private javax.swing.JTextField jTextField76;
-    private javax.swing.JTextField jTextField77;
-    private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField79;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField80;
-    private javax.swing.JTextField jTextField81;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTF1;
+    private javax.swing.JTextField jTF10;
+    private javax.swing.JTextField jTF11;
+    private javax.swing.JTextField jTF12;
+    private javax.swing.JTextField jTF13;
+    private javax.swing.JTextField jTF14;
+    private javax.swing.JTextField jTF15;
+    private javax.swing.JTextField jTF16;
+    private javax.swing.JTextField jTF17;
+    private javax.swing.JTextField jTF18;
+    private javax.swing.JTextField jTF19;
+    private javax.swing.JTextField jTF2;
+    private javax.swing.JTextField jTF20;
+    private javax.swing.JTextField jTF21;
+    private javax.swing.JTextField jTF22;
+    private javax.swing.JTextField jTF23;
+    private javax.swing.JTextField jTF24;
+    private javax.swing.JTextField jTF25;
+    private javax.swing.JTextField jTF26;
+    private javax.swing.JTextField jTF27;
+    private javax.swing.JTextField jTF28;
+    private javax.swing.JTextField jTF29;
+    private javax.swing.JTextField jTF3;
+    private javax.swing.JTextField jTF30;
+    private javax.swing.JTextField jTF31;
+    private javax.swing.JTextField jTF32;
+    private javax.swing.JTextField jTF33;
+    private javax.swing.JTextField jTF34;
+    private javax.swing.JTextField jTF35;
+    private javax.swing.JTextField jTF36;
+    private javax.swing.JTextField jTF37;
+    private javax.swing.JTextField jTF38;
+    private javax.swing.JTextField jTF39;
+    private javax.swing.JTextField jTF4;
+    private javax.swing.JTextField jTF40;
+    private javax.swing.JTextField jTF41;
+    private javax.swing.JTextField jTF42;
+    private javax.swing.JTextField jTF43;
+    private javax.swing.JTextField jTF44;
+    private javax.swing.JTextField jTF45;
+    private javax.swing.JTextField jTF46;
+    private javax.swing.JTextField jTF47;
+    private javax.swing.JTextField jTF48;
+    private javax.swing.JTextField jTF49;
+    private javax.swing.JTextField jTF5;
+    private javax.swing.JTextField jTF50;
+    private javax.swing.JTextField jTF51;
+    private javax.swing.JTextField jTF52;
+    private javax.swing.JTextField jTF53;
+    private javax.swing.JTextField jTF54;
+    private javax.swing.JTextField jTF55;
+    private javax.swing.JTextField jTF56;
+    private javax.swing.JTextField jTF57;
+    private javax.swing.JTextField jTF58;
+    private javax.swing.JTextField jTF59;
+    private javax.swing.JTextField jTF6;
+    private javax.swing.JTextField jTF60;
+    private javax.swing.JTextField jTF61;
+    private javax.swing.JTextField jTF62;
+    private javax.swing.JTextField jTF63;
+    private javax.swing.JTextField jTF64;
+    private javax.swing.JTextField jTF65;
+    private javax.swing.JTextField jTF66;
+    private javax.swing.JTextField jTF67;
+    private javax.swing.JTextField jTF68;
+    private javax.swing.JTextField jTF69;
+    private javax.swing.JTextField jTF7;
+    private javax.swing.JTextField jTF70;
+    private javax.swing.JTextField jTF71;
+    private javax.swing.JTextField jTF72;
+    private javax.swing.JTextField jTF73;
+    private javax.swing.JTextField jTF74;
+    private javax.swing.JTextField jTF75;
+    private javax.swing.JTextField jTF76;
+    private javax.swing.JTextField jTF77;
+    private javax.swing.JTextField jTF78;
+    private javax.swing.JTextField jTF79;
+    private javax.swing.JTextField jTF8;
+    private javax.swing.JTextField jTF80;
+    private javax.swing.JTextField jTF81;
+    private javax.swing.JTextField jTF9;
+    private javax.swing.JPanel jblPanel;
+    private javax.swing.JLabel jlbError;
+    private javax.swing.JLabel lblError;
+    private javax.swing.JTextArea txaResultado;
     // End of variables declaration//GEN-END:variables
 }

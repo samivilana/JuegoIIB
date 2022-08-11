@@ -53,6 +53,8 @@ public class Principal extends javax.swing.JFrame {
         jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Principal");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 153, 153));
@@ -133,10 +135,10 @@ public class Principal extends javax.swing.JFrame {
         });
         getContentPane().add(jB4x4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 180, 20));
 
-        jLabel7.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Selecciona el tablero:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 200, 40));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 200, 40));
         getContentPane().add(jLFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 380, 620));
 
         pack();

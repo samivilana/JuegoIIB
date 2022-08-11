@@ -24,7 +24,7 @@
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="jblPanel">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
           <BorderConstraints direction="Center"/>
@@ -35,17 +35,29 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="263" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jlbError" alignment="0" min="-2" pref="299" max="-2" attributes="0"/>
+                              <Component id="lblError" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btnCambiar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btnVolver" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jScrollPane1" min="-2" pref="263" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="70" max="32767" attributes="0"/>
               </Group>
@@ -54,14 +66,20 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jPanel2" max="32767" attributes="0"/>
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnCambiar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnVolver" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlbError" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblError" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -144,21 +162,21 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField1" max="32767" attributes="0"/>
-                              <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField4" max="32767" attributes="0"/>
+                              <Component id="jTF1" max="32767" attributes="0"/>
+                              <Component id="jTF19" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF10" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField2" max="32767" attributes="0"/>
-                              <Component id="jTextField5" max="32767" attributes="0"/>
-                              <Component id="jTextField8" max="32767" attributes="0"/>
+                              <Component id="jTF2" max="32767" attributes="0"/>
+                              <Component id="jTF11" max="32767" attributes="0"/>
+                              <Component id="jTF20" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField6" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField9" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF12" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF21" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -169,24 +187,24 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField3" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF3" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTF2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTF10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTF11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTF12" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField7" max="32767" attributes="0"/>
+                              <Component id="jTF19" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField8" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTF20" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="jTF21" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -195,7 +213,50 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField1">
+                <Component class="javax.swing.JTextField" name="jTF1">
+                  <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTF1ActionPerformed"/>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF1KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF1KeyTyped"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTF2">
+                  <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF2KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF2KeyTyped"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTF3">
+                  <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF3KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF3KeyTyped"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTF10">
                   <Properties>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[32, 32]"/>
@@ -205,7 +266,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField2">
+                <Component class="javax.swing.JTextField" name="jTF11">
                   <Properties>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[32, 32]"/>
@@ -215,7 +276,21 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField3">
+                <Component class="javax.swing.JTextField" name="jTF12">
+                  <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[32, 32]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF12KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF12KeyTyped"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTF19">
                   <Properties>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[32, 32]"/>
@@ -225,7 +300,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField4">
+                <Component class="javax.swing.JTextField" name="jTF20">
                   <Properties>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[32, 32]"/>
@@ -234,48 +309,12 @@
                       <Dimension value="[32, 32]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF20KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF20KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField5">
-                  <Properties>
-                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField6">
-                  <Properties>
-                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField7">
-                  <Properties>
-                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField8">
-                  <Properties>
-                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[32, 32]"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField9">
+                <Component class="javax.swing.JTextField" name="jTF21">
                   <Properties>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[32, 32]"/>
@@ -302,26 +341,26 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField16" pref="32" max="32767" attributes="0"/>
-                              <Component id="jTextField11" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField10" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF22" pref="32" max="32767" attributes="0"/>
+                              <Component id="jTF13" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF4" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField14" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF5" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField15" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF6" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jTextField17" alignment="0" pref="32" max="32767" attributes="0"/>
-                                      <Component id="jTextField12" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTF23" alignment="0" pref="32" max="32767" attributes="0"/>
+                                      <Component id="jTF14" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField13" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField18" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF15" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF24" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -334,22 +373,22 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField15" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField14" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField10" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF6" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF5" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF4" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField11" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField12" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField13" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF13" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF14" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF15" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField18" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF24" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField16" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="jTextField17" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF22" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF23" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -358,23 +397,44 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField10">
+                <Component class="javax.swing.JTextField" name="jTF4">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField11">
+                <Component class="javax.swing.JTextField" name="jTF13">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTF13ActionPerformed"/>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF13KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF13KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField12">
+                <Component class="javax.swing.JTextField" name="jTF14">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField13">
+                <Component class="javax.swing.JTextField" name="jTF15">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField14">
+                <Component class="javax.swing.JTextField" name="jTF5">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField15">
+                <Component class="javax.swing.JTextField" name="jTF6">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF6KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF6KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField16">
+                <Component class="javax.swing.JTextField" name="jTF22">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF22KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF22KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField17">
+                <Component class="javax.swing.JTextField" name="jTF23">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF23KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF23KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField18">
+                <Component class="javax.swing.JTextField" name="jTF24">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF24KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF24KeyTyped"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -394,25 +454,25 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField19" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF7" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField20" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF8" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField23" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF9" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField21" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF16" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField22" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF17" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField24" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF18" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField25" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF25" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField26" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF26" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField27" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF27" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -424,21 +484,21 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField19" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField20" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField23" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF7" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF8" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF9" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField21" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField22" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField24" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF16" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF17" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF18" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField25" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField26" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField27" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF25" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF26" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF27" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -446,23 +506,47 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField19">
+                <Component class="javax.swing.JTextField" name="jTF7">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF7KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF7KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField20">
+                <Component class="javax.swing.JTextField" name="jTF8">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF8KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF8KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField21">
+                <Component class="javax.swing.JTextField" name="jTF16">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF16KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF16KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField22">
+                <Component class="javax.swing.JTextField" name="jTF17">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF17KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF17KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField23">
+                <Component class="javax.swing.JTextField" name="jTF9">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField24">
+                <Component class="javax.swing.JTextField" name="jTF18">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF18KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF18KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField25">
+                <Component class="javax.swing.JTextField" name="jTF25">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField26">
+                <Component class="javax.swing.JTextField" name="jTF26">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF26KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF26KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField27">
+                <Component class="javax.swing.JTextField" name="jTF27">
                 </Component>
               </SubComponents>
             </Container>
@@ -482,26 +566,26 @@
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField31" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jTF37" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField32" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jTF38" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField28" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jTF28" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField29" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jTF29" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField34" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jTF46" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField35" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jTF47" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField36" min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="jTextField30" min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="jTextField33" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jTF39" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jTF30" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jTF48" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -512,23 +596,23 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField29" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField30" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField28" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF29" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF30" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF28" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField36" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField31" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField32" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF39" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF37" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF38" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField34" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="jTextField35" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF46" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF47" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jTextField33" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF48" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -536,26 +620,42 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField28">
+                <Component class="javax.swing.JTextField" name="jTF28">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField29">
+                <Component class="javax.swing.JTextField" name="jTF29">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField30">
+                <Component class="javax.swing.JTextField" name="jTF30">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF30KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF30KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField31">
+                <Component class="javax.swing.JTextField" name="jTF37">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF37KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF37KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField32">
+                <Component class="javax.swing.JTextField" name="jTF38">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField33">
+                <Component class="javax.swing.JTextField" name="jTF48">
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF48KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF48KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField34">
+                <Component class="javax.swing.JTextField" name="jTF46">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField35">
+                <Component class="javax.swing.JTextField" name="jTF47">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF47KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF47KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField36">
+                <Component class="javax.swing.JTextField" name="jTF39">
                 </Component>
               </SubComponents>
             </Container>
@@ -575,29 +675,29 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField37" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF31" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField38" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF32" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField43" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF33" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField39" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="jTF40" min="-2" pref="32" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextField44" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="jTF41" min="-2" pref="32" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField40" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="jTF49" min="-2" pref="32" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextField42" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="jTF50" min="-2" pref="32" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField41" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField45" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF42" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF51" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -610,21 +710,21 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField37" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField38" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField43" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF31" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF32" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF33" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField41" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField44" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField39" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF42" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF41" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF40" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField45" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField42" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField40" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF51" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF50" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF49" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -632,23 +732,47 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField37">
+                <Component class="javax.swing.JTextField" name="jTF31">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF31KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF31KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField38">
+                <Component class="javax.swing.JTextField" name="jTF32">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField39">
+                <Component class="javax.swing.JTextField" name="jTF40">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField40">
+                <Component class="javax.swing.JTextField" name="jTF49">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF49KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF49KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField41">
+                <Component class="javax.swing.JTextField" name="jTF42">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField42">
+                <Component class="javax.swing.JTextField" name="jTF50">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF50KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF50KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField43">
+                <Component class="javax.swing.JTextField" name="jTF33">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF33KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF33KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField44">
+                <Component class="javax.swing.JTextField" name="jTF41">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF41KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF41KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField45">
+                <Component class="javax.swing.JTextField" name="jTF51">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF51KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF51KeyTyped"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -669,26 +793,26 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jTextField46" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField49" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF34" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF43" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField50" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField47" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF44" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jTF35" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField54" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF52" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField53" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF53" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField52" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField48" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField51" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF54" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF36" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF45" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -699,21 +823,21 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField46" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField47" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField48" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF34" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF35" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF36" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField50" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField51" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField49" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF44" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF45" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF43" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField52" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField53" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField54" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF54" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF53" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF52" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -721,23 +845,47 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField46">
+                <Component class="javax.swing.JTextField" name="jTF34">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField47">
+                <Component class="javax.swing.JTextField" name="jTF35">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF35KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF35KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField48">
+                <Component class="javax.swing.JTextField" name="jTF36">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF36KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF36KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField49">
+                <Component class="javax.swing.JTextField" name="jTF43">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF43KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF43KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField50">
+                <Component class="javax.swing.JTextField" name="jTF44">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF44KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF44KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField51">
+                <Component class="javax.swing.JTextField" name="jTF45">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField52">
+                <Component class="javax.swing.JTextField" name="jTF54">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField53">
+                <Component class="javax.swing.JTextField" name="jTF53">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF53KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF53KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField54">
+                <Component class="javax.swing.JTextField" name="jTF52">
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF52KeyReleased"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF52KeyTyped"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -756,26 +904,26 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField57" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField55" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField56" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF73" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF55" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF64" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField58" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF56" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField61" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF57" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField59" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF65" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField62" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF66" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField60" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF74" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField63" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF75" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -787,21 +935,21 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField55" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField58" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField61" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF55" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF56" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF57" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField56" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField59" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField62" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF64" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF65" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF66" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField57" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField60" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField63" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF73" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF74" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF75" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -809,23 +957,41 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField55">
+                <Component class="javax.swing.JTextField" name="jTF55">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField56">
+                <Component class="javax.swing.JTextField" name="jTF64">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF64KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField57">
+                <Component class="javax.swing.JTextField" name="jTF73">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF73KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField58">
+                <Component class="javax.swing.JTextField" name="jTF56">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField59">
+                <Component class="javax.swing.JTextField" name="jTF65">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF65KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField60">
+                <Component class="javax.swing.JTextField" name="jTF74">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF74KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField61">
+                <Component class="javax.swing.JTextField" name="jTF57">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField62">
+                <Component class="javax.swing.JTextField" name="jTF66">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF66KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField63">
+                <Component class="javax.swing.JTextField" name="jTF75">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF75KeyTyped"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -845,25 +1011,25 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField64" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF58" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField67" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF59" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField70" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF60" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField66" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF76" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField68" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF77" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField72" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF78" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField65" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF67" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField69" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF68" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField71" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF69" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -875,23 +1041,23 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField64" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField67" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField70" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF58" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF59" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF60" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField69" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="jTextField65" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF68" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF67" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jTextField71" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF69" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField68" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField66" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jTextField72" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF77" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF76" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jTF78" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -899,26 +1065,41 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField64">
+                <Component class="javax.swing.JTextField" name="jTF58">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField65">
+                <Component class="javax.swing.JTextField" name="jTF67">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF67KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField66">
+                <Component class="javax.swing.JTextField" name="jTF76">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF76KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField67">
+                <Component class="javax.swing.JTextField" name="jTF59">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField68">
+                <Component class="javax.swing.JTextField" name="jTF77">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF77KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField69">
+                <Component class="javax.swing.JTextField" name="jTF68">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF68KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField70">
+                <Component class="javax.swing.JTextField" name="jTF60">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField71">
+                <Component class="javax.swing.JTextField" name="jTF69">
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField72">
+                <Component class="javax.swing.JTextField" name="jTF78">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF78KeyTyped"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -938,25 +1119,25 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField73" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF61" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField76" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF62" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField79" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF63" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField74" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF70" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField78" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF71" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField80" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF72" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField75" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF79" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField77" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF80" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="jTextField81" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="jTF81" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -968,21 +1149,21 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField73" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="jTextField76" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="jTextField79" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jTF61" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jTF62" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jTF63" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField74" pref="33" max="32767" attributes="0"/>
-                              <Component id="jTextField78" max="32767" attributes="0"/>
-                              <Component id="jTextField80" max="32767" attributes="0"/>
+                              <Component id="jTF70" pref="33" max="32767" attributes="0"/>
+                              <Component id="jTF71" max="32767" attributes="0"/>
+                              <Component id="jTF72" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField75" pref="31" max="32767" attributes="0"/>
-                              <Component id="jTextField77" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField81" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF79" pref="31" max="32767" attributes="0"/>
+                              <Component id="jTF80" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTF81" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -990,29 +1171,46 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextField73">
+                <Component class="javax.swing.JTextField" name="jTF61">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField73ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTF61ActionPerformed"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF61KeyTyped"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField74">
+                <Component class="javax.swing.JTextField" name="jTF70">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField75">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField76">
+                <Component class="javax.swing.JTextField" name="jTF79">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField76ActionPerformed"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF79KeyTyped"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField77">
+                <Component class="javax.swing.JTextField" name="jTF62">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTF62ActionPerformed"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF62KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField78">
+                <Component class="javax.swing.JTextField" name="jTF80">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF80KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField79">
+                <Component class="javax.swing.JTextField" name="jTF71">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField80">
+                <Component class="javax.swing.JTextField" name="jTF63">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF63KeyTyped"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField81">
+                <Component class="javax.swing.JTextField" name="jTF72">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF72KeyTyped"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTF81">
+                  <Events>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTF81KeyTyped"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1022,7 +1220,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea1">
+            <Component class="javax.swing.JTextArea" name="txaResultado">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -1030,9 +1228,37 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnCambiar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cambiar 4x4"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCambiarActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnVolver">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Volver a jugar"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Volver a jugar"/>
+          </AccessibilityProperties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVolverActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlbError">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblError">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ver Soluci&#xf3;n"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
