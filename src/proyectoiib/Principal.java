@@ -5,17 +5,27 @@
  */
 package proyectoiib;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Lenovo
  */
 public class Principal extends javax.swing.JFrame {
-
+    
+    
     /**
      * Creates new form Principal
      */
     public Principal() {
-        initComponents();
+        initComponents();        
+        setImagenLabel(jLFondo, "src/imagenes/fondoInicio.jpg");
+        setImagenLabel(jLZudoku, "src/imagenes/imagenSudoku.jpg");
+        this.setLocationRelativeTo(null);        
+        
     }
 
     /**
@@ -27,21 +37,123 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLZudoku = new javax.swing.JLabel();
+        JB9x9 = new javax.swing.JButton();
+        jB4x4 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLFondo = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 602, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
-        );
+        jButton2.setText("jButton2");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(255, 153, 153));
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("D");
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true));
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 60, 50));
+
+        jLabel2.setBackground(new java.awt.Color(255, 204, 51));
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("U");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true));
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 60, 50));
+
+        jLabel3.setBackground(new java.awt.Color(153, 153, 255));
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("O");
+        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true));
+        jLabel3.setOpaque(true);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 60, 50));
+
+        jLabel4.setBackground(new java.awt.Color(102, 255, 204));
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("K");
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true));
+        jLabel4.setOpaque(true);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 60, 50));
+
+        jLabel5.setBackground(new java.awt.Color(255, 102, 0));
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("U");
+        jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true));
+        jLabel5.setOpaque(true);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 60, 50));
+
+        jLabel6.setBackground(new java.awt.Color(204, 0, 153));
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("S");
+        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true));
+        jLabel6.setOpaque(true);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 60, 50));
+
+        jLZudoku.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLZudoku, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 270));
+
+        JB9x9.setBackground(new java.awt.Color(153, 255, 153));
+        JB9x9.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 18)); // NOI18N
+        JB9x9.setText("9x9");
+        JB9x9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB9x9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JB9x9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 180, 20));
+
+        jB4x4.setBackground(new java.awt.Color(153, 255, 153));
+        jB4x4.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 18)); // NOI18N
+        jB4x4.setText("4x4");
+        jB4x4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jB4x4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB4x4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jB4x4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 180, 20));
+
+        jLabel7.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Selecciona el tablero:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 200, 40));
+        getContentPane().add(jLFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 380, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jB4x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4x4ActionPerformed
+        Sudoku4x4 tablero4x4 = new Sudoku4x4();
+        tablero4x4.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jB4x4ActionPerformed
+
+    private void JB9x9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB9x9ActionPerformed
+        // TODO add your handling code here:
+        Sudoku9x9 tablero9x9 = new Sudoku9x9();
+        tablero9x9.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_JB9x9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,6 +190,24 @@ public class Principal extends javax.swing.JFrame {
         });
     }
 
+    private void setImagenLabel(JLabel nombreLabel, String ruta){
+        ImageIcon image = new ImageIcon(ruta);
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(nombreLabel.getWidth(), nombreLabel.getHeight(), Image.SCALE_DEFAULT));
+        nombreLabel.setIcon(icon);
+        this.repaint();
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JB9x9;
+    private javax.swing.JButton jB4x4;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLFondo;
+    private javax.swing.JLabel jLZudoku;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }
