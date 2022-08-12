@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  * @author Lenovo
  */
 public class Sudoku4x4 extends javax.swing.JFrame {
+    Tablero4x4 tb = new Tablero4x4();
+      public int tabla [][] = new int[9][9];
     
     /**
      * Creates new form Sudoku4x4
@@ -19,7 +21,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
     public Sudoku4x4() {
         initComponents();
         this.setLocationRelativeTo(this);
-        
+        iniciar();
     }
 
     /**
@@ -41,8 +43,8 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jTF4 = new javax.swing.JTextField();
         jTF8 = new javax.swing.JTextField();
-        jTF3 = new javax.swing.JTextField();
         jTF7 = new javax.swing.JTextField();
+        jTF3 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jTF9 = new javax.swing.JTextField();
         jTF10 = new javax.swing.JTextField();
@@ -54,8 +56,11 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jTF15 = new javax.swing.JTextField();
         jTF16 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txaResultados = new javax.swing.JTextArea();
+        jTAResultados = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
+        btnSolucion = new javax.swing.JButton();
+        lblError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku 4x4");
@@ -67,14 +72,49 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jTF1.setMaximumSize(new java.awt.Dimension(32, 32));
         jTF1.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF1.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF1KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF1KeyTyped(evt);
+            }
+        });
 
         jTF2.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF2ActionPerformed(evt);
+            }
+        });
+        jTF2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF2KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF2KeyTyped(evt);
+            }
+        });
 
+        jTF5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF5.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF5.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF5KeyTyped(evt);
+            }
+        });
 
         jTF6.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF6.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF6KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF6KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -107,11 +147,51 @@ public class Sudoku4x4 extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTF3.setMinimumSize(new java.awt.Dimension(32, 32));
-        jTF3.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF4ActionPerformed(evt);
+            }
+        });
+        jTF4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF4KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF4KeyTyped(evt);
+            }
+        });
+
+        jTF8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF8KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF8KeyTyped(evt);
+            }
+        });
 
         jTF7.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF7.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF7KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF7KeyTyped(evt);
+            }
+        });
+
+        jTF3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTF3.setMinimumSize(new java.awt.Dimension(32, 32));
+        jTF3.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF3KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF3KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -120,9 +200,9 @@ public class Sudoku4x4 extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jTF7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTF8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTF4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -131,11 +211,11 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTF4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTF3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTF8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTF7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -146,26 +226,56 @@ public class Sudoku4x4 extends javax.swing.JFrame {
 
         jTF9.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF9.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF9KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF9KeyTyped(evt);
+            }
+        });
 
+        jTF10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF10.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF10.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF10KeyTyped(evt);
+            }
+        });
 
         jTF14.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF14.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF14.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF14KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF14KeyTyped(evt);
+            }
+        });
 
         jTF13.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF13.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF13.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF13KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF13KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTF9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTF13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTF10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTF14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -188,16 +298,46 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTF11.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF11KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF11KeyTyped(evt);
+            }
+        });
 
+        jTF12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF12.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF12.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF12KeyTyped(evt);
+            }
+        });
 
         jTF15.setToolTipText("");
         jTF15.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF15.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF15.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF15KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF15KeyTyped(evt);
+            }
+        });
 
         jTF16.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF16.setPreferredSize(new java.awt.Dimension(32, 32));
+        jTF16.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTF16KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF16KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -255,9 +395,9 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        txaResultados.setColumns(20);
-        txaResultados.setRows(5);
-        jScrollPane1.setViewportView(txaResultados);
+        jTAResultados.setColumns(20);
+        jTAResultados.setRows(5);
+        jScrollPane1.setViewportView(jTAResultados);
 
         jButton1.setText("Cambiar 9x9");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -266,21 +406,43 @@ public class Sudoku4x4 extends javax.swing.JFrame {
             }
         });
 
+        btnVolver.setLabel("Volver a jugar");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+
+        btnSolucion.setText("Ver Solución");
+        btnSolucion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSolucionActionPerformed(evt);
+            }
+        });
+
+        lblError.setForeground(new java.awt.Color(255, 0, 0));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(94, 94, 94)
+                        .addComponent(btnSolucion)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnVolver))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54))))
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,16 +451,33 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(47, 47, 47))
+                .addGap(5, 5, 5)
+                .addComponent(lblError)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnVolver)
+                    .addComponent(jButton1)
+                    .addComponent(btnSolucion))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public void iniciar(){
+        tb.cargarDatos();
+        jTF3.setText(String.valueOf(tb.tablero[0][2]));
+        jTF3.setEditable(false);
+        
+        jTF5.setText(String.valueOf(tb.tablero[1][0]));
+        jTF5.setEditable(false);
+        
+        jTF10.setText(String.valueOf(tb.tablero[2][1]));
+        jTF10.setEditable(false);
+        jTF12.setText(String.valueOf(tb.tablero[2][3]));
+        jTF12.setEditable(false);
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Sudoku9x9 tablero9x9 = new Sudoku9x9();
@@ -306,6 +485,693 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jTF1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyTyped
+        // TODO add your handling code here:
+         char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF1KeyTyped
+
+    private void jTF2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyTyped
+        // TODO add your handling code here:
+          char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF2KeyTyped
+
+    private void jTF4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF4KeyTyped
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF4KeyTyped
+
+    private void jTF5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF5KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF5KeyTyped
+
+    private void jTF6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF6KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF6KeyTyped
+
+    private void jTF7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF7KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF7KeyTyped
+
+    private void jTF8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF8KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF8KeyTyped
+
+    private void jTF9KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF9KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF9KeyTyped
+
+    private void jTF10KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF10KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF10KeyTyped
+
+    private void jTF11KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF11KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF11KeyTyped
+
+    private void jTF12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF12KeyTyped
+
+    private void jTF13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF13KeyTyped
+
+    private void jTF14KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF14KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF14KeyTyped
+
+    private void jTF15KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF15KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF15KeyTyped
+
+    private void jTF16KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF16KeyTyped
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF16KeyTyped
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+
+        if (!jTF1.getText().isEmpty()) {
+            jTF1.setText("");
+        }
+        if (!jTF2.getText().isEmpty()) {
+            jTF2.setText("");
+        }
+       
+        if (!jTF4.getText().isEmpty()) {
+            jTF4.setText("");
+        }
+         if (!jTF6.getText().isEmpty()) {
+            jTF6.setText("");
+        }
+        if (!jTF7.getText().isEmpty()) {
+            jTF7.setText("");
+        }
+        if (!jTF8.getText().isEmpty()) {
+            jTF8.setText("");
+        }
+        if (!jTF9.getText().isEmpty()) {
+            jTF9.setText("");
+        }
+        if (!jTF11.getText().isEmpty()) {
+            jTF12.setText("");
+        }
+        if (!jTF13.getText().isEmpty()) {
+            jTF13.setText("");
+        }
+         if (!jTF14.getText().isEmpty()) {
+            jTF14.setText("");
+        }
+          if (!jTF15.getText().isEmpty()) {
+            jTF16.setText("");
+        }
+           if (!jTF16.getText().isEmpty()) {
+            jTF16.setText("");
+        }
+            //Emplear el método para borrar de la tabla
+        tb.vaciarTabla(tabla);
+        jTAResultados.setText("");
+          
+        
+    }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void btnSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolucionActionPerformed
+
+        int verSolucion = JOptionPane.showConfirmDialog(rootPane, "¿Seguro que quieres continuar?", "Advertencia", JOptionPane.YES_NO_OPTION);
+        if (!jTF1.getText().isEmpty()) {
+            tabla[0][0]=Integer.parseInt(jTF1.getText());
+        }
+
+        if (!jTF2.getText().isEmpty()) {
+            tabla[0][1]=Integer.parseInt(jTF2.getText());
+        }
+
+        if (!jTF3.getText().isEmpty()) {
+            tabla[0][2]=Integer.parseInt(jTF3.getText());
+        }
+
+        if (!jTF4.getText().isEmpty()) {
+            tabla[0][3]=Integer.parseInt(jTF4.getText());
+        }
+
+        if (!jTF5.getText().isEmpty()) {
+            tabla[1][0]=Integer.parseInt(jTF5.getText());
+        }
+
+        if (!jTF6.getText().isEmpty()) {
+            tabla[1][1]=Integer.parseInt(jTF6.getText());
+        }
+
+        if (!jTF7.getText().isEmpty()) {
+            tabla[1][2]=Integer.parseInt(jTF7.getText());
+        }
+
+        if (!jTF8.getText().isEmpty()) {
+            tabla[1][3]=Integer.parseInt(jTF8.getText());
+        }
+
+        if (!jTF9.getText().isEmpty()) {
+            tabla[2][0]=Integer.parseInt(jTF9.getText());
+        }
+
+        if (!jTF10.getText().isEmpty()) {
+            tabla[2][1]=Integer.parseInt(jTF10.getText());
+        }
+
+        if (!jTF11.getText().isEmpty()) {
+            tabla[2][2]=Integer.parseInt(jTF11.getText());
+        }
+
+        if (!jTF12.getText().isEmpty()) {
+            tabla[2][3]=Integer.parseInt(jTF12.getText());
+        }
+
+        if (!jTF13.getText().isEmpty()) {
+            tabla[3][0]=Integer.parseInt(jTF13.getText());
+        }
+
+        if (!jTF14.getText().isEmpty()) {
+            tabla[3][1]=Integer.parseInt(jTF14.getText());
+        }
+
+        if (!jTF15.getText().isEmpty()) {
+            tabla[3][2]=Integer.parseInt(jTF15.getText());
+        }
+
+        if (!jTF16.getText().isEmpty()) {
+            tabla[3][3]=Integer.parseInt(jTF16.getText());
+        }
+
+//Comprobar si los valores son correctos
+        if (!tb.valoresCorrectos(tabla)) {
+            JOptionPane.showMessageDialog(null,"Todos los números deben ser menor a "+tb.dimensionSodoku,"Advertencia",JOptionPane.WARNING_MESSAGE);
+            jTAResultados.setText(tb.imprimirTablero(tabla));//mostrar tabla
+        } else {
+            //Resolver el sudoku
+            if (!tb.resolver(tabla)) {
+                jTAResultados.setText("El Sudoku no tiene solución");
+            } else {
+                jTAResultados.setText(tb.resultados);
+            }
+        }
+    }//GEN-LAST:event_btnSolucionActionPerformed
+
+    private void jTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyReleased
+        // TODO add your handling code here:
+         int con = 0;
+        if (tb.comprobar_valor((jTF1.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF1.getText()), 0)) {
+                lblError.setText("el numero " + jTF1.getText() + " ya esta en la fila");
+                jTF1.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF1.getText()), 0)) {
+                    lblError.setText("el numero " + jTF1.getText() + " ya esta en la columna");
+                    jTF1.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF1.getText()), 0, 0)) {
+                        lblError.setText("el numero " + jTF1.getText() + " ya esta en la caja");
+                        jTF1.setText("");
+                    } else {
+                        tb.tablero[0][0] = Integer.valueOf(jTF1.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF1.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][0] = 0;
+        }
+        
+    }//GEN-LAST:event_jTF1KeyReleased
+
+    private void jTF2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyReleased
+        // TODO add your handling code here:
+        int con = 0;
+        if (tb.comprobar_valor((jTF2.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF2.getText()), 0)) {
+                lblError.setText("el numero " + jTF2.getText() + " ya esta en la fila");
+                jTF2.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF2.getText()), 1)) {
+                    lblError.setText("el numero " + jTF2.getText() + " ya esta en la columna");
+                    jTF2.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF2.getText()), 0, 1)) {
+                        lblError.setText("el numero " + jTF2.getText() + " ya esta en la caja");
+                        jTF2.setText("");
+                    } else {
+                        tb.tablero[0][1] = Integer.valueOf(jTF2.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF2.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][1] = 0;
+        }
+    }//GEN-LAST:event_jTF2KeyReleased
+
+    private void jTF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF2ActionPerformed
+
+    private void jTF4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF4KeyReleased
+        // TODO add your handling code here:
+         int con = 0;
+        if (tb.comprobar_valor((jTF4.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF4.getText()), 0)) {
+                lblError.setText("el numero " + jTF4.getText() + " ya esta en la fila");
+                jTF4.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF4.getText()), 3)) {
+                    lblError.setText("el numero " + jTF4.getText() + " ya esta en la columna");
+                    jTF4.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF4.getText()), 0, 3)) {
+                        lblError.setText("el numero " + jTF4.getText() + " ya esta en la caja");
+                        jTF4.setText("");
+                    } else {
+                        tb.tablero[0][3] = Integer.valueOf(jTF4.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF4.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[0][3] = 0;
+        }
+    }//GEN-LAST:event_jTF4KeyReleased
+
+    private void jTF4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF4ActionPerformed
+
+    private void jTF6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF6KeyReleased
+        // TODO add your handling code here:
+                 int con = 0;
+        if (tb.comprobar_valor((jTF6.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF6.getText()), 1)) {
+                lblError.setText("el numero " + jTF6.getText() + " ya esta en la fila");
+                jTF6.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF6.getText()), 1)) {
+                    lblError.setText("el numero " + jTF6.getText() + " ya esta en la columna");
+                    jTF6.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF6.getText()), 1, 1)) {
+                        lblError.setText("el numero " + jTF6.getText() + " ya esta en la caja");
+                        jTF6.setText("");
+                    } else {
+                        tb.tablero[1][1] = Integer.valueOf(jTF6.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF6.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][1] = 0;
+        }
+    }//GEN-LAST:event_jTF6KeyReleased
+
+    private void jTF7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF7KeyReleased
+        // TODO add your handling code here:
+                 int con = 0;
+        if (tb.comprobar_valor((jTF7.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF7.getText()), 1)) {
+                lblError.setText("el numero " + jTF7.getText() + " ya esta en la fila");
+                jTF7.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF7.getText()), 2)) {
+                    lblError.setText("el numero " + jTF7.getText() + " ya esta en la columna");
+                    jTF7.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF7.getText()), 1, 2)) {
+                        lblError.setText("el numero " + jTF7.getText() + " ya esta en la caja");
+                        jTF7.setText("");
+                    } else {
+                        tb.tablero[1][2] = Integer.valueOf(jTF7.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF7.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][2] = 0;
+        }
+    }//GEN-LAST:event_jTF7KeyReleased
+
+    private void jTF8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF8KeyReleased
+        // TODO add your handling code here:
+                 int con = 0;
+        if (tb.comprobar_valor((jTF8.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF8.getText()), 1)) {
+                lblError.setText("el numero " + jTF8.getText() + " ya esta en la fila");
+                jTF8.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF8.getText()), 3)) {
+                    lblError.setText("el numero " + jTF8.getText() + " ya esta en la columna");
+                    jTF8.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF8.getText()), 1, 3)) {
+                        lblError.setText("el numero " + jTF8.getText() + " ya esta en la caja");
+                        jTF8.setText("");
+                    } else {
+                        tb.tablero[1][3] = Integer.valueOf(jTF8.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF8.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[1][3] = 0;
+        }
+    }//GEN-LAST:event_jTF8KeyReleased
+
+    private void jTF9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF9KeyReleased
+        // TODO add your handling code here:
+                  int con = 0;
+        if (tb.comprobar_valor((jTF9.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF9.getText()), 2)) {
+                lblError.setText("el numero " + jTF9.getText() + " ya esta en la fila");
+                jTF9.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF9.getText()), 0)) {
+                    lblError.setText("el numero " + jTF9.getText() + " ya esta en la columna");
+                    jTF9.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF9.getText()), 2, 0)) {
+                        lblError.setText("el numero " + jTF9.getText() + " ya esta en la caja");
+                        jTF9.setText("");
+                    } else {
+                        tb.tablero[2][0] = Integer.valueOf(jTF9.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF9.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[2][0] = 0;
+        }
+    }//GEN-LAST:event_jTF9KeyReleased
+
+    private void jTF11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF11KeyReleased
+        // TODO add your handling code here:
+                  int con = 0;
+        if (tb.comprobar_valor((jTF11.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF11.getText()), 2)) {
+                lblError.setText("el numero " + jTF11.getText() + " ya esta en la fila");
+                jTF11.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF11.getText()), 2)) {
+                    lblError.setText("el numero " + jTF11.getText() + " ya esta en la columna");
+                    jTF11.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF11.getText()), 2, 2)) {
+                        lblError.setText("el numero " + jTF11.getText() + " ya esta en la caja");
+                        jTF11.setText("");
+                    } else {
+                        tb.tablero[2][2] = Integer.valueOf(jTF11.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF11.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[2][2] = 0;
+        }
+    }//GEN-LAST:event_jTF11KeyReleased
+
+    private void jTF13KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyReleased
+        // TODO add your handling code here:
+                  int con = 0;
+        if (tb.comprobar_valor((jTF13.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF13.getText()), 3)) {
+                lblError.setText("el numero " + jTF13.getText() + " ya esta en la fila");
+                jTF13.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF13.getText()), 0)) {
+                    lblError.setText("el numero " + jTF13.getText() + " ya esta en la columna");
+                    jTF13.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF13.getText()), 3, 0)) {
+                        lblError.setText("el numero " + jTF13.getText() + " ya esta en la caja");
+                        jTF13.setText("");
+                    } else {
+                        tb.tablero[3][0] = Integer.valueOf(jTF13.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF13.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][0] = 0;
+        }
+    }//GEN-LAST:event_jTF13KeyReleased
+
+    private void jTF14KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF14KeyReleased
+        // TODO add your handling code here:
+                  int con = 0;
+        if (tb.comprobar_valor((jTF14.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF14.getText()), 3)) {
+                lblError.setText("el numero " + jTF14.getText() + " ya esta en la fila");
+                jTF14.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF14.getText()), 1)) {
+                    lblError.setText("el numero " + jTF14.getText() + " ya esta en la columna");
+                    jTF14.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF14.getText()), 3, 1)) {
+                        lblError.setText("el numero " + jTF14.getText() + " ya esta en la caja");
+                        jTF14.setText("");
+                    } else {
+                        tb.tablero[3][1] = Integer.valueOf(jTF14.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF14.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][1] = 0;
+        }
+    }//GEN-LAST:event_jTF14KeyReleased
+
+    private void jTF15KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF15KeyReleased
+        // TODO add your handling code here:
+                  int con = 0;
+        if (tb.comprobar_valor((jTF15.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF15.getText()), 3)) {
+                lblError.setText("el numero " + jTF15.getText() + " ya esta en la fila");
+                jTF15.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF15.getText()), 2)) {
+                    lblError.setText("el numero " + jTF15.getText() + " ya esta en la columna");
+                    jTF15.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF15.getText()), 3, 2)) {
+                        lblError.setText("el numero " + jTF15.getText() + " ya esta en la caja");
+                        jTF15.setText("");
+                    } else {
+                        tb.tablero[3][2] = Integer.valueOf(jTF15.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF15.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][2] = 0;
+        }
+    }//GEN-LAST:event_jTF15KeyReleased
+
+    private void jTF16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF16KeyReleased
+        // TODO add your handling code here:
+                  int con = 0;
+        if (tb.comprobar_valor((jTF16.getText()))) {
+            if (tb.existe_fila(Integer.valueOf(jTF16.getText()), 3)) {
+                lblError.setText("el numero " + jTF16.getText() + " ya esta en la fila");
+                jTF16.setText("");
+            } else {
+                if (tb.existe_columna(Integer.valueOf(jTF16.getText()), 3)) {
+                    lblError.setText("el numero " + jTF16.getText() + " ya esta en la columna");
+                    jTF16.setText("");
+                } else {
+
+                    if (tb.existe_caja(Integer.valueOf(jTF16.getText()), 3, 3)) {
+                        lblError.setText("el numero " + jTF16.getText() + " ya esta en la caja");
+                        jTF16.setText("");
+                    } else {
+                        tb.tablero[3][3] = Integer.valueOf(jTF16.getText());
+                        lblError.setText("");
+                        con++;
+                    }
+                }
+            }
+        } else {
+            jTF16.setText("");
+        }
+        if (con == 0) {
+            tb.tablero[3][3] = 0;
+        }
+    }//GEN-LAST:event_jTF16KeyReleased
+
+    private void jTF3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF3KeyReleased
+        // TODO add your handling code here:
+             char validacion = evt.getKeyChar();
+        if (Character.isLetter(validacion)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jTF3KeyReleased
+
+    private void jTF3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF3KeyTyped
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTF3KeyTyped
+   
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -342,6 +1208,8 @@ public class Sudoku4x4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSolucion;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -350,6 +1218,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTAResultados;
     private javax.swing.JTextField jTF1;
     private javax.swing.JTextField jTF10;
     private javax.swing.JTextField jTF11;
@@ -366,6 +1235,6 @@ public class Sudoku4x4 extends javax.swing.JFrame {
     private javax.swing.JTextField jTF7;
     private javax.swing.JTextField jTF8;
     private javax.swing.JTextField jTF9;
-    private javax.swing.JTextArea txaResultados;
+    private javax.swing.JLabel lblError;
     // End of variables declaration//GEN-END:variables
 }

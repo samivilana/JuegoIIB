@@ -100,8 +100,7 @@ public class Tablero4x4 {
                 return false;
             }
         }
-        System.out.println(imprimirTablero(tablero));
-        System.out.println("Encontrada solución.");
+      JOptionPane.showMessageDialog(null, "Solucion encontrada");
         return true;
     }
     //Método para saber si es posible ingresar
@@ -162,6 +161,15 @@ public class Tablero4x4 {
         }
         return flag;
     }
+     //Método para vaciar el tablero
+    public void vaciarTabla(int[][] tablero){
+        //Recorrer el tablero
+        for (int i = 0; i < dimensionSodoku; i++) {
+            for (int j = 0; j < dimensionSodoku; j++) {                
+                tablero[i][j]=0;//volver todo a 0                      
+            }
+        }
+    }
     
      // METODO PARA COMPROBAR LOS VALORES.
 
@@ -171,7 +179,7 @@ public class Tablero4x4 {
             return false;
         } else {
             int valor = Integer.valueOf(valor1);
-            if (valor >= 0 && valor < 10) {
+            if (valor >= 0 && valor < 5) {
                 return true;
             } else {
                 return false;
@@ -228,7 +236,7 @@ public class Tablero4x4 {
         //DETERMINAMOS LAS FILAS DE LA CAJA.
         if (fila >= 0 && fila < 3) {
             minimo_fila = 0;
-            maximo_fila = 2;
+            maximo_fila = 3;
         } else if (fila >= 3 && fila < 6) {
             minimo_fila = 3;
             maximo_fila = 5;
@@ -265,6 +273,16 @@ public class Tablero4x4 {
         //REGRESAMOS EL VALOR BOOLEANO.
         return resultado;
 
+    }
+    //Método para valores correctos
+    public boolean valoresCorrectos(int[][] tablero){      
+        for (int i = 0; i < dimensionSodoku; i++) {
+            for (int j = 0; j < dimensionSodoku; j++) {                
+                if((tablero[i][j])>dimensionSodoku)
+                    return false;//el valor es mayor a la dimensión
+            }
+        }
+        return true;
     }
 
      //METODO PARA SABER SI  EL JUEGO FUE TERMINADO.
