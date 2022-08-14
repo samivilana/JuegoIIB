@@ -5,6 +5,7 @@
  */
 package proyectoiib;
 
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,17 +19,22 @@ public class Tablero4x4 {
     public int numPasos = 0;    //Cantidad de pasos para resolver el sudoku
     public int dim = (int) (Math.pow(dimensionSodoku, 0.5));  //raíz del valor de dimensión
      //Creacion de matriz
-    public int[][] tablero=new int[4][4];
+    public int[][] tablero=new int[9][9];
+    public int min_val = 1;
+        int max_val = 4;
+        Random rand = new Random();
+        int randomNum = min_val + rand.nextInt((max_val - min_val) + 1);
+        
     
     
      //Cargar valores al tablero
         
     public int[][] cargarDatos() {
        
-        tablero[1][0] = 2;
-        tablero[0][2] = 4;
-        tablero[2][3] = 3;
-        tablero[2][1] = 2;
+        tablero[1][0] = randomNum;
+        tablero[0][2] = randomNum;
+        tablero[2][3] = randomNum;
+        //tablero[2][1] = 2;
 
         return tablero;
     }
@@ -234,12 +240,12 @@ public class Tablero4x4 {
         boolean resultado = false;
 
         //DETERMINAMOS LAS FILAS DE LA CAJA.
-        if (fila >= 0 && fila < 3) {
+        /*if (fila >= 0 && fila < 2) {
             minimo_fila = 0;
-            maximo_fila = 3;
-        } else if (fila >= 3 && fila < 6) {
-            minimo_fila = 3;
-            maximo_fila = 5;
+            maximo_fila = 1;
+        } else if (fila >= 2 && fila < 4) {
+            minimo_fila = 2;
+            maximo_fila =3 ;
         } else {
             minimo_fila = 6;
             maximo_fila = 8;
@@ -255,8 +261,25 @@ public class Tablero4x4 {
         } else {
             minimo_columna = 6;
             maximo_columna = 8;
+        }*/
+        
+        if (fila >= 0 && fila < 2) {
+            minimo_fila = 0;
+            maximo_fila = 1;
+        
+        } else {
+            minimo_fila = 2;
+            maximo_fila = 3;
         }
 
+        //DETERMINAMOS LAS COLUMNAS DE LA CAJA.
+        if (columna >= 0 && columna < 2) {
+            minimo_columna = 0;
+            maximo_columna = 1;
+        } else {
+            minimo_columna = 2;
+            maximo_columna = 3;
+        }
         //RECORREMOS EL RANGO DE LA CAJA, Y BUSCAMOS EL VALOR.
         for (int f = minimo_fila; f <= maximo_fila; f++) {
             for (int c = minimo_columna; c <= maximo_columna; c++) {
