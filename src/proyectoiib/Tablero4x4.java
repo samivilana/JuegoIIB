@@ -21,9 +21,7 @@ public class Tablero4x4 {
      //Creacion de matriz
     public int[][] tablero=new int[9][9];
     public int min_val = 1;
-        int max_val = 4;
-        Random rand = new Random();
-        int randomNum = min_val + rand.nextInt((max_val - min_val) + 1);
+        
         
     
     
@@ -31,10 +29,10 @@ public class Tablero4x4 {
         
     public int[][] cargarDatos() {
        
-        tablero[1][0] = randomNum;
-        tablero[0][2] = randomNum;
-        tablero[2][3] = randomNum;
-        //tablero[2][1] = 2;
+        tablero[1][0] = 2;
+        tablero[0][2] = 4;
+        tablero[2][3] = 3;
+        tablero[2][1] = 2;
 
         return tablero;
     }

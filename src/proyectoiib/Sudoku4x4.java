@@ -485,8 +485,8 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         
         jTF10.setText(String.valueOf(tb.tablero[2][1]));
         jTF10.setEditable(false);
-        /**jTF12.setText(String.valueOf(tb.tablero[2][3]));
-        jTF12.setEditable(false);*/
+        jTF12.setText(String.valueOf(tb.tablero[2][3]));
+        jTF12.setEditable(false);
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -693,9 +693,9 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         if (!jTF11.getText().isEmpty()) {
             jTF11.setText("");
         }
-        if (!jTF12.getText().isEmpty()) {
-            jTF12.setText("");
-        }
+        /*if (!jTF12.getText().isEmpty()) {
+            jTF12.setText("");*/
+        
         if (!jTF13.getText().isEmpty()) {
             jTF13.setText("");
         }
@@ -1283,7 +1283,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
 
     private void jTF12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyReleased
         // TODO add your handling code here:
-                    int con = 0;
+          /**          int con = 0;
         if (tb.comprobar_valor((jTF12.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF12.getText()), 2)) {
                 lblError.setText("el numero " + jTF12.getText() + " ya esta en la fila");
@@ -1309,7 +1309,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         }
         if (con == 0) {
             tb.tablero[2][3] = 0;
-        }
+        }*/
     }//GEN-LAST:event_jTF12KeyReleased
    
     
