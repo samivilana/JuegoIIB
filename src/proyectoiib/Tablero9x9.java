@@ -1,26 +1,31 @@
 package proyectoiib;
 
+import javax.swing.JOptionPane;
+
 public class Tablero9x9 {
 
     //Declaracion de variables
-    int dimSudoku;
-    String resultados = "";
-    int numPasos = 0;
-    int dim = (int) (Math.pow(dimSudoku, 0.5));
+    public int dimSudoku = 9;
+    public String resultados = "";
+    public int numPasos = 0;
+    public int dim = (int) (Math.pow(dimSudoku, 0.5));
 
-     //Creacion de matriz
-    public int[][] tablero=new int[9][9];
-    
+      
+
+    //Creacion de matriz
+    public int[][] tablero = new int[9][9];
+
     //Cargar valores al tablero
-        
     public int[][] cargarDatos() {
         tablero[0][3] = 5;
         tablero[0][4] = 6;
         tablero[0][8] = 2;
+
         tablero[1][0] = 5;
         tablero[1][1] = 9;
         tablero[1][4] = 2;
         tablero[1][5] = 4;
+
         tablero[2][0] = 4;
         tablero[2][2] = 2;
         tablero[2][6] = 7;
@@ -47,10 +52,9 @@ public class Tablero9x9 {
         tablero[7][7] = 3;
         tablero[8][5] = 8;
 
-
         return tablero;
     }
-    
+
     //Metodo que permitir agregar valores
     public void tablero(int[][] tablero, int fila, int colum, int valor) {
         tablero[fila][colum] = valor;
@@ -120,8 +124,7 @@ public class Tablero9x9 {
                 return false;
             }
         }
-        System.out.println(imprimirTablero(tablero));
-        System.out.println("Encontrada solución.");
+        JOptionPane.showMessageDialog(null, "Solución encontrada");
         return true;
     }
 
@@ -185,7 +188,7 @@ public class Tablero9x9 {
     }
 
     //Metodo para comprobar los valores
-        public boolean comprobar_valor(String valor1) {
+    public boolean comprobar_valor(String valor1) {
 
         if (String.valueOf(valor1).equalsIgnoreCase("")) {
             return false;
@@ -199,13 +202,12 @@ public class Tablero9x9 {
         }
 
     }
-        
-    //Metodo para comprobar filas.
 
+    //Metodo para comprobar filas.
     public boolean existe_fila(int numero, int fila) {
 
         boolean resultado = false;
-       
+
         for (int i = 0; i < tablero.length; i++) {
             if (numero == 0) {
             } else {
@@ -218,9 +220,8 @@ public class Tablero9x9 {
         return resultado;
 
     }
-    
+
     //Metodo para comprobar columnas.
-    
     public boolean existe_columna(int numero, int columna) {
 
         boolean resultado = false;
@@ -233,9 +234,8 @@ public class Tablero9x9 {
         }
         return resultado;
     }
-    
+
     //Metodo para comprobar si esta llena una caja
-    
     public boolean existe_caja(int valor, int fila, int columna) {
 
         //VARIABLES.
@@ -287,4 +287,24 @@ public class Tablero9x9 {
 
     }
 
+    //Método para vaciar el tablero
+    public void vaciarTabla(int[][] tablero) {
+        //Recorrer el tablero
+        for (int i = 0; i < dimSudoku; i++) {
+            for (int j = 0; j < dimSudoku; j++) {
+                tablero[i][j] = 0;//volver todo a 0                      
+            }
+        }
+    }
+
+    public boolean valoresCorrectos(int[][] tablero) {
+        for (int i = 0; i < dimSudoku; i++) {
+            for (int j = 0; j < dimSudoku; j++) {
+                if ((tablero[i][j]) > dimSudoku) {
+                    return false;//el valor es mayor a la dimensión
+                }
+            }
+        }
+        return true;
+    }
 }

@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class Sudoku9x9 extends javax.swing.JFrame {
 
     Tablero9x9 tb = new Tablero9x9();
+    public int tabla[][] = new int[9][9];
 
     /**
      * Creates new form Sudoku9x9
@@ -126,6 +127,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku 9x9");
+        setResizable(false);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -133,11 +135,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jTF1.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF1.setPreferredSize(new java.awt.Dimension(32, 32));
-        jTF1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF1ActionPerformed(evt);
-            }
-        });
         jTF1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF1KeyReleased(evt);
@@ -149,11 +146,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jTF2.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF2.setPreferredSize(new java.awt.Dimension(32, 32));
-        jTF2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF2ActionPerformed(evt);
-            }
-        });
         jTF2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF2KeyReleased(evt);
@@ -1022,17 +1014,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTF4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTF4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF4ActionPerformed(evt);
-            }
-        });
 
-        jTF13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF13ActionPerformed(evt);
-            }
-        });
         jTF13.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTF13KeyReleased(evt);
@@ -1259,11 +1241,11 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         jTF10.setText(String.valueOf(tb.tablero[1][0]));
         jTF10.setEditable(false);
-        jTF11.setText(String.valueOf(tb.tablero[1][4]));
+        jTF11.setText(String.valueOf(tb.tablero[1][1]));
         jTF11.setEditable(false);
-        jTF14.setText(String.valueOf(tb.tablero[1][5]));
+        jTF14.setText(String.valueOf(tb.tablero[1][4]));
         jTF14.setEditable(false);
-        jTF15.setText(String.valueOf(tb.tablero[1][0]));
+        jTF15.setText(String.valueOf(tb.tablero[1][5]));
         jTF15.setEditable(false);
 
         jTF19.setText(String.valueOf(tb.tablero[2][0]));
@@ -1334,7 +1316,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     private void jTF1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyTyped
 
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1344,7 +1326,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1355,7 +1337,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF3KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1365,7 +1347,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1375,7 +1357,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF20KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF20KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1384,7 +1366,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF30KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF30KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1393,7 +1375,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF37KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF37KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1402,7 +1384,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF47KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF47KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1411,7 +1393,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF48KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF48KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1420,7 +1402,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF64KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF64KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1429,7 +1411,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF65KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF65KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1438,7 +1420,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF66KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF66KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1447,7 +1429,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF73KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF73KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1456,7 +1438,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF74KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF74KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1465,7 +1447,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF75KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF75KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1474,7 +1456,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF6KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1484,7 +1466,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1494,7 +1476,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF22KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF22KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1503,7 +1485,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF23KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF23KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1512,7 +1494,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF24KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF24KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1521,7 +1503,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF31KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF31KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1530,7 +1512,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF33KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF33KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1539,7 +1521,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF41KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF41KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1548,7 +1530,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF49KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF49KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1557,7 +1539,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF50KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF50KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1566,7 +1548,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF51KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF51KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1575,7 +1557,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF67KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF67KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1584,7 +1566,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF68KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF68KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1593,7 +1575,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF76KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF76KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1602,7 +1584,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF77KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF77KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1611,7 +1593,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF78KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF78KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1620,7 +1602,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF7KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1630,7 +1612,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF8KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1640,7 +1622,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF16KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF16KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1649,7 +1631,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF17KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1658,7 +1640,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF18KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF18KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1667,7 +1649,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF26KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF26KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1676,7 +1658,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF35KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF35KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1685,7 +1667,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF36KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF36KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1694,7 +1676,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF43KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF43KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1703,7 +1685,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF44KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF44KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1712,7 +1694,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF52KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF52KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1721,7 +1703,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF53KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF53KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+         if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1730,7 +1712,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF61KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF61KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1739,7 +1721,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF62KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF62KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1748,7 +1730,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF63KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF63KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1757,7 +1739,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF72KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF72KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1766,7 +1748,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF79KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF79KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1775,7 +1757,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF80KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF80KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1784,7 +1766,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
     private void jTF81KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF81KeyTyped
         char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -1940,32 +1922,26 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         if (!jTF81.getText().isEmpty()) {
             jTF81.setText("");
         }
+        tb.vaciarTabla(tabla);
+        txaResultado.setText("");
 
     }//GEN-LAST:event_btnVolverActionPerformed
-
-    private void jTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF1ActionPerformed
-
-    private void jTF13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF13ActionPerformed
 
     private void jTF13KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyReleased
 
         int con = 0;
         if (tb.comprobar_valor((jTF13.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF13.getText()), 1)) {
-                lblError.setText("el numero " + jTF13.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF13.getText() + " ya está en la fila.");
                 jTF13.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF13.getText()), 3)) {
-                    lblError.setText("el numero " + jTF13.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF13.getText() + " ya está en la columna.");
                     jTF13.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF13.getText()), 1, 3)) {
-                        lblError.setText("el numero " + jTF13.getText() + " ya esta en la caja");
+                        lblError.setText("El numero " + jTF13.getText() + " ya está en la caja.");
                         jTF13.setText("");
                     } else {
                         tb.tablero[1][3] = Integer.valueOf(jTF13.getText());
@@ -1987,16 +1963,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF16.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF16.getText()), 1)) {
-                lblError.setText("el numero " + jTF16.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF16.getText() + " ya está en la fila.");
                 jTF16.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF16.getText()), 6)) {
-                    lblError.setText("el numero " + jTF16.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF16.getText() + " ya está en la columna.");
                     jTF16.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF16.getText()), 1, 6)) {
-                        lblError.setText("el numero " + jTF16.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF16.getText() + " ya está en la caja.");
                         jTF16.setText("");
                     } else {
                         tb.tablero[1][6] = Integer.valueOf(jTF16.getText());
@@ -2018,16 +1994,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF1.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF1.getText()), 0)) {
-                lblError.setText("el numero " + jTF1.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF1.getText() + " ya está en la fila.");
                 jTF1.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF1.getText()), 1)) {
-                    lblError.setText("el numero " + jTF1.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF1.getText() + " ya está en la columna.");
                     jTF1.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF1.getText()), 0, 1)) {
-                        lblError.setText("el numero " + jTF1.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF1.getText() + " ya está en la caja.");
                         jTF1.setText("");
                     } else {
                         tb.tablero[0][1] = Integer.valueOf(jTF1.getText());
@@ -2049,16 +2025,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF2.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF2.getText()), 0)) {
-                lblError.setText("el numero " + jTF2.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF2.getText() + " ya está en la fila.");
                 jTF2.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF2.getText()), 2)) {
-                    lblError.setText("el numero " + jTF2.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF2.getText() + " ya está en la columna.");
                     jTF2.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF2.getText()), 0, 2)) {
-                        lblError.setText("el numero " + jTF2.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF2.getText() + " ya está en la caja.");
                         jTF2.setText("");
                     } else {
                         tb.tablero[0][2] = Integer.valueOf(jTF2.getText());
@@ -2080,16 +2056,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF3.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF3.getText()), 0)) {
-                lblError.setText("el numero " + jTF3.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF3.getText() + " ya está en la fila.");
                 jTF3.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF3.getText()), 3)) {
-                    lblError.setText("el numero " + jTF3.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF3.getText() + " ya está en la columna.");
                     jTF3.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF3.getText()), 0, 3)) {
-                        lblError.setText("el numero " + jTF3.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF3.getText() + " ya está en la caja.");
                         jTF3.setText("");
                     } else {
                         tb.tablero[0][3] = Integer.valueOf(jTF3.getText());
@@ -2111,16 +2087,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF6.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF6.getText()), 0)) {
-                lblError.setText("el numero " + jTF6.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF6.getText() + " ya está en la fila.");
                 jTF6.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF6.getText()), 6)) {
-                    lblError.setText("el numero " + jTF6.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF6.getText() + " ya está en la columna.");
                     jTF6.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF6.getText()), 0, 6)) {
-                        lblError.setText("el numero " + jTF6.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF6.getText() + " ya está en la caja.");
                         jTF6.setText("");
                     } else {
                         tb.tablero[0][6] = Integer.valueOf(jTF6.getText());
@@ -2142,16 +2118,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF7.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF7.getText()), 0)) {
-                lblError.setText("el numero " + jTF7.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF7.getText() + " ya está en la fila.");
                 jTF7.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF7.getText()), 7)) {
-                    lblError.setText("el numero " + jTF7.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF7.getText() + " ya está en la columna.");
                     jTF7.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF7.getText()), 0, 7)) {
-                        lblError.setText("el numero " + jTF7.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF7.getText() + " ya está en la caja.");
                         jTF7.setText("");
                     } else {
                         tb.tablero[0][7] = Integer.valueOf(jTF7.getText());
@@ -2173,16 +2149,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF8.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF8.getText()), 0)) {
-                lblError.setText("el numero " + jTF8.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF8.getText() + " ya está en la fila.");
                 jTF8.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF8.getText()), 8)) {
-                    lblError.setText("el numero " + jTF8.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF8.getText() + " ya está en la columna.");
                     jTF8.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF8.getText()), 0, 8)) {
-                        lblError.setText("el numero " + jTF8.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF8.getText() + " ya está en la caja.");
                         jTF8.setText("");
                     } else {
                         tb.tablero[0][8] = Integer.valueOf(jTF8.getText());
@@ -2204,16 +2180,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF12.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF12.getText()), 1)) {
-                lblError.setText("el numero " + jTF12.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF12.getText() + " ya está en la fila.");
                 jTF12.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF12.getText()), 2)) {
-                    lblError.setText("el numero " + jTF12.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF12.getText() + " ya está en la columna.");
                     jTF12.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF12.getText()), 1, 2)) {
-                        lblError.setText("el numero " + jTF12.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF12.getText() + " ya está en la caja.");
                         jTF12.setText("");
                     } else {
                         tb.tablero[1][2] = Integer.valueOf(jTF12.getText());
@@ -2235,16 +2211,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF20.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF20.getText()), 2)) {
-                lblError.setText("el numero " + jTF20.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF20.getText() + " ya está en la fila.");
                 jTF20.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF20.getText()), 1)) {
-                    lblError.setText("el numero " + jTF20.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF20.getText() + " ya está en la columna.");
                     jTF20.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF20.getText()), 2, 1)) {
-                        lblError.setText("el numero " + jTF20.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF20.getText() + " ya está en la caja.");
                         jTF20.setText("");
                     } else {
                         tb.tablero[2][1] = Integer.valueOf(jTF20.getText());
@@ -2266,16 +2242,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF22.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF22.getText()), 2)) {
-                lblError.setText("el numero " + jTF22.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF22.getText() + " ya está en la fila.");
                 jTF22.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF22.getText()), 3)) {
-                    lblError.setText("el numero " + jTF22.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF22.getText() + " ya está en la columna.");
                     jTF22.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF22.getText()), 2, 3)) {
-                        lblError.setText("el numero " + jTF22.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF22.getText() + " ya está en la caja.");
                         jTF22.setText("");
                     } else {
                         tb.tablero[2][3] = Integer.valueOf(jTF22.getText());
@@ -2297,16 +2273,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF23.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF23.getText()), 2)) {
-                lblError.setText("el numero " + jTF23.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF23.getText() + " ya está en la fila.");
                 jTF23.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF23.getText()), 4)) {
-                    lblError.setText("el numero " + jTF23.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF23.getText() + " ya está en la columna.");
                     jTF23.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF23.getText()), 2, 4)) {
-                        lblError.setText("el numero " + jTF23.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF23.getText() + " ya está en la caja.");
                         jTF23.setText("");
                     } else {
                         tb.tablero[2][4] = Integer.valueOf(jTF23.getText());
@@ -2328,16 +2304,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF17.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF17.getText()), 1)) {
-                lblError.setText("el numero " + jTF17.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF17.getText() + " ya está en la fila.");
                 jTF17.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF17.getText()), 7)) {
-                    lblError.setText("el numero " + jTF17.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF17.getText() + " ya está en la columna.");
                     jTF17.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF17.getText()), 1, 7)) {
-                        lblError.setText("el numero " + jTF17.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF17.getText() + " ya está en la caja.");
                         jTF17.setText("");
                     } else {
                         tb.tablero[1][7] = Integer.valueOf(jTF17.getText());
@@ -2359,16 +2335,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF18.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF18.getText()), 1)) {
-                lblError.setText("el numero " + jTF18.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF18.getText() + " ya está en la fila.");
                 jTF18.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF18.getText()), 8)) {
-                    lblError.setText("el numero " + jTF18.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF18.getText() + " ya está en la columna.");
                     jTF18.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF18.getText()), 1, 8)) {
-                        lblError.setText("el numero " + jTF18.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF18.getText() + " ya está en la caja.");
                         jTF18.setText("");
                     } else {
                         tb.tablero[1][8] = Integer.valueOf(jTF18.getText());
@@ -2390,16 +2366,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF24.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF24.getText()), 2)) {
-                lblError.setText("el numero " + jTF24.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF24.getText() + " ya está en la fila.");
                 jTF24.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF24.getText()), 5)) {
-                    lblError.setText("el numero " + jTF24.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF24.getText() + " ya está en la columna.");
                     jTF24.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF24.getText()), 2, 5)) {
-                        lblError.setText("el numero " + jTF24.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF24.getText() + " ya está en la caja.");
                         jTF24.setText("");
                     } else {
                         tb.tablero[2][5] = Integer.valueOf(jTF24.getText());
@@ -2421,16 +2397,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF26.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF26.getText()), 2)) {
-                lblError.setText("el numero " + jTF26.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF26.getText() + " ya está en la fila.");
                 jTF26.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF26.getText()), 7)) {
-                    lblError.setText("el numero " + jTF26.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF26.getText() + " ya está en la columna.");
                     jTF26.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF26.getText()), 2, 7)) {
-                        lblError.setText("el numero " + jTF26.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF26.getText() + " ya está en la caja.");
                         jTF26.setText("");
                     } else {
                         tb.tablero[2][7] = Integer.valueOf(jTF26.getText());
@@ -2452,16 +2428,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF30.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF30.getText()), 3)) {
-                lblError.setText("el numero " + jTF30.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF30.getText() + " ya está en la fila.");
                 jTF30.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF30.getText()), 2)) {
-                    lblError.setText("el numero " + jTF30.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF30.getText() + " ya está en la columna.");
                     jTF30.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF30.getText()), 3, 2)) {
-                        lblError.setText("el numero " + jTF30.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF30.getText() + " ya está en la caja.");
                         jTF30.setText("");
                     } else {
                         tb.tablero[3][2] = Integer.valueOf(jTF30.getText());
@@ -2483,16 +2459,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF31.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF31.getText()), 3)) {
-                lblError.setText("el numero " + jTF31.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF31.getText() + " ya está en la fila.");
                 jTF31.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF31.getText()), 3)) {
-                    lblError.setText("el numero " + jTF31.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF31.getText() + " ya está en la columna.");
                     jTF31.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF31.getText()), 3, 3)) {
-                        lblError.setText("el numero " + jTF31.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF31.getText() + " ya está en la caja.");
                         jTF31.setText("");
                     } else {
                         tb.tablero[3][3] = Integer.valueOf(jTF31.getText());
@@ -2514,16 +2490,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF33.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF33.getText()), 3)) {
-                lblError.setText("el numero " + jTF33.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF33.getText() + " ya está en la fila.");
                 jTF33.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF33.getText()), 5)) {
-                    lblError.setText("el numero " + jTF33.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF33.getText() + " ya está en la columna.");
                     jTF33.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF33.getText()), 3, 5)) {
-                        lblError.setText("el numero " + jTF33.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF33.getText() + " ya está en la caja.");
                         jTF33.setText("");
                     } else {
                         tb.tablero[3][5] = Integer.valueOf(jTF33.getText());
@@ -2545,16 +2521,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF35.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF35.getText()), 3)) {
-                lblError.setText("el numero " + jTF35.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF35.getText() + " ya está en la fila.");
                 jTF35.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF35.getText()), 7)) {
-                    lblError.setText("el numero " + jTF35.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF35.getText() + " ya está en la columna.");
                     jTF35.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF35.getText()), 3, 7)) {
-                        lblError.setText("el numero " + jTF35.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF35.getText() + " ya está en la caja.");
                         jTF35.setText("");
                     } else {
                         tb.tablero[3][7] = Integer.valueOf(jTF35.getText());
@@ -2576,16 +2552,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF36.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF36.getText()), 3)) {
-                lblError.setText("el numero " + jTF36.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF36.getText() + " ya está en la fila.");
                 jTF36.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF36.getText()), 8)) {
-                    lblError.setText("el numero " + jTF36.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF36.getText() + " ya está en la columna.");
                     jTF36.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF36.getText()), 3, 8)) {
-                        lblError.setText("el numero " + jTF36.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF36.getText() + " ya está en la caja.");
                         jTF36.setText("");
                     } else {
                         tb.tablero[3][8] = Integer.valueOf(jTF36.getText());
@@ -2607,16 +2583,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF37.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF37.getText()), 4)) {
-                lblError.setText("el numero " + jTF37.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF37.getText() + " ya está en la fila.");
                 jTF37.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF37.getText()), 0)) {
-                    lblError.setText("el numero " + jTF37.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF37.getText() + " ya está en la columna.");
                     jTF37.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF37.getText()), 4, 0)) {
-                        lblError.setText("el numero " + jTF37.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF37.getText() + " ya está en la caja.");
                         jTF37.setText("");
                     } else {
                         tb.tablero[4][0] = Integer.valueOf(jTF37.getText());
@@ -2638,16 +2614,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF41.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF41.getText()), 4)) {
-                lblError.setText("el numero " + jTF41.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF41.getText() + " ya está en la fila.");
                 jTF41.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF41.getText()), 4)) {
-                    lblError.setText("el numero " + jTF41.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF41.getText() + " ya está en la columna.");
                     jTF41.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF41.getText()), 4, 4)) {
-                        lblError.setText("el numero " + jTF41.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF41.getText() + " ya está en la caja.");
                         jTF41.setText("");
                     } else {
                         tb.tablero[4][4] = Integer.valueOf(jTF41.getText());
@@ -2669,16 +2645,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF43.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF43.getText()), 4)) {
-                lblError.setText("el numero " + jTF43.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF43.getText() + " ya está en la fila.");
                 jTF43.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF43.getText()), 6)) {
-                    lblError.setText("el numero " + jTF43.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF43.getText() + " ya está en la columna.");
                     jTF43.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF43.getText()), 4, 6)) {
-                        lblError.setText("el numero " + jTF43.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF43.getText() + " ya está en la caja.");
                         jTF43.setText("");
                     } else {
                         tb.tablero[4][6] = Integer.valueOf(jTF43.getText());
@@ -2700,16 +2676,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF44.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF44.getText()), 4)) {
-                lblError.setText("el numero " + jTF44.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF44.getText() + " ya está en la fila.");
                 jTF44.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF44.getText()), 7)) {
-                    lblError.setText("el numero " + jTF44.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF44.getText() + " ya está en la columna.");
                     jTF44.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF44.getText()), 4, 7)) {
-                        lblError.setText("el numero " + jTF44.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF44.getText() + " ya está en la caja.");
                         jTF44.setText("");
                     } else {
                         tb.tablero[4][7] = Integer.valueOf(jTF44.getText());
@@ -2731,16 +2707,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF47.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF47.getText()), 5)) {
-                lblError.setText("el numero " + jTF47.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF47.getText() + " ya está en la fila.");
                 jTF47.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF47.getText()), 1)) {
-                    lblError.setText("el numero " + jTF47.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF47.getText() + " ya está en la columna.");
                     jTF47.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF47.getText()), 5, 1)) {
-                        lblError.setText("el numero " + jTF47.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF47.getText() + " ya está en la caja.");
                         jTF47.setText("");
                     } else {
                         tb.tablero[5][1] = Integer.valueOf(jTF47.getText());
@@ -2762,16 +2738,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF48.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF48.getText()), 5)) {
-                lblError.setText("el numero " + jTF48.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF48.getText() + " ya está en la fila.");
                 jTF48.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF48.getText()), 2)) {
-                    lblError.setText("el numero " + jTF48.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF48.getText() + " ya está en la columna.");
                     jTF48.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF48.getText()), 5, 2)) {
-                        lblError.setText("el numero " + jTF48.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF48.getText() + " ya está en la caja.");
                         jTF48.setText("");
                     } else {
                         tb.tablero[5][2] = Integer.valueOf(jTF48.getText());
@@ -2793,16 +2769,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF49.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF49.getText()), 5)) {
-                lblError.setText("el numero " + jTF49.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF49.getText() + " ya está en la fila.");
                 jTF49.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF49.getText()), 3)) {
-                    lblError.setText("el numero " + jTF49.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF49.getText() + " ya está en la columna.");
                     jTF49.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF49.getText()), 5, 3)) {
-                        lblError.setText("el numero " + jTF49.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF49.getText() + " ya está en la caja.");
                         jTF49.setText("");
                     } else {
                         tb.tablero[5][3] = Integer.valueOf(jTF49.getText());
@@ -2824,16 +2800,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF50.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF50.getText()), 5)) {
-                lblError.setText("el numero " + jTF50.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF50.getText() + " ya está en la fila.");
                 jTF50.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF50.getText()), 4)) {
-                    lblError.setText("el numero " + jTF50.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF50.getText() + " ya está en la columna.");
                     jTF50.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF50.getText()), 5, 4)) {
-                        lblError.setText("el numero " + jTF50.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF50.getText() + " ya está en la caja.");
                         jTF50.setText("");
                     } else {
                         tb.tablero[5][4] = Integer.valueOf(jTF50.getText());
@@ -2855,16 +2831,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF51.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF51.getText()), 5)) {
-                lblError.setText("el numero " + jTF51.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF51.getText() + " ya está en la fila.");
                 jTF51.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF51.getText()), 5)) {
-                    lblError.setText("el numero " + jTF51.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF51.getText() + " ya está en la columna.");
                     jTF51.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF51.getText()), 5, 5)) {
-                        lblError.setText("el numero " + jTF51.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF51.getText() + " ya está en la caja.");
                         jTF51.setText("");
                     } else {
                         tb.tablero[5][5] = Integer.valueOf(jTF51.getText());
@@ -2886,16 +2862,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF52.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF52.getText()), 5)) {
-                lblError.setText("el numero " + jTF52.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF52.getText() + " ya está en la fila.");
                 jTF52.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF52.getText()), 6)) {
-                    lblError.setText("el numero " + jTF52.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF52.getText() + " ya está en la columna.");
                     jTF52.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF52.getText()), 5, 6)) {
-                        lblError.setText("el numero " + jTF52.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF52.getText() + " ya está en la caja.");
                         jTF52.setText("");
                     } else {
                         tb.tablero[5][6] = Integer.valueOf(jTF52.getText());
@@ -2917,16 +2893,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF53.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF53.getText()), 5)) {
-                lblError.setText("el numero " + jTF53.getText() + " ya esta en la fila");
+                lblError.setText("  El número " + jTF53.getText() + " ya está en la fila.");
                 jTF53.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF53.getText()), 7)) {
-                    lblError.setText("el numero " + jTF53.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF53.getText() + " ya está en la columna.");
                     jTF53.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF53.getText()), 5, 7)) {
-                        lblError.setText("el numero " + jTF53.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF53.getText() + " ya está en la caja.");
                         jTF53.setText("");
                     } else {
                         tb.tablero[5][7] = Integer.valueOf(jTF53.getText());
@@ -2947,6 +2923,348 @@ public class Sudoku9x9 extends javax.swing.JFrame {
 
         int verSolucion = JOptionPane.showConfirmDialog(rootPane, "¿Seguro que quieres continuar?", "Advertencia", JOptionPane.YES_NO_OPTION);
 
+        if (!jTF1.getText().isEmpty()) {
+            tabla[0][0] = Integer.parseInt(jTF1.getText());
+        }
+
+        if (!jTF2.getText().isEmpty()) {
+            tabla[0][1] = Integer.parseInt(jTF2.getText());
+        }
+
+        if (!jTF3.getText().isEmpty()) {
+            tabla[0][2] = Integer.parseInt(jTF3.getText());
+        }
+
+        if (!jTF4.getText().isEmpty()) {
+            tabla[0][3] = Integer.parseInt(jTF4.getText());
+        }
+        if (!jTF5.getText().isEmpty()) {
+            tabla[0][4] = Integer.parseInt(jTF5.getText());
+        }
+
+        if (!jTF6.getText().isEmpty()) {
+            tabla[0][5] = Integer.parseInt(jTF6.getText());
+        }
+
+        if (!jTF7.getText().isEmpty()) {
+            tabla[0][6] = Integer.parseInt(jTF7.getText());
+        }
+
+        if (!jTF8.getText().isEmpty()) {
+            tabla[0][7] = Integer.parseInt(jTF8.getText());
+        }
+
+        if (!jTF9.getText().isEmpty()) {
+            tabla[0][8] = Integer.parseInt(jTF9.getText());
+        }
+
+        //Fila 2
+        if (!jTF10.getText().isEmpty()) {
+            tabla[1][0] = Integer.parseInt(jTF10.getText());
+        }
+
+        if (!jTF11.getText().isEmpty()) {
+            tabla[1][1] = Integer.parseInt(jTF11.getText());
+        }
+
+        if (!jTF12.getText().isEmpty()) {
+            tabla[1][2] = Integer.parseInt(jTF12.getText());
+        }
+
+        if (!jTF13.getText().isEmpty()) {
+            tabla[1][3] = Integer.parseInt(jTF13.getText());
+        }
+        if (!jTF14.getText().isEmpty()) {
+            tabla[1][4] = Integer.parseInt(jTF14.getText());
+        }
+
+        if (!jTF15.getText().isEmpty()) {
+            tabla[1][5] = Integer.parseInt(jTF15.getText());
+        }
+
+        if (!jTF16.getText().isEmpty()) {
+            tabla[1][6] = Integer.parseInt(jTF16.getText());
+        }
+
+        if (!jTF17.getText().isEmpty()) {
+            tabla[1][7] = Integer.parseInt(jTF17.getText());
+        }
+
+        if (!jTF18.getText().isEmpty()) {
+            tabla[1][8] = Integer.parseInt(jTF18.getText());
+        }
+
+        //Fila 3
+        if (!jTF19.getText().isEmpty()) {
+            tabla[2][0] = Integer.parseInt(jTF19.getText());
+        }
+
+        if (!jTF20.getText().isEmpty()) {
+            tabla[2][1] = Integer.parseInt(jTF20.getText());
+        }
+
+        if (!jTF21.getText().isEmpty()) {
+            tabla[2][2] = Integer.parseInt(jTF21.getText());
+        }
+
+        if (!jTF22.getText().isEmpty()) {
+            tabla[2][3] = Integer.parseInt(jTF22.getText());
+        }
+
+        if (!jTF23.getText().isEmpty()) {
+            tabla[2][4] = Integer.parseInt(jTF23.getText());
+        }
+
+        if (!jTF24.getText().isEmpty()) {
+            tabla[2][5] = Integer.parseInt(jTF24.getText());
+        }
+
+        if (!jTF25.getText().isEmpty()) {
+            tabla[2][6] = Integer.parseInt(jTF25.getText());
+        }
+
+        if (!jTF26.getText().isEmpty()) {
+            tabla[2][7] = Integer.parseInt(jTF26.getText());
+        }
+
+        if (!jTF27.getText().isEmpty()) {
+            tabla[2][8] = Integer.parseInt(jTF27.getText());
+        }
+
+        //Fila 4
+        if (!jTF28.getText().isEmpty()) {
+            tabla[3][0] = Integer.parseInt(jTF28.getText());
+        }
+
+        if (!jTF29.getText().isEmpty()) {
+            tabla[3][1] = Integer.parseInt(jTF29.getText());
+        }
+
+        if (!jTF30.getText().isEmpty()) {
+            tabla[3][2] = Integer.parseInt(jTF30.getText());
+        }
+
+        if (!jTF31.getText().isEmpty()) {
+            tabla[3][3] = Integer.parseInt(jTF31.getText());
+        }
+        if (!jTF32.getText().isEmpty()) {
+            tabla[3][4] = Integer.parseInt(jTF32.getText());
+        }
+
+        if (!jTF33.getText().isEmpty()) {
+            tabla[3][5] = Integer.parseInt(jTF33.getText());
+        }
+
+        if (!jTF34.getText().isEmpty()) {
+            tabla[3][6] = Integer.parseInt(jTF34.getText());
+        }
+
+        if (!jTF35.getText().isEmpty()) {
+            tabla[3][7] = Integer.parseInt(jTF35.getText());
+        }
+
+        if (!jTF36.getText().isEmpty()) {
+            tabla[3][8] = Integer.parseInt(jTF36.getText());
+        }
+
+        //Fila 5
+        if (!jTF37.getText().isEmpty()) {
+            tabla[4][0] = Integer.parseInt(jTF37.getText());
+        }
+
+        if (!jTF38.getText().isEmpty()) {
+            tabla[4][1] = Integer.parseInt(jTF38.getText());
+        }
+
+        if (!jTF39.getText().isEmpty()) {
+            tabla[4][2] = Integer.parseInt(jTF39.getText());
+        }
+
+        if (!jTF40.getText().isEmpty()) {
+            tabla[4][3] = Integer.parseInt(jTF40.getText());
+        }
+
+        if (!jTF41.getText().isEmpty()) {
+            tabla[4][4] = Integer.parseInt(jTF41.getText());
+        }
+
+        if (!jTF42.getText().isEmpty()) {
+            tabla[4][5] = Integer.parseInt(jTF42.getText());
+        }
+
+        if (!jTF43.getText().isEmpty()) {
+            tabla[4][6] = Integer.parseInt(jTF43.getText());
+        }
+
+        if (!jTF44.getText().isEmpty()) {
+            tabla[4][7] = Integer.parseInt(jTF44.getText());
+        }
+
+        if (!jTF45.getText().isEmpty()) {
+            tabla[4][8] = Integer.parseInt(jTF45.getText());
+        }
+
+        //Fila 6
+        if (!jTF46.getText().isEmpty()) {
+            tabla[5][0] = Integer.parseInt(jTF46.getText());
+        }
+
+        if (!jTF47.getText().isEmpty()) {
+            tabla[5][1] = Integer.parseInt(jTF47.getText());
+        }
+
+        if (!jTF48.getText().isEmpty()) {
+            tabla[5][2] = Integer.parseInt(jTF48.getText());
+        }
+
+        if (!jTF49.getText().isEmpty()) {
+            tabla[5][3] = Integer.parseInt(jTF49.getText());
+        }
+
+        if (!jTF50.getText().isEmpty()) {
+            tabla[5][4] = Integer.parseInt(jTF50.getText());
+        }
+
+        if (!jTF51.getText().isEmpty()) {
+            tabla[5][5] = Integer.parseInt(jTF51.getText());
+        }
+
+        if (!jTF52.getText().isEmpty()) {
+            tabla[5][6] = Integer.parseInt(jTF52.getText());
+        }
+
+        if (!jTF53.getText().isEmpty()) {
+            tabla[5][7] = Integer.parseInt(jTF53.getText());
+        }
+
+        if (!jTF54.getText().isEmpty()) {
+            tabla[5][8] = Integer.parseInt(jTF54.getText());
+        }
+
+        //Fila 7
+        if (!jTF55.getText().isEmpty()) {
+            tabla[6][0] = Integer.parseInt(jTF55.getText());
+        }
+
+        if (!jTF56.getText().isEmpty()) {
+            tabla[6][1] = Integer.parseInt(jTF56.getText());
+        }
+
+        if (!jTF57.getText().isEmpty()) {
+            tabla[6][2] = Integer.parseInt(jTF57.getText());
+        }
+
+        if (!jTF58.getText().isEmpty()) {
+            tabla[6][3] = Integer.parseInt(jTF58.getText());
+        }
+
+        if (!jTF59.getText().isEmpty()) {
+            tabla[6][4] = Integer.parseInt(jTF59.getText());
+        }
+
+        if (!jTF60.getText().isEmpty()) {
+            tabla[6][5] = Integer.parseInt(jTF60.getText());
+        }
+
+        if (!jTF61.getText().isEmpty()) {
+            tabla[6][6] = Integer.parseInt(jTF61.getText());
+        }
+
+        if (!jTF62.getText().isEmpty()) {
+            tabla[6][7] = Integer.parseInt(jTF62.getText());
+        }
+
+        if (!jTF63.getText().isEmpty()) {
+            tabla[6][8] = Integer.parseInt(jTF63.getText());
+        }
+
+        //Fila 8
+        if (!jTF64.getText().isEmpty()) {
+            tabla[7][0] = Integer.parseInt(jTF64.getText());
+        }
+
+        if (!jTF65.getText().isEmpty()) {
+            tabla[7][1] = Integer.parseInt(jTF65.getText());
+        }
+
+        if (!jTF66.getText().isEmpty()) {
+            tabla[7][2] = Integer.parseInt(jTF66.getText());
+        }
+
+        if (!jTF67.getText().isEmpty()) {
+            tabla[7][3] = Integer.parseInt(jTF67.getText());
+        }
+
+        if (!jTF68.getText().isEmpty()) {
+            tabla[7][4] = Integer.parseInt(jTF68.getText());
+        }
+
+        if (!jTF69.getText().isEmpty()) {
+            tabla[7][5] = Integer.parseInt(jTF69.getText());
+        }
+
+        if (!jTF70.getText().isEmpty()) {
+            tabla[7][6] = Integer.parseInt(jTF70.getText());
+        }
+
+        if (!jTF71.getText().isEmpty()) {
+            tabla[7][7] = Integer.parseInt(jTF71.getText());
+        }
+
+        if (!jTF72.getText().isEmpty()) {
+            tabla[7][8] = Integer.parseInt(jTF72.getText());
+        }
+
+        //Fila 9
+        if (!jTF73.getText().isEmpty()) {
+            tabla[8][0] = Integer.parseInt(jTF73.getText());
+        }
+
+        if (!jTF74.getText().isEmpty()) {
+            tabla[8][1] = Integer.parseInt(jTF74.getText());
+        }
+
+        if (!jTF75.getText().isEmpty()) {
+            tabla[8][2] = Integer.parseInt(jTF75.getText());
+        }
+
+        if (!jTF76.getText().isEmpty()) {
+            tabla[8][3] = Integer.parseInt(jTF76.getText());
+        }
+
+        if (!jTF77.getText().isEmpty()) {
+            tabla[8][4] = Integer.parseInt(jTF77.getText());
+        }
+
+        if (!jTF78.getText().isEmpty()) {
+            tabla[8][5] = Integer.parseInt(jTF78.getText());
+        }
+
+        if (!jTF79.getText().isEmpty()) {
+            tabla[8][6] = Integer.parseInt(jTF79.getText());
+        }
+
+        if (!jTF80.getText().isEmpty()) {
+            tabla[8][7] = Integer.parseInt(jTF80.getText());
+        }
+
+        if (!jTF81.getText().isEmpty()) {
+            tabla[8][8] = Integer.parseInt(jTF81.getText());
+        }
+
+        if (verSolucion==0){
+                    if (!tb.resolver(tabla)) {
+
+            txaResultado.setText("El Sudoku no tiene solución");
+
+        } else {
+
+            txaResultado.setText(tb.resultados);
+
+        }
+        }else{
+            JOptionPane.showMessageDialog(rootPane,"Insertar mensaje alentador xd", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+        }
 
     }//GEN-LAST:event_btnSolucionActionPerformed
 
@@ -2955,16 +3273,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF61.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF61.getText()), 6)) {
-                lblError.setText("el numero " + jTF61.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF61.getText() + " ya está en la fila.");
                 jTF61.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF61.getText()), 6)) {
-                    lblError.setText("el numero " + jTF61.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF61.getText() + " ya está en la columna.");
                     jTF61.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF61.getText()), 6, 6)) {
-                        lblError.setText("el numero " + jTF61.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF61.getText() + " ya está en la caja.");
                         jTF61.setText("");
                     } else {
                         tb.tablero[6][6] = Integer.valueOf(jTF61.getText());
@@ -2986,16 +3304,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF62.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF62.getText()), 6)) {
-                lblError.setText("el numero " + jTF62.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF62.getText() + " ya está en la fila.");
                 jTF62.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF62.getText()), 7)) {
-                    lblError.setText("el numero " + jTF62.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF62.getText() + " ya está en la columna.");
                     jTF62.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF62.getText()), 6, 7)) {
-                        lblError.setText("el numero " + jTF62.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF62.getText() + " ya está en la caja.");
                         jTF62.setText("");
                     } else {
                         tb.tablero[6][7] = Integer.valueOf(jTF62.getText());
@@ -3017,16 +3335,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF63.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF63.getText()), 6)) {
-                lblError.setText("el numero " + jTF63.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF63.getText() + " ya está en la fila.");
                 jTF63.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF63.getText()), 8)) {
-                    lblError.setText("el numero " + jTF63.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF63.getText() + " ya está en la columna.");
                     jTF63.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF63.getText()), 6, 8)) {
-                        lblError.setText("el numero " + jTF63.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF63.getText() + " ya está en la caja.");
                         jTF63.setText("");
                     } else {
                         tb.tablero[6][8] = Integer.valueOf(jTF63.getText());
@@ -3048,16 +3366,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF64.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF64.getText()), 7)) {
-                lblError.setText("el numero " + jTF64.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF64.getText() + " ya está en la fila.");
                 jTF64.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF64.getText()), 0)) {
-                    lblError.setText("el numero " + jTF64.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF64.getText() + " ya está en la columna.");
                     jTF64.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF64.getText()), 7, 0)) {
-                        lblError.setText("el numero " + jTF64.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF64.getText() + " ya está en la caja.");
                         jTF64.setText("");
                     } else {
                         tb.tablero[7][0] = Integer.valueOf(jTF64.getText());
@@ -3079,16 +3397,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF65.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF65.getText()), 7)) {
-                lblError.setText("el numero " + jTF65.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF65.getText() + " ya está en la fila.");
                 jTF65.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF65.getText()), 1)) {
-                    lblError.setText("el numero " + jTF65.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF65.getText() + " ya está en la columna.");
                     jTF65.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF65.getText()), 7, 1)) {
-                        lblError.setText("el numero " + jTF65.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF65.getText() + " ya está en la caja.");
                         jTF65.setText("");
                     } else {
                         tb.tablero[7][1] = Integer.valueOf(jTF65.getText());
@@ -3110,16 +3428,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF66.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF66.getText()), 7)) {
-                lblError.setText("el numero " + jTF66.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF66.getText() + " ya está en la fila.");
                 jTF66.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF66.getText()), 2)) {
-                    lblError.setText("el numero " + jTF66.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF66.getText() + " ya está en la columna.");
                     jTF66.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF66.getText()), 7, 2)) {
-                        lblError.setText("el numero " + jTF66.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF66.getText() + " ya está en la caja.");
                         jTF66.setText("");
                     } else {
                         tb.tablero[7][2] = Integer.valueOf(jTF66.getText());
@@ -3141,16 +3459,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF67.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF67.getText()), 7)) {
-                lblError.setText("el numero " + jTF67.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF67.getText() + " ya está en la fila.");
                 jTF67.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF67.getText()), 3)) {
-                    lblError.setText("el numero " + jTF67.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF67.getText() + " ya está en la columna.");
                     jTF67.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF67.getText()), 7, 3)) {
-                        lblError.setText("el numero " + jTF67.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF67.getText() + " ya está en la caja.");
                         jTF67.setText("");
                     } else {
                         tb.tablero[7][3] = Integer.valueOf(jTF67.getText());
@@ -3172,16 +3490,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF68.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF68.getText()), 7)) {
-                lblError.setText("el numero " + jTF68.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF68.getText() + " ya está en la fila.");
                 jTF68.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF68.getText()), 4)) {
-                    lblError.setText("el numero " + jTF68.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF68.getText() + " ya está en la columna.");
                     jTF68.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF68.getText()), 7, 4)) {
-                        lblError.setText("el numero " + jTF68.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF68.getText() + " ya está en la caja.");
                         jTF68.setText("");
                     } else {
                         tb.tablero[7][4] = Integer.valueOf(jTF68.getText());
@@ -3203,16 +3521,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF72.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF72.getText()), 7)) {
-                lblError.setText("el numero " + jTF72.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF72.getText() + " ya está en la fila.");
                 jTF72.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF72.getText()), 8)) {
-                    lblError.setText("el numero " + jTF72.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF72.getText() + " ya está en la columna.");
                     jTF72.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF72.getText()), 7, 8)) {
-                        lblError.setText("el numero " + jTF72.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF72.getText() + " ya está en la caja.");
                         jTF72.setText("");
                     } else {
                         tb.tablero[7][8] = Integer.valueOf(jTF72.getText());
@@ -3234,16 +3552,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF73.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF73.getText()), 8)) {
-                lblError.setText("el numero " + jTF73.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF73.getText() + " ya está en la fila.");
                 jTF73.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF73.getText()), 0)) {
-                    lblError.setText("el numero " + jTF73.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF73.getText() + " ya está en la columna.");
                     jTF73.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF73.getText()), 8, 0)) {
-                        lblError.setText("el numero " + jTF73.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF73.getText() + " ya está en la caja.");
                         jTF73.setText("");
                     } else {
                         tb.tablero[8][0] = Integer.valueOf(jTF73.getText());
@@ -3265,16 +3583,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF74.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF74.getText()), 8)) {
-                lblError.setText("el numero " + jTF74.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF74.getText() + " ya está en la fila.");
                 jTF74.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF74.getText()), 1)) {
-                    lblError.setText("el numero " + jTF74.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF74.getText() + " ya está en la columna.");
                     jTF74.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF74.getText()), 8, 1)) {
-                        lblError.setText("el numero " + jTF74.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF74.getText() + " ya está en la caja.");
                         jTF74.setText("");
                     } else {
                         tb.tablero[8][1] = Integer.valueOf(jTF74.getText());
@@ -3296,16 +3614,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF75.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF75.getText()), 8)) {
-                lblError.setText("el numero " + jTF75.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF75.getText() + " ya está en la fila.");
                 jTF75.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF75.getText()), 2)) {
-                    lblError.setText("el numero " + jTF75.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF75.getText() + " ya está en la columna.");
                     jTF75.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF75.getText()), 8, 2)) {
-                        lblError.setText("el numero " + jTF75.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF75.getText() + " ya está en la caja.");
                         jTF75.setText("");
                     } else {
                         tb.tablero[8][2] = Integer.valueOf(jTF75.getText());
@@ -3327,16 +3645,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF76.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF76.getText()), 8)) {
-                lblError.setText("el numero " + jTF76.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF76.getText() + " ya está en la fila.");
                 jTF76.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF76.getText()), 3)) {
-                    lblError.setText("el numero " + jTF76.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF76.getText() + " ya está en la columna.");
                     jTF76.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF76.getText()), 8, 3)) {
-                        lblError.setText("el numero " + jTF76.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF76.getText() + " ya está en la caja.");
                         jTF76.setText("");
                     } else {
                         tb.tablero[8][3] = Integer.valueOf(jTF76.getText());
@@ -3358,16 +3676,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF77.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF77.getText()), 8)) {
-                lblError.setText("el numero " + jTF77.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF77.getText() + " ya está en la fila.");
                 jTF77.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF77.getText()), 4)) {
-                    lblError.setText("el numero " + jTF77.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF77.getText() + " ya está en la columna.");
                     jTF77.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF77.getText()), 8, 4)) {
-                        lblError.setText("el numero " + jTF77.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF77.getText() + " ya está en la caja.");
                         jTF77.setText("");
                     } else {
                         tb.tablero[8][4] = Integer.valueOf(jTF77.getText());
@@ -3389,16 +3707,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF79.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF79.getText()), 8)) {
-                lblError.setText("el numero " + jTF79.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF79.getText() + " ya está en la fila.");
                 jTF79.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF79.getText()), 6)) {
-                    lblError.setText("el numero " + jTF79.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF79.getText() + " ya está en la columna.");
                     jTF79.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF79.getText()), 8, 6)) {
-                        lblError.setText("el numero " + jTF79.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF79.getText() + " ya está en la caja.");
                         jTF79.setText("");
                     } else {
                         tb.tablero[8][6] = Integer.valueOf(jTF79.getText());
@@ -3420,16 +3738,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF80.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF80.getText()), 8)) {
-                lblError.setText("el numero " + jTF80.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF80.getText() + " ya está en la fila.");
                 jTF80.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF80.getText()), 7)) {
-                    lblError.setText("el numero " + jTF80.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF80.getText() + " ya está en la columna.");
                     jTF80.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF80.getText()), 8, 7)) {
-                        lblError.setText("el numero " + jTF80.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF80.getText() + " ya está en la caja.");
                         jTF80.setText("");
                     } else {
                         tb.tablero[8][7] = Integer.valueOf(jTF80.getText());
@@ -3451,16 +3769,16 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF81.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF81.getText()), 8)) {
-                lblError.setText("el numero " + jTF81.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF81.getText() + " ya está en la fila.");
                 jTF81.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF81.getText()), 8)) {
-                    lblError.setText("el numero " + jTF81.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF81.getText() + " ya está en la columna.");
                     jTF81.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF81.getText()), 8, 8)) {
-                        lblError.setText("el numero " + jTF81.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF81.getText() + " ya está en la caja.");
                         jTF81.setText("");
                     } else {
                         tb.tablero[8][8] = Integer.valueOf(jTF81.getText());
@@ -3480,14 +3798,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     private void jTF39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF39ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTF39ActionPerformed
-
-    private void jTF4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF4ActionPerformed
-
-    private void jTF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF2ActionPerformed
 
     /**
      * @param args the command line arguments
