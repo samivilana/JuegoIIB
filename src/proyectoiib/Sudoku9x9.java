@@ -133,6 +133,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jlbError = new javax.swing.JLabel();
         lblError = new javax.swing.JLabel();
         btnSolucion = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku 9x9");
@@ -1385,6 +1387,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         txaResultado.setRows(5);
         jScrollPane1.setViewportView(txaResultado);
 
+        btnCambiar.setBackground(new java.awt.Color(153, 255, 102));
+        btnCambiar.setFont(new java.awt.Font("Kristen ITC", 1, 11)); // NOI18N
         btnCambiar.setText("Cambiar 4x4");
         btnCambiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1392,6 +1396,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             }
         });
 
+        btnVolver.setBackground(new java.awt.Color(180, 110, 250));
+        btnVolver.setFont(new java.awt.Font("Kristen ITC", 1, 11)); // NOI18N
         btnVolver.setLabel("Volver a jugar");
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1402,12 +1408,20 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         lblError.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblError.setForeground(new java.awt.Color(255, 255, 255));
 
+        btnSolucion.setBackground(new java.awt.Color(0, 204, 255));
+        btnSolucion.setFont(new java.awt.Font("Kristen ITC", 1, 11)); // NOI18N
         btnSolucion.setText("Ver Solución");
         btnSolucion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSolucionActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
+        jLabel1.setText("Sudoku 9x9");
+
+        jLabel2.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
+        jLabel2.setText("Solución");
 
         javax.swing.GroupLayout jblPanelLayout = new javax.swing.GroupLayout(jblPanel);
         jblPanel.setLayout(jblPanelLayout);
@@ -1416,36 +1430,48 @@ public class Sudoku9x9 extends javax.swing.JFrame {
             .addGroup(jblPanelLayout.createSequentialGroup()
                 .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jblPanelLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
+                        .addGap(26, 26, 26)
                         .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jblPanelLayout.createSequentialGroup()
+                                .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE))
+                            .addGroup(jblPanelLayout.createSequentialGroup()
+                                .addGap(39, 39, 39)
                                 .addComponent(btnSolucion)
-                                .addGap(96, 96, 96)
-                                .addComponent(btnVolver))
-                            .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnVolver)))
                         .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblPanelLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jblPanelLayout.createSequentialGroup()
-                                .addGap(94, 94, 94)
-                                .addComponent(btnCambiar))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblPanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnCambiar)
+                                .addGap(49, 49, 49))))
                     .addGroup(jblPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jlbError, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
+            .addGroup(jblPanelLayout.createSequentialGroup()
+                .addGap(139, 139, 139)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(115, 115, 115))
         );
         jblPanelLayout.setVerticalGroup(
             jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jblPanelLayout.createSequentialGroup()
-                .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(15, 15, 15)
+                .addGroup(jblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jblPanelLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jblPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblError, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1455,7 +1481,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                     .addComponent(btnCambiar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlbError)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         getContentPane().add(jblPanel, java.awt.BorderLayout.CENTER);
@@ -4075,6 +4101,8 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     private javax.swing.JButton btnCambiar;
     private javax.swing.JButton btnSolucion;
     private javax.swing.JButton btnVolver;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
