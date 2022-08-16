@@ -17,6 +17,7 @@ public class Tablero9x9 {
 
     //Cargar valores al tablero
     public int[][] cargarDatos() {
+        
         tablero[0][3] = 5;
         tablero[0][4] = 6;
         tablero[0][8] = 2;

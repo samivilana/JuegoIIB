@@ -100,14 +100,6 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jTF5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF5.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF5.setPreferredSize(new java.awt.Dimension(32, 32));
-        jTF5.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTF5KeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTF5KeyTyped(evt);
-            }
-        });
 
         jTF6.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF6.setPreferredSize(new java.awt.Dimension(32, 32));
@@ -188,14 +180,6 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jTF3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF3.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF3.setPreferredSize(new java.awt.Dimension(32, 32));
-        jTF3.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTF3KeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTF3KeyTyped(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -242,14 +226,6 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jTF10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF10.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF10.setPreferredSize(new java.awt.Dimension(32, 32));
-        jTF10.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTF10KeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTF10KeyTyped(evt);
-            }
-        });
 
         jTF14.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF14.setPreferredSize(new java.awt.Dimension(32, 32));
@@ -317,14 +293,6 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         jTF12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTF12.setMinimumSize(new java.awt.Dimension(32, 32));
         jTF12.setPreferredSize(new java.awt.Dimension(32, 32));
-        jTF12.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTF12KeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTF12KeyTyped(evt);
-            }
-        });
 
         jTF15.setToolTipText("");
         jTF15.setMinimumSize(new java.awt.Dimension(32, 32));
@@ -498,7 +466,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
     private void jTF1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF1KeyTyped
         // TODO add your handling code here:
          char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -508,7 +476,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
     private void jTF2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF2KeyTyped
         // TODO add your handling code here:
           char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -518,29 +486,18 @@ public class Sudoku4x4 extends javax.swing.JFrame {
     private void jTF4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF4KeyTyped
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jTF4KeyTyped
 
-    private void jTF5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF5KeyTyped
-        // TODO add your handling code here:
-        // TODO add your handling code here:
-            char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_jTF5KeyTyped
-
     private void jTF6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF6KeyTyped
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -551,7 +508,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -562,7 +519,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -573,51 +530,29 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jTF9KeyTyped
 
-    private void jTF10KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF10KeyTyped
-        // TODO add your handling code here:
-        // TODO add your handling code here:
-            char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_jTF10KeyTyped
-
     private void jTF11KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF11KeyTyped
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jTF11KeyTyped
 
-    private void jTF12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyTyped
-        // TODO add your handling code here:
-        // TODO add your handling code here:
-            char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_jTF12KeyTyped
-
     private void jTF13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF13KeyTyped
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -628,7 +563,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -639,7 +574,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -650,7 +585,7 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
             char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
+        if (!Character.isDigit(validacion)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
@@ -666,15 +601,11 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         if (!jTF2.getText().isEmpty()) {
             jTF2.setText("");
         }
-       /*if (!jTF3.getText().isEmpty()) {
-            jTF3.setText("");
-       // }*/
+
         if (!jTF4.getText().isEmpty()) {
             jTF4.setText("");
         }
-        /*if (!jTF5.getText().isEmpty()) {
-            jTF5.setText("");
-        }**/
+
          if (!jTF6.getText().isEmpty()) {
             jTF6.setText("");
         }
@@ -687,14 +618,11 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         if (!jTF9.getText().isEmpty()) {
             jTF9.setText("");
         }
-        /**if (!jTF10.getText().isEmpty()) {
-            jTF10.setText("");
-        }*/
+
         if (!jTF11.getText().isEmpty()) {
             jTF11.setText("");
         }
-        /*if (!jTF12.getText().isEmpty()) {
-            jTF12.setText("");*/
+
         
         if (!jTF13.getText().isEmpty()) {
             jTF13.setText("");
@@ -784,13 +712,20 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         }
 
 //Comprobar si los valores son correctos
-       
-            //Resolver el sudoku
-            if (!tb.resolver(tabla)) {
-                jTAResultados.setText("El Sudoku no tiene solución");
-            } else {
-                jTAResultados.setText(tb.resultados);
-            }
+        if (verSolucion==0){
+                    if (!tb.resolver(tabla)) {
+
+            jTAResultados.setText("El Sudoku no tiene solución");
+
+        } else {
+
+            jTAResultados.setText(tb.resultados);
+
+        }
+        }else{
+            JOptionPane.showMessageDialog(rootPane,"No te rindas", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+        }
+
       
         
     }//GEN-LAST:event_btnSolucionActionPerformed
@@ -1176,141 +1111,6 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         }
          
     }//GEN-LAST:event_jTF16KeyReleased
-
-    private void jTF3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF3KeyReleased
-        // TODO add your handling code here:
-             /*int con = 0;
-        if (tb.comprobar_valor((jTF3.getText()))) {
-            if (tb.existe_fila(Integer.valueOf(jTF3.getText()), 0)) {
-                lblError.setText("el numero " + jTF3.getText() + " ya esta en la fila");
-                jTF3.setText("");
-            } else {
-                if (tb.existe_columna(Integer.valueOf(jTF3.getText()), 2)) {
-                    lblError.setText("el numero " + jTF3.getText() + " ya esta en la columna");
-                    jTF3.setText("");
-                } else {
-
-                    if (tb.existe_caja(Integer.valueOf(jTF3.getText()), 0, 2)) {
-                        lblError.setText("el numero " + jTF3.getText() + " ya esta en la caja");
-                        jTF3.setText("");
-                    } else {
-                        tb.tablero[0][2] = Integer.valueOf(jTF3.getText());
-                        lblError.setText("");
-                        con++;
-                    }
-                }
-            }
-        } else {
-            jTF3.setText("");
-        }
-        if (con == 0) {
-            tb.tablero[0][2] = 0;
-        }*/
-    }//GEN-LAST:event_jTF3KeyReleased
-
-    private void jTF3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF3KeyTyped
-        // TODO add your handling code here:
-               char validacion = evt.getKeyChar();
-        if (Character.isLetter(validacion)) {
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Solo se permiten números", "Mensaje", JOptionPane.ERROR_MESSAGE);
-        }
-        
-    }//GEN-LAST:event_jTF3KeyTyped
-
-    private void jTF5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF5KeyReleased
-        // TODO add your handling code here:
-       /**              int con = 0;
-        if (tb.comprobar_valor((jTF5.getText()))) {
-            if (tb.existe_fila(Integer.valueOf(jTF5.getText()), 1)) {
-                lblError.setText("el numero " + jTF5.getText() + " ya esta en la fila");
-                jTF5.setText("");
-            } else {
-                if (tb.existe_columna(Integer.valueOf(jTF5.getText()), 0)) {
-                    lblError.setText("el numero " + jTF5.getText() + " ya esta en la columna");
-                    jTF5.setText("");
-                } else {
-
-                    if (tb.existe_caja(Integer.valueOf(jTF5.getText()), 1, 0)) {
-                        lblError.setText("el numero " + jTF5.getText() + " ya esta en la caja");
-                        jTF5.setText("");
-                    } else {
-                        tb.tablero[1][0] = Integer.valueOf(jTF5.getText());
-                        lblError.setText("");
-                        con++;
-                    }
-                }
-            }
-        } else {
-            jTF5.setText("");
-        }
-        if (con == 0) {
-            tb.tablero[1][0] = 0;
-        }*/
-    }//GEN-LAST:event_jTF5KeyReleased
-
-    private void jTF10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF10KeyReleased
-        // TODO add your handling code here:
-                     /*int con = 0;
-        if (tb.comprobar_valor((jTF10.getText()))) {
-            if (tb.existe_fila(Integer.valueOf(jTF10.getText()), 2)) {
-                lblError.setText("el numero " + jTF10.getText() + " ya esta en la fila");
-                jTF10.setText("");
-            } else {
-                if (tb.existe_columna(Integer.valueOf(jTF10.getText()), 1  )) {
-                    lblError.setText("el numero " + jTF10.getText() + " ya esta en la columna");
-                    jTF10.setText("");
-                } else {
-
-                    if (tb.existe_caja(Integer.valueOf(jTF10.getText()), 2 , 1)) {
-                        lblError.setText("el numero " + jTF10.getText() + " ya esta en la caja");
-                        jTF10.setText("");
-                    } else {
-                        tb.tablero[2][1] = Integer.valueOf(jTF10.getText());
-                        lblError.setText("");
-                        con++;
-                    }
-                }
-            }
-        } else {
-            jTF10.setText("");
-        }
-        if (con == 0) {
-            tb.tablero[2][1] = 0;
-        }*/
-    }//GEN-LAST:event_jTF10KeyReleased
-
-    private void jTF12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF12KeyReleased
-        // TODO add your handling code here:
-          /**          int con = 0;
-        if (tb.comprobar_valor((jTF12.getText()))) {
-            if (tb.existe_fila(Integer.valueOf(jTF12.getText()), 2)) {
-                lblError.setText("el numero " + jTF12.getText() + " ya esta en la fila");
-                jTF12.setText("");
-            } else {
-                if (tb.existe_columna(Integer.valueOf(jTF12.getText()), 3)) {
-                    lblError.setText("el numero " + jTF12.getText() + " ya esta en la columna");
-                    jTF12.setText("");
-                } else {
-
-                    if (tb.existe_caja(Integer.valueOf(jTF12.getText()), 2, 3)) {
-                        lblError.setText("el numero " + jTF12.getText() + " ya esta en la caja");
-                        jTF12.setText("");
-                    } else {
-                        tb.tablero[3][3] = Integer.valueOf(jTF12.getText());
-                        lblError.setText("");
-                        con++;
-                    }
-                }
-            }
-        } else {
-            jTF12.setText("");
-        }
-        if (con == 0) {
-            tb.tablero[2][3] = 0;
-        }*/
-    }//GEN-LAST:event_jTF12KeyReleased
    
     
     
