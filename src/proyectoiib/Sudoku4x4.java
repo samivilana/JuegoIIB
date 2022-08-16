@@ -800,16 +800,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
          int con = 0;
         if (tb.comprobar_valor((jTF1.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF1.getText()), 0)) {
-                lblError.setText("el numero " + jTF1.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF1.getText() + " ya esta en la fila");
                 jTF1.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF1.getText()), 0)) {
-                    lblError.setText("el numero " + jTF1.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF1.getText() + " ya esta en la columna");
                     jTF1.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF1.getText()), 0, 0)) {
-                        lblError.setText("el numero " + jTF1.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF1.getText() + " ya esta en la caja");
                         jTF1.setText("");
                     } else {
                         tb.tablero[0][0] = Integer.valueOf(jTF1.getText());
@@ -832,16 +832,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
         int con = 0;
         if (tb.comprobar_valor((jTF2.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF2.getText()), 0)) {
-                lblError.setText("el numero " + jTF2.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF2.getText() + " ya esta en la fila");
                 jTF2.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF2.getText()), 1)) {
-                    lblError.setText("el numero " + jTF2.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF2.getText() + " ya esta en la columna");
                     jTF2.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF2.getText()), 0, 1)) {
-                        lblError.setText("el numero " + jTF2.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF2.getText() + " ya esta en la caja");
                         jTF2.setText("");
                     } else {
                         tb.tablero[0][1] = Integer.valueOf(jTF2.getText());
@@ -867,16 +867,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
          int con = 0;
         if (tb.comprobar_valor((jTF4.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF4.getText()), 0)) {
-                lblError.setText("el numero " + jTF4.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF4.getText() + " ya esta en la fila");
                 jTF4.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF4.getText()), 3)) {
-                    lblError.setText("el numero " + jTF4.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF4.getText() + " ya esta en la columna");
                     jTF4.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF4.getText()), 0, 3)) {
-                        lblError.setText("el numero " + jTF4.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF4.getText() + " ya esta en la caja");
                         jTF4.setText("");
                     } else {
                         tb.tablero[0][3] = Integer.valueOf(jTF4.getText());
@@ -902,16 +902,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                  int con = 0;
         if (tb.comprobar_valor((jTF6.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF6.getText()), 1)) {
-                lblError.setText("el numero " + jTF6.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF6.getText() + " ya esta en la fila");
                 jTF6.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF6.getText()), 1)) {
-                    lblError.setText("el numero " + jTF6.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF6.getText() + " ya esta en la columna");
                     jTF6.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF6.getText()), 1, 1)) {
-                        lblError.setText("el numero " + jTF6.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF6.getText() + " ya esta en la caja");
                         jTF6.setText("");
                     } else {
                         tb.tablero[1][1] = Integer.valueOf(jTF6.getText());
@@ -933,16 +933,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                  int con = 0;
         if (tb.comprobar_valor((jTF7.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF7.getText()), 1)) {
-                lblError.setText("el numero " + jTF7.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF7.getText() + " ya esta en la fila");
                 jTF7.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF7.getText()), 2)) {
-                    lblError.setText("el numero " + jTF7.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF7.getText() + " ya esta en la columna");
                     jTF7.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF7.getText()), 1, 2)) {
-                        lblError.setText("el numero " + jTF7.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF7.getText() + " ya esta en la caja");
                         jTF7.setText("");
                     } else {
                         tb.tablero[1][2] = Integer.valueOf(jTF7.getText());
@@ -964,16 +964,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                  int con = 0;
         if (tb.comprobar_valor((jTF8.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF8.getText()), 1)) {
-                lblError.setText("el numero " + jTF8.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF8.getText() + " ya esta en la fila");
                 jTF8.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF8.getText()), 3)) {
-                    lblError.setText("el numero " + jTF8.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF8.getText() + " ya esta en la columna");
                     jTF8.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF8.getText()), 1, 3)) {
-                        lblError.setText("el numero " + jTF8.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF8.getText() + " ya esta en la caja");
                         jTF8.setText("");
                     } else {
                         tb.tablero[1][3] = Integer.valueOf(jTF8.getText());
@@ -995,16 +995,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                   int con = 0;
         if (tb.comprobar_valor((jTF9.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF9.getText()), 2)) {
-                lblError.setText("el numero " + jTF9.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF9.getText() + " ya esta en la fila");
                 jTF9.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF9.getText()), 0)) {
-                    lblError.setText("el numero " + jTF9.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF9.getText() + " ya esta en la columna");
                     jTF9.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF9.getText()), 2, 0)) {
-                        lblError.setText("el numero " + jTF9.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF9.getText() + " ya esta en la caja");
                         jTF9.setText("");
                     } else {
                         tb.tablero[2][0] = Integer.valueOf(jTF9.getText());
@@ -1026,16 +1026,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                   int con = 0;
         if (tb.comprobar_valor((jTF11.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF11.getText()), 2)) {
-                lblError.setText("el numero " + jTF11.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF11.getText() + " ya esta en la fila");
                 jTF11.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF11.getText()), 2)) {
-                    lblError.setText("el numero " + jTF11.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF11.getText() + " ya esta en la columna");
                     jTF11.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF11.getText()), 2, 2)) {
-                        lblError.setText("el numero " + jTF11.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF11.getText() + " ya esta en la caja");
                         jTF11.setText("");
                     } else {
                         tb.tablero[2][2] = Integer.valueOf(jTF11.getText());
@@ -1057,16 +1057,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                   int con = 0;
         if (tb.comprobar_valor((jTF13.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF13.getText()), 3)) {
-                lblError.setText("el numero " + jTF13.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF13.getText() + " ya esta en la fila");
                 jTF13.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF13.getText()), 0)) {
-                    lblError.setText("el numero " + jTF13.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF13.getText() + " ya esta en la columna");
                     jTF13.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF13.getText()), 3, 0)) {
-                        lblError.setText("el numero " + jTF13.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF13.getText() + " ya esta en la caja");
                         jTF13.setText("");
                     } else {
                         tb.tablero[3][0] = Integer.valueOf(jTF13.getText());
@@ -1088,16 +1088,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                   int con = 0;
         if (tb.comprobar_valor((jTF14.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF14.getText()), 3)) {
-                lblError.setText("el numero " + jTF14.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF14.getText() + " ya esta en la fila");
                 jTF14.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF14.getText()), 1)) {
-                    lblError.setText("el numero " + jTF14.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF14.getText() + " ya esta en la columna");
                     jTF14.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF14.getText()), 3, 1)) {
-                        lblError.setText("el numero " + jTF14.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF14.getText() + " ya esta en la caja");
                         jTF14.setText("");
                     } else {
                         tb.tablero[3][1] = Integer.valueOf(jTF14.getText());
@@ -1119,16 +1119,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                   int con = 0;
         if (tb.comprobar_valor((jTF15.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF15.getText()), 3)) {
-                lblError.setText("el numero " + jTF15.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF15.getText() + " ya esta en la fila");
                 jTF15.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF15.getText()), 2)) {
-                    lblError.setText("el numero " + jTF15.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF15.getText() + " ya esta en la columna");
                     jTF15.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF15.getText()), 3, 2)) {
-                        lblError.setText("el numero " + jTF15.getText() + " ya esta en la caja");
+                        lblError.setText("El número " + jTF15.getText() + " ya esta en la caja");
                         jTF15.setText("");
                     } else {
                         tb.tablero[3][2] = Integer.valueOf(jTF15.getText());
@@ -1150,16 +1150,16 @@ public class Sudoku4x4 extends javax.swing.JFrame {
                   int con = 0;
         if (tb.comprobar_valor((jTF16.getText()))) {
             if (tb.existe_fila(Integer.valueOf(jTF16.getText()), 3)) {
-                lblError.setText("el numero " + jTF16.getText() + " ya esta en la fila");
+                lblError.setText("El número " + jTF16.getText() + " ya esta en la fila");
                 jTF16.setText("");
             } else {
                 if (tb.existe_columna(Integer.valueOf(jTF16.getText()), 3)) {
-                    lblError.setText("el numero " + jTF16.getText() + " ya esta en la columna");
+                    lblError.setText("El número " + jTF16.getText() + " ya esta en la columna");
                     jTF16.setText("");
                 } else {
 
                     if (tb.existe_caja(Integer.valueOf(jTF16.getText()), 3, 3)) {
-                        lblError.setText("el numero " + jTF16.getText() + " ya esta en la caja");
+                        lblError.setText("El número" + jTF16.getText() + " ya esta en la caja");
                         jTF16.setText("");
                     } else {
                         tb.tablero[3][3] = Integer.valueOf(jTF16.getText());
